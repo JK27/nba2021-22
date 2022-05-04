@@ -1,0 +1,26 @@
+{
+	"name": "nba2021-22",
+	"version": "1.0.0",
+	"description": "Data dashboard for 2021-22 season",
+	"main": "app.js",
+	"scripts": {
+		"start": "nodemon server.js",
+		"start:prod": "SET NODE_ENV=production&& nodemon app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JK27/nba2021-22.git"
+	},
+	"author": "Juan Carlos Martin",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/JK27/nba2021-22/issues"
+	},
+	"homepage": "https://github.com/JK27/nba2021-22#readme",
+	"dependencies": {
+		"axios": "^0.27.2",
+		"express": "^4.18.1",
+		"mongoose": "^6.3.2",
+		"morgan": "^1.10.0"
+	}
+}

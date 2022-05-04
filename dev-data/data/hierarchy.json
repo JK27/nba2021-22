@@ -1,0 +1,97 @@
+[
+	{
+		"id": "583ec825-fb46-11e1-82cb-f4ce4684ea4c",
+		"name": "Warriors",
+		"market": "Golden State",
+		"alias": "GSW",
+		"sr_id": "sr:team:3428",
+		"reference": "1610612744",
+		"venue": {
+			"id": "938016dc-9e1d-4abc-88f5-3a7d772332e6",
+			"name": "Chase Center",
+			"capacity": 18064,
+			"address": "1 Warriors Way",
+			"city": "San Francisco",
+			"state": "CA",
+			"zip": "94158",
+			"country": "USA",
+			"sr_id": "sr:venue:44446"
+		}
+	},
+	{
+		"id": "583ecae2-fb46-11e1-82cb-f4ce4684ea4c",
+		"name": "Lakers",
+		"market": "Los Angeles",
+		"alias": "LAL",
+		"sr_id": "sr:team:3427",
+		"reference": "1610612747",
+		"venue": {
+			"id": "792ec100-691e-5e16-8ef8-79b2b6ee38ba",
+			"name": "Crypto.com Arena",
+			"capacity": 18997,
+			"address": "1111 S. Figueroa Street",
+			"city": "Los Angeles",
+			"state": "CA",
+			"zip": "90015",
+			"country": "USA",
+			"sr_id": "sr:venue:6008"
+		}
+	},
+	{
+		"id": "583ecdfb-fb46-11e1-82cb-f4ce4684ea4c",
+		"name": "Clippers",
+		"market": "LA",
+		"alias": "LAC",
+		"sr_id": "sr:team:3425",
+		"reference": "1610612746",
+		"venue": {
+			"id": "792ec100-691e-5e16-8ef8-79b2b6ee38ba",
+			"name": "Crypto.com Arena",
+			"capacity": 18997,
+			"address": "1111 S. Figueroa Street",
+			"city": "Los Angeles",
+			"state": "CA",
+			"zip": "90015",
+			"country": "USA",
+			"sr_id": "sr:venue:6008"
+		}
+	},
+	{
+		"id": "583ecfa8-fb46-11e1-82cb-f4ce4684ea4c",
+		"name": "Suns",
+		"market": "Phoenix",
+		"alias": "PHX",
+		"sr_id": "sr:team:3416",
+		"reference": "1610612756",
+		"venue": {
+			"id": "1d2e59b2-2479-5f84-a6a7-e82f65dd8442",
+			"name": "Footprint Center",
+			"capacity": 18422,
+			"address": "201 E. Jefferson Street",
+			"city": "Phoenix",
+			"state": "AZ",
+			"zip": "85004",
+			"country": "USA",
+			"sr_id": "sr:venue:6938"
+		}
+	},
+	{
+		"id": "583ed0ac-fb46-11e1-82cb-f4ce4684ea4c",
+		"name": "Kings",
+		"market": "Sacramento",
+		"alias": "SAC",
+		"sr_id": "sr:team:3413",
+		"reference": "1610612758",
+		"venue": {
+			"id": "2e687b9a-c7a7-487c-85b4-43479abc8458",
+			"name": "Golden 1 Center",
+			"capacity": 17608,
+			"address": "500 David J. Stern Walkway",
+			"city": "Sacramento",
+			"state": "CA",
+			"zip": "95814",
+			"country": "USA",
+			"sr_id": "sr:venue:6942"
+		}
+	}
+]
