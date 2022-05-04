@@ -1,2 +1,2 @@
-# nba2018-19
-Data dashboard for the NBA 2018/19 season.
+# nba2021-22
+Data dashboard for the NBA 2021-22 season.
