@@ -1,8 +1,8 @@
 const fs = require("fs");
 
-const teams = JSON.parse(
-	fs.readFileSync(`${__dirname}/../dev-data/data/hierarchy.json`)
-);
+// const teams = JSON.parse(
+// 	fs.readFileSync(`${__dirname}/../dev-data/data/hierarchy.json`)
+// );
 
 /////////////////////////////////////////////////////////// ROUTE HANDLERS
 /////////////////////////////////////// GET ALL TEAMS
