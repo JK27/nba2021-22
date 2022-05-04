@@ -6,6 +6,7 @@ const teamRouter = require("./routes/teamRoutes");
 
 const app = express();
 app.use(express.json());
+app.use(express.static(`${__dirname}/public`));
 
 /////////////////////////////////////////////////////////// MIDDLEWARES
 app.use(morgan("dev"));

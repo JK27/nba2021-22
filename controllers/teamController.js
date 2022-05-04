@@ -20,14 +20,14 @@ exports.getAllTeams = (req, res) => {
 exports.getTeamById = (req, res) => {
 	console.log(req.params);
 
-	const id = req.params.id;
+	const ref = req.params.ref;
 	// DOES => Finds the team with id matching the id in the params.
-	const team = teams.find(el => el.id === id);
+	const team = teams.find(el => el.reference === ref);
 
 	if (!team) {
 		return res.status(404).json({
 			status: "fail",
-			message: "Team not found",
+			message: "Invalid team id.",
 		});
 	}
 

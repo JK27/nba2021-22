@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="static/js/d3-scale-chromatic.v1.min.js"></script>
+    <script type="text/javascript" src="static/js/d3.min.js"></script>
+    <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
+    <script type="text/javascript" src="static/js/dc.min.js"></script>
+    <script type="text/javascript" src="static/js/queue.min.js"></script>
+    <script type="text/javascript" src="static/js/graph.js"></script>
+
+
+    <title>NBA Season 2021-22</title>
+
+</head>
+
+<body>
+    <section>
+        <!--TITLE-->
+        <div class="header-title">
+            <h1>NBA SEASON 2021-22</h1>
+        </div>
+
+        <div class="container-fluid">
+
+            <!-- VENUES MAP -->
+            <div class="row">
+                <div class="col">
+                    <h3>VENUE LOCATIONS</h3>
+                    <p>The map below indicates the location of the venues for each team of the NBA season 2018/19. Click on each marker to get more information about the venue and the team. Note that the year of foundation refers to when the franchise was
+                        first stablished, not necessarily on its current location.</p>
+                    <div id="map"></div>
+                </div>
+            </div>
+
+            <!--FIRST ROW-->
+            <div class="row">
+
+                <!-- PLAYER POSITION BAR CHART-->
+                <div class="col inline">
+                    <h3>PLAYERS BY POSITION</h3>
+                    <p>This chart distributes the players according to their primary position on the court, the position they normally play as.</p>
+                    <p>Shooting Guard (SG) is the most populated one as it is also the most versatile, these players can usually cover the postions of Point Guard (PG) and Small Forward (SF).</p>
+                    <p>Center (C) is the position that has the less number of players as these are the tallest players and this position sometimes is occupied by Power Forward players (PF).</p>
+                    <div id="player-position"></div>
+                </div>
+
+                <!-- PLAYER BY COUNTRY DONUT CHART -->
+                <div class="col inline">
+                    <h3>PLAYERS BY COUNTRY</h3>
+                    <p>About 75% of players are American. Despite the number of players from other countries increasing year by year, especially in the last two decades, these only reach just about a quarter of the total.</p>
+                    <p>Los Angeles Lakers is the only team of the 2018/19 season with only American born players in its team roster.</p>
+                    <p>Dallas Mavericks is the team with the most variety of nationalities, with players coming from nine different countries and four continents: USA, Tunisia, Latvia, Germany, Canada, Puerto Rico, Australia, Greece and Slovenia.</p>
+                    <div id="player-country"></div>
+                </div>
+            </div>
+
+            <!-- PLAYER BY OTHER COUNTRIES PIE CHART -->
+            <div class="row">
+                <div class="col">
+                    <h3>PLAYERS FROM THE REST OF THE WORLD</h3>
+                    <p>Despite still being a clear minority when compared to players form the USA, there are players from all continents (except Antarctica), and their number have been increasing with the years with more and more being traded in or drafted
+                        every year.</p>
+                    <p>Europe is still the dominant market for non-American players, but Canada and Australia are the individual countries with more players in the 2018/19 season.</p>
+                    <div id="player-other-countries"></div>
+                </div>
+            </div>
+
+            <!-- PLAYER BY STATE PIE CHART -->
+            <div class="row">
+                <div class="col">
+                    <h3>PLAYERS BY STATE (USA and CANADA only)</h3>
+                    <p>There are players from the majority of the US States. The only states with no players representing them on the NBA during season 2018/19 are: Alaska, Hawaii, Idaho, Maine, Montana, New Mexico, Rhode Island, South Dakota and Vermont.</p>
+                    <p>From the 16 Canadian players currently playing in the league, 13 of them come from the province of Ontario, where the only Canadian team in the League, the Toronto Raptors, are based in.</p>
+                    <div id="player-state"></div>
+                </div>
+            </div>
+
+            <!-- PLAYER BY AGE -->
+            <div class="row">
+                <div class="col">
+                    <h3>PLAYERS BY AGE</h3>
+                    <p>The ample majority of players are aged between 20 and 26 years old, being 25 the average age from all players in the league. Due to the high level of physicality of the game, the number of players in their thirties is clearly low when
+                        compared to those in their twenties, number that reduces dramatically for over 35 years old, with only eleven players above this age.</p>
+                    <p>Fun fact: there are 39 current players that were not born yet when Vince Carter and Dirk Nowitzki, the two most experienced players in the league, started their careers on the NBA back in 1998.</p>
+                </div>
+            </div>
+
+            <!--row chart-->
+            <div class="row">
+                <div class="col">
+                    <div id="player-by-age"></div>
+                </div>
+
+                <!--player data-->
+                <div class="col" id="age-players-pics">
+                    <div class="row">
+                        <div class="col">
+                            <div class="col">
+                                <img src="pics/talen_horton-tucker.png" class="player-pic" alt="Talen Horton-Tucker"></img>
+                            </div>
+                            <div class="col">
+                                <p><strong>Youngest player:</strong> Talen Horton-Tucker</p>
+                                <p><strong>Date of birth:</strong> 25 - November - 2000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="col">
+                                <img src="pics/vince_carter.png" class="player-pic" alt="Vince Carter"></img>
+                            </div>
+                            <div class="col">
+                                <p><strong>Oldest player:</strong> Vince Carter</p>
+                                <p><strong>Date of birth:</strong> 26 - January - 1977</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLAYER BY DRAFT YEAR -->
+            <div class="row">
+                <div class="col">
+                    <h3>PLAYERS BY DRAFT YEAR (AGE v EXPERIENCE)</h3>
+                    <p>When talking about basketball, and sports in general, experience is not everything that matters. The most experienced team in the league, the Los Angeles Lakers, did not even got through to the play-offs, finishing the regular season
+                        on the 20th postition out of 30 teams.</p>
+                    <p>There are only 13 players on the 2018/19 season with 15 years or more of experience since they were rookies in the league. Curiously, there is no players that were drafted in 1999.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <!--teams data-->
+                <div class="col" id="draft-team-pics">
+                    <div class="row">
+                        <div class="col">
+                            <div class="col">
+                                <img src="logos/la_lakers.png" class="chart-team-logo" alt="Los Angeles Lakers"></img>
+                            </div>
+                            <div class="col">
+                                <p><strong>Most experienced team:</strong> Los Angeles Lakers</p>
+                                <p><strong>Average player experience:</strong> 7 seasons</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="col">
+                                <img src="logos/chicago_bulls.png" class="chart-team-logo" alt="Chicago Bulls"></img>
+                            </div>
+                            <div class="col">
+                                <p><strong>Least experienced team:</strong> Chicago Bulls</p>
+                                <p><strong>Average player experience:</strong> 3 seasons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--scatter plot chart-->
+                <div class="col">
+                    <div id="player-by-draft-year"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJD5Aw1cD-P4jdl7aCzt8V2PKRMbcQqCU&libraries=visualization,places&callback=initMap">
+    </script>
+    <script src="static/js/markerclusterer.js">
+    </script>
+</body>
+
+</html>
