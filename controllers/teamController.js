@@ -4,7 +4,7 @@ const Team = require("./../models/teamModel");
 /////////////////////////////////////// GET ALL TEAMS
 exports.getAllTeams = async (req, res) => {
 	try {
-		console.log(req.query);
+		// FUNCTIONALITY => FILTERING
 		// DOES => Creates a new object containing all the key-value pairs from the query parameters.
 		const queryObj = { ...req.query };
 		// DOES => Removes all the fields in the array from the queryObj.
@@ -13,10 +13,17 @@ exports.getAllTeams = async (req, res) => {
 		// DOES => Advance filtering. Allows to use greater and lower than operators adding a '$' to the query to match the mongoDB operators.
 		let queryStr = JSON.stringify(queryObj);
 		queryStr = queryStr.replace(/\b(gte?|lte?)\b/g, match => `$${match}`);
-		console.log(JSON.parse(queryStr));
 
 		// DOES => Builds the query.
-		const query = Team.find(JSON.parse(queryStr));
+		let query = Team.find(JSON.parse(queryStr));
+
+		// FUNCTIONALITY => SORTING
+		if (req.query.sort) {
+			const sortBy = req.query.sort.split(",").join(" ");
+			query = query.sort(sortBy);
+		} else {
+			query = query.sort("market");
+		}
 
 		// DOES => Executes the query.
 		const teams = await query;
