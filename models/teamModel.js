@@ -41,26 +41,17 @@ const teamSchema = new mongoose.Schema({
 		},
 	},
 	conference: {
-		id: String,
-		name: String,
-		alias: String,
+		type: String,
 	},
 	division: {
+		type: String,
+	},
+	coach: {
 		id: String,
 		name: String,
-		alias: String,
+		experience: String,
 	},
-	coaches: [
-		{
-			id: String,
-			full_name: String,
-			first_name: String,
-			last_name: String,
-			position: String,
-			experience: String,
-			name_suffix: String,
-		},
-	],
+
 	players: [
 		{
 			full_name: String,
