@@ -43,3 +43,99 @@ exports.getTeamById = async (req, res) => {
 		});
 	}
 };
+
+exports.getTeamStats = async (req, res) => {
+	try {
+		const stats = await Team.aggregate([
+			{
+				$match: {}
+			},
+			{
+				$group: {
+					_id: '$division',
+					olderTeam: {$min: '$founded'},
+					newerTeam: {$max: '$founded'},
+				}
+			},
+			{
+				$sort: {olderTeam: 1}
+			}
+		])
+
+		console.log(stats)
+
+		res.status(200).json({
+			status: "success",
+			data: {
+				stats,
+			}
+		});
+	} catch (err) {
+		res.status(404).json({
+			status: "fail",
+			message: err,
+		});
+	}
+}
+/*
+********************************** CODE TO GET PLAYERS INFO
+exports.getPlayerInfo = async (req, res) => {
+	try {
+		const playersInfo = await Team.aggregate([
+			{
+				$unwind: {
+					path: "$players",
+					preserveNullAndEmptyArrays: true
+				}
+			},
+			{
+				$match: {"name": 'Celtics'}
+			},
+			{
+				$group: {
+					_id: {
+						_id: "$id",
+						playerId: "$players.id"
+					},
+					name: {
+						$first: "$name"
+					},
+					player_name: {
+						$first: "$players.full_name"
+					},
+					jersey_number: {
+						$first: "$players.jersey_number"
+					}
+				}
+			},
+			{
+				$group: {
+					_id: "$id.id",
+					name: {
+						$first: "$name"
+					},
+					players: {
+						$push: {
+							_id: "$id.playerId",
+							name: "$player_name",
+							number: "$jersey_number"
+						}
+					}
+				}
+			}
+		])
+		console.log(playersInfo)
+		res.status(200).json({
+			status: "success",
+			data: {
+				playersInfo,
+			}
+		});
+	} catch (err) {
+		res.status(404).json({
+			status: "fail",
+			message: err,
+		});
+	}
+}
+*/
