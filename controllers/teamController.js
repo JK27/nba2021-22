@@ -1,12 +1,12 @@
 const Team = require("./../models/teamModel");
-const APIFeatures = require('./../utils/apiFeatures')
+const APIFeatures = require("./../utils/apiFeatures")
 
 /////////////////////////////////////////////////////////// ROUTE HANDLERS
 /////////////////////////////////////// GET ALL TEAMS
 exports.getAllTeams = async (req, res) => {
 	try {
 		// DOES => Executes the query.
-		// NOTE => Chaining methods is possible because after calling each method, we always return 'this'.
+		// NOTE => Chaining methods is possible because after calling each method, we always return "this".
 		const features = new APIFeatures(Team.find(), req.query).filter().sort().limitFields().paginate();
 		const teams = await features.query;
 
@@ -44,6 +44,7 @@ exports.getTeamById = async (req, res) => {
 	}
 };
 
+/////////////////////////////////////// GET TEAM STATS
 exports.getTeamStats = async (req, res) => {
 	try {
 		const stats = await Team.aggregate([
@@ -52,17 +53,23 @@ exports.getTeamStats = async (req, res) => {
 			},
 			{
 				$group: {
-					_id: '$division',
-					olderTeam: {$min: '$founded'},
-					newerTeam: {$max: '$founded'},
+					_id: "$division",
+					olderTeam: {$min: "$founded"},
+					newerTeam: {$max: "$founded"},
 				}
 			},
 			{
-				$sort: {olderTeam: 1}
+				$addFields: {division: "$_id"}
+			},
+			{
+				$sort: {division: 1}
+			},
+			{
+				$project: {
+					_id: 0
+				}
 			}
 		])
-
-		console.log(stats)
 
 		res.status(200).json({
 			status: "success",
@@ -77,65 +84,6 @@ exports.getTeamStats = async (req, res) => {
 		});
 	}
 }
-/*
-********************************** CODE TO GET PLAYERS INFO
-exports.getPlayerInfo = async (req, res) => {
-	try {
-		const playersInfo = await Team.aggregate([
-			{
-				$unwind: {
-					path: "$players",
-					preserveNullAndEmptyArrays: true
-				}
-			},
-			{
-				$match: {"name": 'Celtics'}
-			},
-			{
-				$group: {
-					_id: {
-						_id: "$id",
-						playerId: "$players.id"
-					},
-					name: {
-						$first: "$name"
-					},
-					player_name: {
-						$first: "$players.full_name"
-					},
-					jersey_number: {
-						$first: "$players.jersey_number"
-					}
-				}
-			},
-			{
-				$group: {
-					_id: "$id.id",
-					name: {
-						$first: "$name"
-					},
-					players: {
-						$push: {
-							_id: "$id.playerId",
-							name: "$player_name",
-							number: "$jersey_number"
-						}
-					}
-				}
-			}
-		])
-		console.log(playersInfo)
-		res.status(200).json({
-			status: "success",
-			data: {
-				playersInfo,
-			}
-		});
-	} catch (err) {
-		res.status(404).json({
-			status: "fail",
-			message: err,
-		});
-	}
-}
-*/
+
+
+

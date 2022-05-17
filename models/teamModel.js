@@ -24,21 +24,19 @@ const teamSchema = new mongoose.Schema({
 		type: Number,
 	},
 	venue: {
-		type: {
-			name: String,
-			capacity: Number,
-			address: String,
-			city: String,
-			state: {
-				type: String,
-				length: 2,
-			},
-			state_name: String,
-			zip: Number,
-			country: String,
-			latitude: String,
-			longitude: String,
+		name: String,
+		capacity: Number,
+		address: String,
+		city: String,
+		state: {
+			type: String,
+			length: 2,
 		},
+		state_name: String,
+		zip: Number,
+		country: String,
+		latitude: String,
+		longitude: String,
 	},
 	conference: {
 		type: String,
@@ -51,32 +49,13 @@ const teamSchema = new mongoose.Schema({
 		name: String,
 		experience: String,
 	},
-
 	players: [
 		{
-			full_name: String,
-			first_name: String,
-			last_name: String,
-			abbr_name: String,
-			height: Number,
-			weight: Number,
-			position: String,
-			primary_position: String,
-			jersey_number: String,
-			experience: String,
-			college: String,
-			high_school: String,
-			birth_place: String,
-			birthdate: String,
-			rookie_year: Number,
-			draft: {
-				team_id: String,
-				year: Number,
-				round: String,
-				pick: String,
-			},
+			type: mongoose.Schema.ObjectId,
+			ref: 'Player'
 		},
-	],
+	]
+
 });
 
 const Team = mongoose.model("Team", teamSchema);

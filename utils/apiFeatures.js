@@ -11,7 +11,7 @@ class APIFeatures {
     // DOES => Removes all the fields in the array from the queryObj.
     const excludedFields = ["page", "sort", "limit", "fields"];
     excludedFields.forEach(el => delete queryObj[el]);
-    // DOES => Advance filtering. Allows to use greater and lower than operators adding a '$' to the query to match the mongoDB operators.
+    // DOES => Advance filtering. Allows to use greater and lower than operators adding a "$" to the query to match the mongoDB operators.
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte?|lte?)\b/g, match => `$${match}`);
 
@@ -27,7 +27,7 @@ class APIFeatures {
       const sortBy = this.queryString.sort.split(",").join(" ");
       this.query = this.query.sort(sortBy);
     } else {
-      this.query = this.query.sort("market");
+      this.query = this.query.sort("_id");
     }
     return this;
   }

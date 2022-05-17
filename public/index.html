@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
 
+    
+    <!-- MAPBOX -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+
+
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -40,7 +46,18 @@
                     <h3>VENUE LOCATIONS</h3>
                     <p>The map below indicates the location of the venues for each team of the NBA season 2018/19. Click on each marker to get more information about the venue and the team. Note that the year of foundation refers to when the franchise was
                         first stablished, not necessarily on its current location.</p>
-                    <div id="map"></div>
+                    <!-- <div id="map"></div> -->
+                    <div id='map' style='width: 100%; height: 300px;'></div>
+                    <script>
+                    mapboxgl.accessToken = 'pk.eyJ1IjoiamsyNyIsImEiOiJjbDM4bXRxYXowMWc1M2lxZjN0dWl3cHZnIn0.pagSzy_FQ6Q090bac7p6Gw';
+                    var map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/jk27/cl38mzyqr006e14qpwl6v7b80/draft',
+                        center: [-71.062146, 42.36623],
+                        zoom: 12
+                    });
+                    </script>
+
                 </div>
             </div>
 

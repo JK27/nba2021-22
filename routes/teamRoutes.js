@@ -4,14 +4,8 @@ const teamController = require("./../controllers/teamController");
 /////////////////////////////////////////////////////////// TEAM ROUTES
 const router = express.Router();
 
-// router.param("id", (req, res, next, val) => {
-// 	console.log(`Team id is: ${val}`);
-// 	next();
-// });
-
-router.route('/team-info').get(teamController.getTeamStats);
-
 router.get("/", teamController.getAllTeams);
 router.get("/:id", teamController.getTeamById);
+router.get("/team-info", teamController.getTeamStats);
 
 module.exports = router;
