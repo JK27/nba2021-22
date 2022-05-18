@@ -1,4 +1,5 @@
 const Player = require("./../models/playerModel");
+const Team = require("./../models/teamModel");
 const APIFeatures = require("./../utils/apiFeatures")
 
 /////////////////////////////////////////////////////////// GET ALL PLAYERS 
@@ -47,17 +48,14 @@ exports.getPlayerById = async (req, res) => {
 exports.getPlayerInfo = async (req, res) => {
   try {
     const playersInfo = await Team.aggregate([
-      // {
-      // 	$unwind: {
-      // 		path: "$players",
-      // 		preserveNullAndEmptyArrays: true
-      // 	}
-      // },
       {
-        $match: {"name": req.params.team}
+        $unwind: {
+          path: "$players",
+          preserveNullAndEmptyArrays: true
+        }
       },
       {
-        $match: {"players.status": "ACT", }
+        $match: {"name": req.params.team}
       },
       {
         $group: {
@@ -77,11 +75,9 @@ exports.getPlayerInfo = async (req, res) => {
           birthdate: {
             $first: "$players.birthdate"
           },
-          status: {
-            $first: "$players.status"
-          }
         }
       },
+
       {
         $group: {
           _id: "$id.id",
@@ -93,7 +89,6 @@ exports.getPlayerInfo = async (req, res) => {
               name: "$player_name",
               number: {$toInt: "$jersey_number"},
               birthdate: "$birthdate",
-              status: "$status"
               // birthdate: {
               // 	$dateFromString: {
               // 		dateString: "$birthdate",
@@ -104,8 +99,6 @@ exports.getPlayerInfo = async (req, res) => {
         },
       },
     ])
-
-
     res.status(200).json({
       status: "success",
       data: {
