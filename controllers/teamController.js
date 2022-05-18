@@ -1,6 +1,7 @@
 const Team = require("./../models/teamModel");
 const APIFeatures = require("./../utils/apiFeatures")
 const catchAsync = require("./../utils/catchAsync")
+const AppError = require("./../utils/appError")
 
 /////////////////////////////////////////////////////////// ROUTE HANDLERS
 /////////////////////////////////////// GET ALL TEAMS
@@ -22,7 +23,13 @@ exports.getAllTeams = catchAsync(async (req, res, next) => {
 
 /////////////////////////////////////// GET TEAM BY ID
 exports.getTeamById = catchAsync(async (req, res, next) => {
-	const team = await Team.findById(req.params.id);
+	const team = await Team.findById(req.params.id, (err) => {
+		// DOES => If there is no team whose ID matches the one passed in the query parameter, returns 404 error.
+		if (err) {
+			next(new AppError('No team found with that ID', 404));
+			return;
+		}
+	}).clone();
 	res.status(200).json({
 		status: "success",
 		data: {
