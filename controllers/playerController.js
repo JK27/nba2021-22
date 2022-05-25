@@ -2,15 +2,19 @@ const Player = require("./../models/playerModel");
 const Team = require("./../models/teamModel");
 const APIFeatures = require("./../utils/apiFeatures")
 const catchAsync = require("./../utils/catchAsync")
-const AppError = require("./../utils/appError")
+const AppError = require("./../utils/appError");
 
 
 
 /////////////////////////////////////////////////////////// GET ALL PLAYERS 
-exports.getAllPlayers = catchAsync(async (req, res) => {
+exports.getAllPlayers = catchAsync(async (req, res, next) => {
+  // DOES => 'filter' is used to find only players for the team matching the teamId in the params. It works as if it was 'getPlayerByTeamId'.
+  let filter = {}
+  if (req.params.teamId) filter = {team_id: req.params.teamId}
+
   // DOES => Executes the query.
   // NOTE => Chaining methods is possible because after calling each method, we always return "this".
-  const features = new APIFeatures(Player.find(), req.query).filter().sort().limitFields().paginate();
+  const features = new APIFeatures(Player.find(filter), req.query).filter().sort().limitFields().paginate();
   const players = await features.query;
 
   // DOES => Sends the response.
@@ -28,13 +32,13 @@ exports.getPlayerById = catchAsync(async (req, res, next) => {
   const player = await Player.findById(req.params.id, (err) => {
     // DOES => If there is no team whose ID matches the one passed in the query parameter, returns 404 error.
     if (err) {
-      next(new AppError('No player found with that ID', 404));
+      next(new AppError("No player found with that ID", 404));
       return;
     }
   }).clone().populate({
     // DOES => Populates the field players with the player's info selected, based on the player's ObjectId.
-    path: 'team_id',
-    select: 'name -_id',
+    path: "team_id",
+    select: "name -_id",
   });
 
   res.status(200).json({

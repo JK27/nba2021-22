@@ -25,20 +25,10 @@ const playerSchema = mongoose.Schema({
   },
   team_id: {
     type: mongoose.Schema.ObjectId,
-    ref: 'Team'
+    ref: "Team"
   },
 });
 
-/////////////////////////////////////////////////////////// QUERY MIDDLEWARE
-// DOES => Populates the field players with the player's info selected, based on the player's ObjectId.
-// playerSchema.pre(/^find/, function (next) {
-//   this.populate({
-//     path: 'team_id',
-//     // select: 
-//   });
-//   next();
-// })
-
-const Player = mongoose.model('Player', playerSchema);
+const Player = mongoose.model("Player", playerSchema);
 
 module.exports = Player

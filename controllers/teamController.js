@@ -26,14 +26,14 @@ exports.getTeamById = catchAsync(async (req, res, next) => {
 	const team = await Team.findById(req.params.id, (err) => {
 		// DOES => If there is no team whose ID matches the one passed in the query parameter, returns 404 error.
 		if (err) {
-			next(new AppError('No team found with that ID', 404));
+			next(new AppError("No team found with that ID", 404));
 			return;
 		}
 		// NOTE => Need to .clone() to avoid error of Query already executed.
 	}).clone().populate({
 		// DOES => Populates the field players with the player's info selected, based on the player's ObjectId.
-		path: 'players',
-		select: 'full_name primary_position jersey_number -_id'
+		path: "players",
+		select: "full_name primary_position jersey_number -_id"
 	});
 
 	res.status(200).json({
