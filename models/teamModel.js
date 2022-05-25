@@ -24,6 +24,13 @@ const teamSchema = new mongoose.Schema({
 		type: Number,
 	},
 	venue: {
+		// NOTE => Using GeoJSON
+		type: {
+			type: String,
+			default: 'Point',
+			enum: ['Point']
+		},
+		coordinates: [Number],
 		name: String,
 		capacity: Number,
 		address: String,
@@ -35,8 +42,16 @@ const teamSchema = new mongoose.Schema({
 		state_name: String,
 		zip: Number,
 		country: String,
-		latitude: String,
-		longitude: String,
+	},
+	venueLocation: {
+		// NOTE => Using GeoJSON
+		type: {
+			type: String,
+			default: 'Point',
+			enum: ['Point']
+		},
+		coordinates: [Number]
+
 	},
 	conference: {
 		type: String,
@@ -57,6 +72,16 @@ const teamSchema = new mongoose.Schema({
 	]
 
 });
+
+/////////////////////////////////////////////////////////// QUERY MIDDLEWARE
+// // DOES => Populates the field players with the player's info selected, based on the player's ObjectId.
+// teamSchema.pre(/^find/, function (next) {
+// 	this.populate({
+// 		path: 'players',
+// 		select: 'full_name primary_position jersey_number -_id'
+// 	});
+// 	next();
+// })
 
 const Team = mongoose.model("Team", teamSchema);
 

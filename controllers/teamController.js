@@ -29,7 +29,13 @@ exports.getTeamById = catchAsync(async (req, res, next) => {
 			next(new AppError('No team found with that ID', 404));
 			return;
 		}
-	}).clone();
+		// NOTE => Need to .clone() to avoid error of Query already executed.
+	}).clone().populate({
+		// DOES => Populates the field players with the player's info selected, based on the player's ObjectId.
+		path: 'players',
+		select: 'full_name primary_position jersey_number -_id'
+	});
+
 	res.status(200).json({
 		status: "success",
 		data: {
