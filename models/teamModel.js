@@ -51,7 +51,6 @@ const teamSchema = new mongoose.Schema({
 			enum: ["Point"]
 		},
 		coordinates: [Number]
-
 	},
 	conference: {
 		type: String,
@@ -69,9 +68,24 @@ const teamSchema = new mongoose.Schema({
 			type: mongoose.Schema.ObjectId,
 			ref: "Player"
 		},
-	]
-
+	],
+	slug: {
+		type: String,
+	},
+	championships: {
+		type: Number,
+	},
+	conf_titles: {
+		type: Number,
+	},
+	div_titles: {
+		type: Number,
+	}
 });
+
+/////////////////////////////////////////////////////////// INDEXES
+teamSchema.index({founded: 1})
+teamSchema.index({conference: 1, division: 1})
 
 
 const Team = mongoose.model("Team", teamSchema);

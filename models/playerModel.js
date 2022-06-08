@@ -29,6 +29,13 @@ const playerSchema = mongoose.Schema({
   },
 });
 
+/////////////////////////////////////////////////////////// INDEXES
+playerSchema.index({height: 1, weight: 1})
+playerSchema.index({primary_position: 1})
+playerSchema.index({jersey_number: 1})
+playerSchema.index({experience: 1})
+playerSchema.index({rookie_year: 1})
+
 const Player = mongoose.model("Player", playerSchema);
 
 module.exports = Player

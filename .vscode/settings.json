@@ -1,7 +1,0 @@
-{
-	"npm-intellisense.importQuotes": "\"",
-	"javascript.preferences.quoteStyle": "double",
-	"typescript.preferences.quoteStyle": "double",
-	"editor.autoClosingDelete": "auto",
-	"editor.autoClosingQuotes": "always"
-}

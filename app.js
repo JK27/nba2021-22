@@ -1,7 +1,8 @@
+const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
-const helmet = require('helmet')
+const helmet = require("helmet")
 
 const AppError = require("./utils/appError")
 const golbalErrorHandler = require("./controllers/errorController")
@@ -9,10 +10,18 @@ const golbalErrorHandler = require("./controllers/errorController")
 /////////////////////////////////////////////////////////// ROUTERS
 const teamRouter = require("./routes/teamRoutes");
 const playerRouter = require("./routes/playerRoutes");
+const viewRouter = require("./routes/viewRoutes");
 
 const app = express();
 
+/////////////////////////////////////////////////////////// PUG SETUP
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"))
+
 /////////////////////////////////////////////////////////// GLOBAL MIDDLEWARES
+//////////////////////////////////////////// STATIC FILES
+// DOES => SErves static files from the specified path.
+app.use(express.static(path.join(__dirname, "public")));
 //////////////////////////////////////////// HELMET
 // DOES => Sets security HTTP headers.
 app.use(helmet({
@@ -27,11 +36,9 @@ app.use(helmet({
 				"http:",
 				"blob:",
 				"https://*.mapbox.com",
-				"https://js.stripe.com",
-				"https://m.stripe.network",
 				"https://*.cloudflare.com",
 			],
-			frameSrc: ["'self'", "https://js.stripe.com"],
+			frameSrc: ["'self'"],
 			objectSrc: ["'none'"],
 			styleSrc: ["'self'", "https:", "'unsafe-inline'"],
 			workerSrc: [
@@ -41,7 +48,6 @@ app.use(helmet({
 				"https://*.tiles.mapbox.com",
 				"https://api.mapbox.com",
 				"https://events.mapbox.com",
-				"https://m.stripe.network",
 			],
 			childSrc: ["'self'", "blob:"],
 			imgSrc: ["'self'", "data:", "blob:"],
@@ -50,7 +56,6 @@ app.use(helmet({
 				"'self'",
 				"data:",
 				"blob:",
-				"https://*.stripe.com",
 				"https://*.mapbox.com",
 				"https://*.cloudflare.com/",
 				"https://bundle.js:*",
@@ -70,27 +75,24 @@ if (process.env.NODE_ENV === "development") {
 const limiter = rateLimit({
 	max: 1000,
 	windowMs: 60 * 60 * 1000,
-	message: 'Too many requests from the same IP address. Please try again in one hour.'
+	message: "Too many requests from the same IP address. Please try again in one hour."
 });
 
-app.use('/api/', limiter);
+app.use("/api/", limiter);
 
 //////////////////////////////////////////// BODY PARSER
 // DOES => Reads data from the body into req.body.
 app.use(express.json({
-	limit: '10kb'
+	limit: "10kb"
 }));
 
-//////////////////////////////////////////// STATIC FILES
-// DOES => SErves static files from the specified path.
-app.use(express.static(`${__dirname}/public`));
-
 /////////////////////////////////////////////////////////// ROUTE HANDLERS
+app.use("/", viewRouter);
 app.use("/api/v1/teams", teamRouter);
 app.use("/api/v1/players", playerRouter);
 
 // DOES => Catches all unhandled errors for invalid routes
-app.all('*', (req, res, next) => {
+app.all("*", (req, res, next) => {
 	next(new AppError(`Cannot find ${req.originalUrl}`, 404));
 })
 
