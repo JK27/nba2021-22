@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "nodemon server.js",
 		"start:prod": "SET NODE_ENV=production&& nodemon app.js",
-		"debug": "ndb server.js"
+		"debug": "ndb server.js",
+		"compile:sass": "node-sass sass/main.scss public/css/style.css -w"
 	},
 	"repository": {
 		"type": "git",
@@ -20,6 +21,7 @@
 	"homepage": "https://github.com/JK27/nba2021-22#readme",
 	"dependencies": {
 		"axios": "^0.27.2",
+		"cors": "^2.8.5",
 		"dotenv": "^16.0.0",
 		"express": "^4.18.1",
 		"express-rate-limit": "^6.4.0",
@@ -30,6 +32,7 @@
 		"slugify": "^1.6.5"
 	},
 	"devDependencies": {
+		"node-sass": "^7.0.1",
 		"nodemon": "^2.0.16"
 	}
 }

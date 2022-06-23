@@ -5,6 +5,7 @@ block append head
   link(href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet')
 
 
+
 //- ///////////////////////////////////////////////////////////////// MIXINS
 //- /////////////////////////////////////////////////////// OVERVIEW BOX
 mixin overviewBox(label, text, icon)
@@ -19,9 +20,7 @@ block content
   section.section-header
     //////////////////////////////////////// HEADER HERO
     .header__hero
-      //- .header__hero-overlay &nbsp;
       img.header__hero-img(src=`/img/logos/${team.logo}`, alt=`${team.market} ${team.name}`)
-
     //////////////////////////////////////// OVERVIEW BOX
     .overview-box
       div
@@ -61,38 +60,81 @@ block content
           +overviewBox("Capacity", team.venue.capacity, "star")
 
   //- ///////////////////////////////////////////////////////// PLAYERS
-  section.section-reviews
-    .reviews
+  section.section-players
+    .players
       //- Loops through all guides creating an img with name and label for each.
       each player in team.players
         //////////////////////////////////// PLAYER CARD
-        .reviews__card
-          ///////////////////// NAME
-          h6.reviews__user= player.full_name 
-          ///////////////////// HEIGHT
-          p.reviews__label Height
-          p.reviews__text= player.height
-          ///////////////////// WEIGHT
-          p.reviews__label Weight
-          p.reviews__text= player.weight
-          ///////////////////// BIRTH PLACE
-          //- DOES=> Splits birth_place string by the commas, returning an array with the city, state and country ISO code.
-          - const place = player.birth_place.split(",")
-          - const birth_city = place[0]
-          - const birth_state = place[1].trim()
+        .players__card
+          //////////////////////// ADDITIONAL
+          - const alias = team.alias.toLowerCase()
+          .additional(class=`additional__color--${alias}`)
+            //////////// PLAYER HEADER
+            .players__header
+              .players__header-info
+                h6.players__name= player.first_name
+                h6.players__name= `${player.last_name} ${player.name_suffix ?  player.name_suffix : ''}`
+                p.players__number= player.jersey_number
+                p.players__position= player.primary_position
+            //////////// PLAYER HISTORY
+            .players__history
+              .players__history-school
+                p.players__label High School 
+                p.players__text= player.high_school ?  player.high_school : 'N/A'
+              .players__history-college
+                p.players__label College  
+                p.players__text= player.college ?  player.college : 'N/A'
+              .players__history-draft-year
+                p.players__label Draft Year  
+                p.players__text= player.draft.year 
+              .players__history-draft-round
+                p.players__label Draft Round  
+                p.players__text= player.draft.round ?  player.draft.round : 'N/A'
+              .players__history-draft-pick
+                p.players__label Draft Pick
+                p.players__text= player.draft.pick ?  player.draft.pick : 'N/A'
+              .players__history-draft-team
+                - let {name: teamName, market: teamMarket} = player.draft.team_id
+                p.players__label Draft Team  
+                p.players__text= `${teamMarket} ${teamName}`
 
-          //- DOES=> Removes whitespace from the string, leaving only the country ISO code.
-          - const birth_country = place[2].trim()
-          //- DOES=> Converts the county ISO code into the country name.
-          - const country_name = new Intl.DisplayNames(['en'], {type: 'region'}).of(birth_country)
-          p.reviews__label Birth Place
-          //- DOES=> If there is a birth_state (it is not blank) then displays it separating it with a comma from the birth_city.
-          p.reviews__text= `${birth_city}  ${birth_state ? `, ${birth_state}` : ''}`
-          ///////////////////// COUNTRY
-          p.reviews__label Country
-          p.reviews__text= `${country_name}`
-          ///////////////////// BIRTH DATE
-          //- does=> Converts the birthdate string into a Date instance and then returns a string with a language sensitive representation of that date.
-          - const date = new Date(player.birthdate).toLocaleString("en-gb", {day: "numeric", month: "long", year: "numeric"})
-          p.reviews__label Birth Date 
-          p.reviews__text= date 
+          //////////////////////// PLAYERS PROFILE
+          .players__profile
+            .players__profile-height-weight 
+              ////////// HEIGHT
+              //- DOES=> Converts player's height from inches to foot, taking only one decimal.
+              - const height = (player.height * 0.0833).toFixed(1)
+              p.players__label Height
+              p.players__text= `${height} ft`
+
+            .players__profile-height-weight 
+              ////////// WEIGHT
+              p.players__label Weight
+              p.players__text=`${player.weight} lbs`
+
+            .players__profile-birthplace
+              ////////// BIRTH PLACE
+              //- DOES=> Splits birth_place string by the commas, returning an array with the city, state and country ISO code.
+              - const place = player.birth_place.split(",")
+              - const birth_city = place[0]
+              - const birth_state = place[1].trim()
+
+              //- DOES=> Removes whitespace from the string, leaving only the country ISO code.
+              - const birth_country = place[2].trim()
+              //- DOES=> Converts the county ISO code into the country name.
+              - const country_name = new Intl.DisplayNames(['en'], {type: 'region'}).of(birth_country)
+              p.players__label Birth Place
+              //- DOES=> If there is a birth_state (it is not blank) then displays it separating it with a comma from the birth_city.
+              p.players__text= `${birth_city}  ${birth_state ? `, ${birth_state}` : ''}`
+            
+            .players__profile-country
+              ////////// COUNTRY
+              p.players__label Country
+              p.players__text= `${country_name}`
+
+            .players__profile-birthdate  
+              ////////// BIRTH DATE
+              //- DOES=> Converts the birthdate string into a Date instance and then returns a string with a language sensitive representation of that date.
+              - const date = new Date(player.birthdate).toLocaleString("en-gb", {day: "numeric", month: "long", year: "numeric"})
+              p.players__label Birth Date 
+              p.players__text= date

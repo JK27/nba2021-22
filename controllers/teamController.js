@@ -7,9 +7,5 @@ const factory = require("./handlerFactory");
 exports.getAllTeams = factory.getAll(Team)
 
 /////////////////////////////////////// GET TEAM BY ID
-exports.getTeamById = factory.getOne(Team, {
-	// DOES => Populates the field players with the player's info selected, based on the player's ObjectId.
-	path: "players",
-	select: "full_name primary_position jersey_number -_id"
-})
+exports.getTeamById = factory.getOne(Team)
 

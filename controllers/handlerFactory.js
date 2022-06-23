@@ -37,6 +37,11 @@ exports.getOne = (Model, populateOptions) => catchAsync(async (req, res, next) =
     return next(new AppError("No document found with that ID", 404));
   }
 
+  if (Model == Team) {
+    const el = document.createElement('div')
+    el.className = 'marker';
+  }
+
   res.status(200).json({
     status: "success",
     data: {

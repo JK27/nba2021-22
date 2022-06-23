@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 const teamSchema = new mongoose.Schema({
+	id: {
+		type: String,
+	},
 	name: {
 		type: String,
 		required: [true, "A team must have a name."],
@@ -82,6 +85,8 @@ const teamSchema = new mongoose.Schema({
 		type: Number,
 	}
 });
+
+
 
 /////////////////////////////////////////////////////////// INDEXES
 teamSchema.index({founded: 1})

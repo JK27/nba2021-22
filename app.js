@@ -3,6 +3,7 @@ const express = require("express");
 const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
 const helmet = require("helmet")
+const cors = require("cors");
 
 const AppError = require("./utils/appError")
 const golbalErrorHandler = require("./controllers/errorController")
@@ -19,13 +20,16 @@ app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"))
 
 /////////////////////////////////////////////////////////// GLOBAL MIDDLEWARES
+//////////////////////////////////////////// IMPLEMENT CORS
+app.use(cors());
 //////////////////////////////////////////// STATIC FILES
-// DOES => SErves static files from the specified path.
+// DOES => Serves static files from the specified path.
 app.use(express.static(path.join(__dirname, "public")));
 //////////////////////////////////////////// HELMET
 // DOES => Sets security HTTP headers.
 app.use(helmet({
 	contentSecurityPolicy: {
+		useDefaults: false,
 		directives: {
 			defaultSrc: ["'self'", "data:", "blob:", "https:", "ws:"],
 			baseUri: ["'self'"],
@@ -37,6 +41,7 @@ app.use(helmet({
 				"blob:",
 				"https://*.mapbox.com",
 				"https://*.cloudflare.com",
+				"https://cdn.jsdelivr.net/npm/chart.js",
 			],
 			frameSrc: ["'self'"],
 			objectSrc: ["'none'"],

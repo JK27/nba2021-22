@@ -1,34 +1,4 @@
 /* -------------------------------------------------------- VARIABLES */
-/* -------------------------------- HAWKS */
-/* -------------------------------- CELTICS */
-/* -------------------------------- NETS */
-/* -------------------------------- HORNETS */
-/* -------------------------------- BULLS */
-/* -------------------------------- CAVS */
-/* -------------------------------- MAVS */
-/* -------------------------------- NUGGETS */
-/* -------------------------------- PISTONS */
-/* -------------------------------- WARRIORS */
-/* -------------------------------- ROCKETS */
-/* -------------------------------- PACERS */
-/* -------------------------------- CLIPPERS */
-/* -------------------------------- LAKERS */
-/* -------------------------------- GRIZZLIES */
-/* -------------------------------- HEAT */
-/* -------------------------------- BUCKS */
-/* -------------------------------- WOLVES */
-/* -------------------------------- PELICANS */
-/* -------------------------------- KNICKS */
-/* -------------------------------- THUNDER */
-/* -------------------------------- MAGIC */
-/* -------------------------------- 76ERS */
-/* -------------------------------- SUNS */
-/* -------------------------------- BLAZERS */
-/* -------------------------------- SPURS */
-/* -------------------------------- KINGS */
-/* -------------------------------- RAPTORS */
-/* -------------------------------- JAZZ */
-/* -------------------------------- WIZARDS */
 :root {
   --section-rotate: 9vw; }
 
@@ -627,126 +597,14 @@ body {
   overflow: hidden;
   z-index: 2; }
 
-/* ---------------- ADDITIONAL TEAM COLOR  */
-.additional__color--atl {
-  background-color: #c8102e;
-  color: #fdb927; }
+.additional__color--hawks {
+  background-color: #d61111; }
 
-.additional__color--bos {
-  background-color: #008348;
-  color: #ffffff; }
+.additional__color--celtics {
+  background-color: #4fd611; }
 
-.additional__color--bkn {
-  background-color: #000000;
-  color: #ffffff; }
-
-.additional__color--cha {
-  background-color: #00788c;
-  color: #1d1160; }
-
-.additional__color--chi {
-  background-color: #ce1141;
-  color: #000000; }
-
-.additional__color--cle {
-  background-color: #860038;
-  color: #bc945c; }
-
-.additional__color--dal {
-  background-color: #0064b1;
-  color: #00285e; }
-
-.additional__color--den {
-  background-color: #0e2240;
-  color: #fec524; }
-
-.additional__color--det {
-  background-color: #1d428a;
-  color: #c8102e; }
-
-.additional__color--gsw {
-  background-color: #1d428a;
-  color: #fdb927; }
-
-.additional__color--hou {
-  background-color: #ce1141;
-  color: #ffffff; }
-
-.additional__color--ind {
-  background-color: #fdbb30;
-  color: #002d62; }
-
-.additional__color--lac {
-  background-color: #ffffff;
-  color: #1d428a; }
-
-.additional__color--lal {
-  background-color: #552583;
-  color: #fdb927; }
-
-.additional__color--mem {
-  background-color: #7d9bc1;
-  color: #0c2340; }
-
-.additional__color--mia {
-  background-color: #000000;
-  color: #98002e; }
-
-.additional__color--mil {
-  background-color: #00471b;
-  color: #eee1c6; }
-
-.additional__color--min {
-  background-color: #0c2340;
-  color: #78be20; }
-
-.additional__color--nop {
-  background-color: #0a2240;
-  color: #8c734b; }
-
-.additional__color--nyk {
-  background-color: #006bb6;
-  color: #f58426; }
-
-.additional__color--okc {
-  background-color: #007ac1;
-  color: #ef3b24; }
-
-.additional__color--orl {
-  background-color: #0077c0;
-  color: #c4ced4; }
-
-.additional__color--phi {
-  background-color: #006bb6;
-  color: #ffffff; }
-
-.additional__color--phx {
-  background-color: #1d1160;
-  color: #e56020; }
-
-.additional__color--por {
-  background-color: #e03a3e;
-  color: #000000; }
-
-.additional__color--sas {
-  background-color: #c4ced4;
-  color: #000000; }
-
-.additional__color--sac {
-  background-color: #5a2d81;
-  color: #63727a; }
-
-.additional__color--tor {
-  background-color: #ce1141;
-  color: #000000; }
-
-.additional__color--uta {
-  background-color: #002b5c;
-  color: #f9a01b; }
-
-.additional__color--was {
-  background-color: #ffffff;
-  color: #002b5c; }
+.additional__color--bulls {
+  background-color: #161b13; }
 
 .additional:hover {
   width: 100%;
@@ -775,6 +633,7 @@ body {
 
 /* ---------------- PLAYERS NAME */
 .players__name {
+  color: #d60b0b;
   top: 15%;
   font-size: 1.5rem;
   font-weight: 700;
@@ -785,12 +644,14 @@ body {
 /* ---------------- PLAYERS NUMBER */
 .players__number {
   font-family: "Stardos Stencil", cursive;
+  color: #e7f709;
   font-size: 7.5rem;
   top: 50%; }
 
 /* ---------------- PLAYERS POSITION */
 .players__position {
   /* top: 85%; */
+  color: #fff;
   font-size: 1.75em;
   font-weight: bold;
   padding: 0.125rem 0.75rem;
@@ -817,6 +678,7 @@ body {
   float: left;
   left: 150px;
   padding: 1rem;
+  color: #fff;
   display: grid;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: repeat(3, 1fr);

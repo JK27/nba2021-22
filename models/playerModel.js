@@ -6,8 +6,8 @@ const playerSchema = mongoose.Schema({
   first_name: String,
   last_name: String,
   abbr_name: String,
-  height: Number,
-  weight: Number,
+  height: Number, // Inches
+  weight: Number, // Pounds
   position: String,
   primary_position: String,
   jersey_number: String,
@@ -16,9 +16,13 @@ const playerSchema = mongoose.Schema({
   high_school: String,
   birth_place: String,
   birthdate: String,
+  name_suffix: String,
   rookie_year: Number,
   draft: {
-    team_id: String,
+    team_id: {
+      type: mongoose.Schema.ObjectId,
+      ref: "Team",
+    },
     year: Number,
     round: String,
     pick: String,
@@ -27,6 +31,16 @@ const playerSchema = mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "Team"
   },
+});
+
+//////////////////////////////////////////// POPULATE MIDDLEWARE
+playerSchema.pre(/^find/, function (next) {
+  this.populate({
+    path: "draft.team_id",
+    select: "market name -_id",
+  });
+
+  next();
 });
 
 /////////////////////////////////////////////////////////// INDEXES
