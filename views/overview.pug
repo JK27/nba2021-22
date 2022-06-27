@@ -12,36 +12,8 @@ block content
           //////////////////////// CARD HEADER
           .card__header
             .card__picture
-              //- .card__picture-overlay &nbsp;
               img.card__picture-img(src=`/img/logos/${team.logo}`, alt=`${team.market} ${team.name}`)
-            //- h3.heading-tertirary
-            //-   span= `${team.market} ${team.name}`
-          //- //////////////////////// CARD DETAILS
-          //- .card__details
-          //-   /////// team SUMMARY
-          //-   h4.card__sub-heading= `${team.difficulty} ${team.duration}-day team`
-          //-   p.card__text= team.summary
-          //-   /////// team START LOCATION
-          //-   .card__data
-          //-     svg.card__icon
-          //-       use(xlink:href='/img/icons.svg#icon-map-pin')
-          //-     span= team.startLocation.description
-          //-   /////// team START DATES
-          //-   .card__data
-          //-     svg.card__icon
-          //-       use(xlink:href='/img/icons.svg#icon-calendar')
-          //-     span= team.startDates[0].toLocaleString('en-us', {month: 'long', year: 'numeric'})
-          //-   /////// team LOCATIONS
-          //-   .card__data
-          //-     svg.card__icon
-          //-       use(xlink:href='/img/icons.svg#icon-flag')
-          //-     span= `${team.locations.length} stops`
-          //-   /////// team GROUP SIZE
-          //-   .card__data
-          //-     svg.card__icon
-          //-       use(xlink:href='/img/icons.svg#icon-user')
-          //-     span= `${team.maxGroupSize} people`
+
           /////////////////////// CARD FOOTER
           .card__footer
             span.card__footer-text= `${team.market} ${team.name}`
-            //- a.btn.btn--green.btn--small(href=`/team/${team.slug}`) Details

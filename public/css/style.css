@@ -33,11 +33,11 @@
   --section-rotate: 9vw; }
 
 ::-moz-selection {
-  background-color: #55c57a;
+  background-color: #c8102e;
   color: #fff; }
 
 ::selection {
-  background-color: #55c57a;
+  background-color: #c8102e;
   color: #fff; }
 
 *,
@@ -71,71 +71,111 @@ body {
   flex-direction: column; }
 
 /* ---------------------------------------------- HEADINGS */
-/* ------------------------------- HEADING SECONDARY */
-.heading-secondary {
+/* ------------------------------- HEADING SECTION */
+.heading-section {
   font-size: 2.25rem;
   text-transform: uppercase;
   font-weight: 700;
-  background: linear-gradient(135deg, rgba(0, 66, 138, 0.85) 49%, rgba(247, 250, 254, 0.85) 51%, rgba(200, 16, 46, 0.85) 100%);
-  /* opacity: 0.7; */
   -webkit-background-clip: text;
-  color: transparent;
   letter-spacing: 0.1rem;
   line-height: 1.3;
   display: inline-block;
   margin: 3rem 0; }
 
-.heading-secondary--error {
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff7730), to(#eb4d4b));
-  background-image: linear-gradient(to right, #ff7730, #eb4d4b);
-  font-size: 3.5rem; }
+/* ---------------- ADDITIONAL TEAM COLOR  */
+.heading__color--atl {
+  color: #e03a3e; }
 
-/* ------------------------------- HEADING PRIMARY & TERTIARY */
-.heading-primary,
-.heading-tertirary {
-  color: #141414;
-  text-transform: uppercase;
-  font-weight: 700; }
+.heading__color--bos {
+  color: #008248; }
 
-.heading-primary span,
-.heading-tertirary span {
-  padding: 1rem 1.5rem;
-  line-height: 1;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  /* background: linear-gradient(
-		135deg,
-		rgba(0, 66, 138, 0.85) 49%,
-		rgba(247, 250, 254, 0.85) 51%,
-		rgba(200, 16, 46, 0.85) 100%
-	);
-	opacity: 0.7; */
-  /* background-image: linear-gradient(
-		to bottom right,
-		rgba(125, 213, 111, 0.85),
-		rgba(40, 180, 135, 0.85)
-	); */ }
+.heading__color--bkn {
+  color: #000000; }
 
-/* ------------------------------- HEADING PRIMARY */
-.heading-primary {
-  font-size: 5rem;
-  text-align: center;
-  width: 70%;
-  margin: 0 auto; }
+.heading__color--cha {
+  color: #00788c; }
 
-/* ------------------------------- HEADING TERTIARY */
-.heading-tertirary {
-  font-size: 1.25rem;
-  text-align: center;
-  position: absolute;
-  bottom: 1rem;
-  right: 4rem;
-  width: 70%;
-  z-index: 10; }
+.heading__color--chi {
+  color: #000000; }
+
+.heading__color--cle {
+  color: #860038; }
+
+.heading__color--dal {
+  color: #0064b1; }
+
+.heading__color--den {
+  color: #0e2240; }
+
+.heading__color--det {
+  color: #1d428a; }
+
+.heading__color--gsw {
+  color: #1d428a; }
+
+.heading__color--hou {
+  color: #ce1141; }
+
+.heading__color--ind {
+  color: #fdbb30; }
+
+.heading__color--lac {
+  color: #1d428a; }
+
+.heading__color--lal {
+  color: #552583; }
+
+.heading__color--mem {
+  color: #7d9bc1; }
+
+.heading__color--mia {
+  color: #000000; }
+
+.heading__color--mil {
+  color: #00471b; }
+
+.heading__color--min {
+  color: #0c2340; }
+
+.heading__color--nop {
+  color: #0a2240; }
+
+.heading__color--nyk {
+  color: #006bb6; }
+
+.heading__color--okc {
+  color: #007ac1; }
+
+.heading__color--orl {
+  color: #0077c0; }
+
+.heading__color--phi {
+  color: #006bb6; }
+
+.heading__color--phx {
+  color: #1d1160; }
+
+.heading__color--por {
+  color: #e03a3e; }
+
+.heading__color--sas {
+  color: #c4ced4; }
+
+.heading__color--sac {
+  color: #5a2d81; }
+
+.heading__color--tor {
+  color: #ce1141; }
+
+.heading__color--uta {
+  color: #0d2240; }
+
+.heading__color--was {
+  color: #ffffff; }
 
 /* ---------------------------------------------- HEADER */
 .header {
-  background: linear-gradient(135deg, rgba(0, 66, 138, 0.85) 49%, rgba(247, 250, 254, 0.85) 51%, rgba(200, 16, 46, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(0, 66, 139, 0.85) 49%, rgba(255, 255, 255, 0.85) 51%, rgba(217, 26, 50, 0.85) 100%);
   padding: 0 5rem;
   height: 8rem;
   position: relative;
@@ -184,18 +224,18 @@ body {
     -ms-flex-direction: column;
     flex-direction: column; } }
 
-/* ------------------------------- NAV TOURS */
-.nav--tours {
+/* ------------------------------- NAV TEAMS */
+.nav--teams {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 40%;
   flex: 0 1 40%; }
 
 @media only screen and (max-width: 62.5em) {
-  .nav--tours {
+  .nav--teams {
     margin-bottom: 1.5rem; } }
 
 @media only screen and (max-width: 37.5em) {
-  .nav--tours {
+  .nav--teams {
     margin-bottom: 0; } }
 
 /* ------------------------------- NAV EL */
@@ -247,27 +287,10 @@ body {
   position: relative; }
 
 /* ---------------------------------------------- FLEX */
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.span-all-rows {
-  grid-row: 1 / -1; }
-
 /* ---------------------------------------------- CONTAINER */
 .container {
   max-width: 120rem;
   margin: 0 auto; }
-
-.ma-bt-md {
-  margin-bottom: 3rem !important; }
-
-.ma-bt-lg {
-  margin-bottom: 3.5rem !important; }
-
-.right {
-  text-align: right !important; }
 
 /* ---------------------------------------------- CARD CONTAINER */
 .card-container {
@@ -304,25 +327,8 @@ body {
 /* ---------------- CARD PICTURE */
 .card__picture {
   position: relative;
-  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 71%, 0 86%);
-	clip-path: polygon(0 0, 100% 0, 100% 71%, 0 86%); */
   height: 22rem; }
 
-/* - CARD PICTURE OVERLAY */
-/* .card__picture-overlay {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-image: -webkit-gradient(
-		linear,
-		left top,
-		right bottom,
-		from(#7dd56f),
-		to(#28b487)
-	);
-	background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
-	opacity: 0.7;
-} */
 /* - CARD PICTURE IMG */
 .card__picture-img {
   -o-object-fit: contain;
@@ -334,48 +340,6 @@ body {
   height: 70%;
   width: 70%; }
 
-/* -------------- CARD DETAILS */
-.card__details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-row-gap: 1.75rem;
-  grid-column-gap: 2rem;
-  padding: 2.5rem 3rem; }
-
-/* -------------- CARD SUB-HEADING */
-.card__sub-heading {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  grid-column: 1 / -1; }
-
-/* -------------- CARD TEXT */
-.card__text {
-  grid-column: 1 / -1;
-  font-size: 1.5rem;
-  font-style: italic;
-  margin-top: -1rem;
-  margin-bottom: 0.75rem; }
-
-/* -------------- CARD DATA */
-.card__data {
-  font-size: 1.3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.card__data svg {
-  margin-right: 0.7rem; }
-
-/* -------------- CARD ICON */
-.card__icon {
-  height: 2rem;
-  width: 2rem;
-  fill: #55c57a; }
-
 /* -------------- CARD FOOTER */
 .card__footer {
   background: linear-gradient(135deg, rgba(0, 66, 138, 0.85) 49%, rgba(247, 250, 254, 0.85) 51%, rgba(200, 16, 46, 0.85) 100%);
@@ -383,48 +347,16 @@ body {
   padding: 1.5rem 3rem;
   border-top: 1px solid #f1f1f1;
   font-size: 1.75rem;
-  text-align: center;
-  /* display: grid;
-	grid-template-columns: auto 1fr;
-	grid-column-gap: 1rem;
-	grid-row-gap: 1rem;
-	margin-top: auto; */ }
+  text-align: center; }
 
-/* .card__footer-value {
-	font-weight: 800;
-} */
 .card__footer-text {
   color: black;
   font-weight: 800; }
 
-/* -------------- CARD RATINGS */
-/* .card__ratings {
-	grid-row: 2 / 3;
-} */
-/* -------------- CARD BTN */
-/* .card .btn-small,
-.card .btn {
-	grid-row: 1 / 3;
-	justify-self: end;
-	-ms-flex-item-align: center;
-	align-self: center;
-} */
 /* ---------------------------------------------- SECTION HEADER */
 .section-header {
   position: relative;
   height: 45vw;
-  /* clip-path: polygon(
-		0 0,
-		100% 0,
-		100% calc(100% - var(--section-rotate)),
-		0 100%
-	);
-	-webkit-clip-path: polygon(
-		0 0,
-		100% 0,
-		100% calc(100% - var(--section-rotate)),
-		0 100%
-	); */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -444,9 +376,7 @@ body {
   -o-object-fit: contain;
   object-fit: contain;
   height: 100%;
-  width: 100%;
-  /* -o-object-position: 50% 25%;
-	object-position: 50% 25%; */ }
+  width: 100%; }
 
 /* ---------------------------------------------- SECTION DESCRIPTION */
 .section-description {
@@ -474,9 +404,8 @@ body {
 .description-box .description__text:not(:last-child) {
   margin-bottom: 2rem; }
 
-/* ------------------------------- OVERVIEW BOX */
-.overview-box {
-  background-color: #f1f7fd;
+/* ------------------------------- SECTION BOX */
+.section-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,11 +413,99 @@ body {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.overview-box__group:not(:last-child) {
-  margin-bottom: 7rem; }
+/* ---------------- ADDITIONAL TEAM COLOR  */
+.section__bg-color--atl {
+  background-color: rgba(224, 58, 62, 0.1); }
 
-/* ---------------- OVERVIEW BOX DETAIL */
-.overview-box__detail {
+.section__bg-color--bos {
+  background-color: rgba(0, 130, 72, 0.1); }
+
+.section__bg-color--bkn {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.section__bg-color--cha {
+  background-color: rgba(0, 120, 140, 0.1); }
+
+.section__bg-color--chi {
+  background-color: rgba(206, 17, 65, 0.1); }
+
+.section__bg-color--cle {
+  background-color: rgba(134, 0, 56, 0.1); }
+
+.section__bg-color--dal {
+  background-color: rgba(0, 100, 177, 0.1); }
+
+.section__bg-color--den {
+  background-color: rgba(14, 34, 64, 0.1); }
+
+.section__bg-color--det {
+  background-color: rgba(29, 66, 138, 0.1); }
+
+.section__bg-color--gsw {
+  background-color: rgba(29, 66, 138, 0.1); }
+
+.section__bg-color--hou {
+  background-color: rgba(206, 17, 65, 0.1); }
+
+.section__bg-color--ind {
+  background-color: rgba(253, 187, 48, 0.1); }
+
+.section__bg-color--lac {
+  background-color: rgba(29, 66, 138, 0.1); }
+
+.section__bg-color--lal {
+  background-color: rgba(85, 37, 131, 0.1); }
+
+.section__bg-color--mem {
+  background-color: rgba(125, 155, 193, 0.1); }
+
+.section__bg-color--mia {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.section__bg-color--mil {
+  background-color: rgba(0, 71, 27, 0.1); }
+
+.section__bg-color--min {
+  background-color: rgba(12, 35, 64, 0.1); }
+
+.section__bg-color--nop {
+  background-color: rgba(10, 34, 64, 0.1); }
+
+.section__bg-color--nyk {
+  background-color: rgba(0, 107, 182, 0.1); }
+
+.section__bg-color--okc {
+  background-color: rgba(0, 122, 193, 0.1); }
+
+.section__bg-color--orl {
+  background-color: rgba(0, 119, 192, 0.1); }
+
+.section__bg-color--phi {
+  background-color: rgba(0, 107, 182, 0.1); }
+
+.section__bg-color--phx {
+  background-color: rgba(29, 17, 96, 0.1); }
+
+.section__bg-color--por {
+  background-color: rgba(224, 58, 62, 0.1); }
+
+.section__bg-color--sas {
+  background-color: rgba(196, 206, 212, 0.1); }
+
+.section__bg-color--sac {
+  background-color: rgba(90, 45, 129, 0.1); }
+
+.section__bg-color--tor {
+  background-color: rgba(206, 17, 65, 0.1); }
+
+.section__bg-color--uta {
+  background-color: rgba(13, 34, 64, 0.1); }
+
+.section__bg-color--was {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+/* ---------------- SECTION BOX DETAIL */
+.section-box__detail {
   font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -499,29 +516,29 @@ body {
   font-weight: 400;
   margin-bottom: 2.25rem; }
 
-.overview-box__detail svg {
+.section-box__detail svg {
   margin-right: 1.25rem; }
 
-/* ---------------- OVERVIEW BOX ICON */
-.overview-box__icon {
+/* ---------------- SECTION BOX ICON */
+.section-box__icon {
   height: 2.25rem;
   width: 2.25rem;
   fill: #55c57a; }
 
-/* ---------------- OVERVIEW BOX LABEL */
-.overview-box__label {
+/* ---------------- SECTION BOX LABEL */
+.section-box__label {
   font-weight: 700;
   margin-right: 2.25rem;
   text-transform: uppercase;
   font-size: 1.4rem; }
 
-/* ---------------- OVERVIEW BOX TEXT */
-.overview-box__text {
+/* ---------------- SECTION BOX TEXT */
+.section-box__text {
   margin-right: 2.25rem;
   text-transform: capitalize; }
 
-/* ---------------- OVERVIEW BOX IMG */
-.overview-box__img {
+/* ---------------- SECTION BOX IMG */
+.section-box__img {
   border-radius: 50%;
   height: 3.5rem;
   margin-right: 1.25rem; }
@@ -533,15 +550,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   flex-direction: row-reverse;
-  /* height: 35rem; */
   margin-top: calc(0px - var(--section-rotate));
   -ms-flex: 0 0 50%;
   flex: 0 0 70%; }
 
 .section-map > * {
   padding: 1rem 8rem;
-  /* padding-top: 14vw; */
-  /* padding-bottom: calc(1vw + var(--section-rotate)); */
   -webkit-box-flex: 0;
   -ms-flex: 0 0 50%;
   flex: 0 0 50%; }
@@ -562,19 +576,7 @@ body {
   height: 45px;
   cursor: pointer; }
 
-/* ------------------------------- MAP BOX */
-.mapboxgl-popup {
-  max-width: 25rem; }
-
-.mapboxgl-popup-content {
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  padding: 1.5rem !important;
-  font-size: 1.4rem;
-  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important; }
-
-/* ------------------------------- players */
+/* ------------------------------- PLAYERS */
 .players {
   padding: 5rem 0;
   display: grid;
@@ -629,16 +631,16 @@ body {
 
 /* ---------------- ADDITIONAL TEAM COLOR  */
 .additional__color--atl {
-  background-color: #c8102e;
+  background-color: #e03a3e;
   color: #fdb927; }
 
 .additional__color--bos {
-  background-color: #008348;
+  background-color: #008248;
   color: #ffffff; }
 
 .additional__color--bkn {
   background-color: #000000;
-  color: #ffffff; }
+  color: #707271; }
 
 .additional__color--cha {
   background-color: #00788c;
@@ -677,12 +679,12 @@ body {
   color: #002d62; }
 
 .additional__color--lac {
-  background-color: #ffffff;
-  color: #1d428a; }
+  background-color: #1d428a;
+  color: #ffffff; }
 
 .additional__color--lal {
   background-color: #552583;
-  color: #fdb927; }
+  color: #ffffff; }
 
 .additional__color--mem {
   background-color: #7d9bc1;
@@ -698,7 +700,7 @@ body {
 
 .additional__color--min {
   background-color: #0c2340;
-  color: #78be20; }
+  color: #236192; }
 
 .additional__color--nop {
   background-color: #0a2240;
@@ -722,7 +724,7 @@ body {
 
 .additional__color--phx {
   background-color: #1d1160;
-  color: #e56020; }
+  color: #63727a; }
 
 .additional__color--por {
   background-color: #e03a3e;
@@ -741,12 +743,12 @@ body {
   color: #000000; }
 
 .additional__color--uta {
-  background-color: #002b5c;
-  color: #f9a01b; }
+  background-color: #0d2240;
+  color: #ffa400; }
 
 .additional__color--was {
   background-color: #ffffff;
-  color: #002b5c; }
+  color: #0d2240; }
 
 .additional:hover {
   width: 100%;
@@ -790,7 +792,6 @@ body {
 
 /* ---------------- PLAYERS POSITION */
 .players__position {
-  /* top: 85%; */
   font-size: 1.75em;
   font-weight: bold;
   padding: 0.125rem 0.75rem;
