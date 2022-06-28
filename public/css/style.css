@@ -82,7 +82,7 @@ body {
   display: inline-block;
   margin: 3rem 0; }
 
-/* ---------------- ADDITIONAL TEAM COLOR  */
+/* ---------------- HEADING TEAM COLOR  */
 .heading__color--atl {
   color: #e03a3e; }
 
@@ -99,7 +99,7 @@ body {
   color: #000000; }
 
 .heading__color--cle {
-  color: #860038; }
+  color: #1e263d; }
 
 .heading__color--dal {
   color: #0064b1; }
@@ -108,7 +108,7 @@ body {
   color: #0e2240; }
 
 .heading__color--det {
-  color: #1d428a; }
+  color: #c8102e; }
 
 .heading__color--gsw {
   color: #1d428a; }
@@ -117,7 +117,7 @@ body {
   color: #ce1141; }
 
 .heading__color--ind {
-  color: #fdbb30; }
+  color: #002d62; }
 
 .heading__color--lac {
   color: #1d428a; }
@@ -126,7 +126,7 @@ body {
   color: #552583; }
 
 .heading__color--mem {
-  color: #7d9bc1; }
+  color: #0c2340; }
 
 .heading__color--mia {
   color: #000000; }
@@ -138,7 +138,7 @@ body {
   color: #0c2340; }
 
 .heading__color--nop {
-  color: #0a2240; }
+  color: #ce0e2d; }
 
 .heading__color--nyk {
   color: #006bb6; }
@@ -147,10 +147,10 @@ body {
   color: #007ac1; }
 
 .heading__color--orl {
-  color: #0077c0; }
+  color: #000000; }
 
 .heading__color--phi {
-  color: #006bb6; }
+  color: #ed174c; }
 
 .heading__color--phx {
   color: #1d1160; }
@@ -159,18 +159,291 @@ body {
   color: #e03a3e; }
 
 .heading__color--sas {
-  color: #c4ced4; }
+  color: #000000; }
 
 .heading__color--sac {
   color: #5a2d81; }
 
 .heading__color--tor {
-  color: #ce1141; }
+  color: #000000; }
 
 .heading__color--uta {
   color: #0d2240; }
 
 .heading__color--was {
+  color: #cf0a2c; }
+
+/* ---------------- LABEL TEAM COLOR  */
+.label__color--atl {
+  color: #fdb927; }
+
+.label__color--bos {
+  color: #ba9653; }
+
+.label__color--bkn {
+  color: #707271; }
+
+.label__color--cha {
+  color: #1d1160; }
+
+.label__color--chi {
+  color: #ce1141; }
+
+.label__color--cle {
+  color: #bc945c; }
+
+.label__color--dal {
+  color: #00285e; }
+
+.label__color--den {
+  color: #fec524; }
+
+.label__color--det {
+  color: #1d428a; }
+
+.label__color--gsw {
+  color: #fdb927; }
+
+.label__color--hou {
+  color: #000000; }
+
+.label__color--ind {
+  color: #fdbb30; }
+
+.label__color--lac {
+  color: #c8102e; }
+
+.label__color--lal {
+  color: #fdb927; }
+
+.label__color--mem {
+  color: #7d9bc1; }
+
+.label__color--mia {
+  color: #98002e; }
+
+.label__color--mil {
+  color: #000000; }
+
+.label__color--min {
+  color: #236192; }
+
+.label__color--nop {
+  color: #8c734b; }
+
+.label__color--nyk {
+  color: #f58426; }
+
+.label__color--okc {
+  color: #f05133; }
+
+.label__color--orl {
+  color: #0077c0; }
+
+.label__color--phi {
+  color: #006bb6; }
+
+.label__color--phx {
+  color: #e56020; }
+
+.label__color--por {
+  color: #000000; }
+
+.label__color--sas {
+  color: #000000; }
+
+.label__color--sac {
+  color: #63727a; }
+
+.label__color--tor {
+  color: #ce1141; }
+
+.label__color--uta {
+  color: #ffa400; }
+
+.label__color--was {
+  color: #0d2240; }
+
+/* ---------------- ADDITIONAL LABEL TEAM COLOR  */
+.additional__label-color--atl {
+  color: #fdb927; }
+
+.additional__label-color--bos {
+  color: #ba9653; }
+
+.additional__label-color--bkn {
+  color: #707271; }
+
+.additional__label-color--cha {
+  color: #1d1160; }
+
+.additional__label-color--chi {
+  color: #000000; }
+
+.additional__label-color--cle {
+  color: #bc945c; }
+
+.additional__label-color--dal {
+  color: #00285e; }
+
+.additional__label-color--den {
+  color: #fec524; }
+
+.additional__label-color--det {
+  color: #c8102e; }
+
+.additional__label-color--gsw {
+  color: #fdb927; }
+
+.additional__label-color--hou {
+  color: #000000; }
+
+.additional__label-color--ind {
+  color: #002d62; }
+
+.additional__label-color--lac {
+  color: #c8102e; }
+
+.additional__label-color--lal {
+  color: #fdb927; }
+
+.additional__label-color--mem {
+  color: #0c2340; }
+
+.additional__label-color--mia {
+  color: #98002e; }
+
+.additional__label-color--mil {
+  color: #000000; }
+
+.additional__label-color--min {
+  color: #236192; }
+
+.additional__label-color--nop {
+  color: #ce0e2d; }
+
+.additional__label-color--nyk {
+  color: #f58426; }
+
+.additional__label-color--okc {
+  color: #f05133; }
+
+.additional__label-color--orl {
+  color: #000000; }
+
+.additional__label-color--phi {
+  color: #ffffff; }
+
+.additional__label-color--phx {
+  color: #e56020; }
+
+.additional__label-color--por {
+  color: #000000; }
+
+.additional__label-color--sas {
+  color: #c4ced4; }
+
+.additional__label-color--sac {
+  color: #63727a; }
+
+.additional__label-color--tor {
+  color: #000000; }
+
+.additional__label-color--uta {
+  color: #ffa400; }
+
+.additional__label-color--was {
+  color: #cf0a2c; }
+
+/* ---------------- ADDITIONAL TEXT TEAM COLOR  */
+.additional__text-color--atl {
+  color: #ffffff; }
+
+.additional__text-color--bos {
+  color: #ffffff; }
+
+.additional__text-color--bkn {
+  color: #ffffff; }
+
+.additional__text-color--cha {
+  color: #ffffff; }
+
+.additional__text-color--chi {
+  color: #ffffff; }
+
+.additional__text-color--cle {
+  color: #bc945c; }
+
+.additional__text-color--dal {
+  color: #bbc4ca; }
+
+.additional__text-color--den {
+  color: #ffffff; }
+
+.additional__text-color--det {
+  color: #ffffff; }
+
+.additional__text-color--gsw {
+  color: #ffffff; }
+
+.additional__text-color--hou {
+  color: #ffffff; }
+
+.additional__text-color--ind {
+  color: #002d62; }
+
+.additional__text-color--lac {
+  color: #ffffff; }
+
+.additional__text-color--lal {
+  color: #ffffff; }
+
+.additional__text-color--mem {
+  color: #b8cfe9; }
+
+.additional__text-color--mia {
+  color: #ffffff; }
+
+.additional__text-color--mil {
+  color: #eee1c6; }
+
+.additional__text-color--min {
+  color: #78be20; }
+
+.additional__text-color--nop {
+  color: #8c734b; }
+
+.additional__text-color--nyk {
+  color: #bec0c2; }
+
+.additional__text-color--okc {
+  color: #ffffff; }
+
+.additional__text-color--orl {
+  color: #c4ced4; }
+
+.additional__text-color--phi {
+  color: #ffffff; }
+
+.additional__text-color--phx {
+  color: #63727a; }
+
+.additional__text-color--por {
+  color: #ffffff; }
+
+.additional__text-color--sas {
+  color: #ffffff; }
+
+.additional__text-color--sac {
+  color: #ffffff; }
+
+.additional__text-color--tor {
+  color: #ffffff; }
+
+.additional__text-color--uta {
+  color: #ffa400; }
+
+.additional__text-color--was {
   color: #ffffff; }
 
 /* ---------------------------------------------- HEADER */
@@ -413,9 +686,9 @@ body {
   -ms-flex-pack: center;
   justify-content: center; }
 
-/* ---------------- ADDITIONAL TEAM COLOR  */
+/* ---------------- SECTION BACKGROUND TEAM COLORS  */
 .section__bg-color--atl {
-  background-color: rgba(224, 58, 62, 0.1); }
+  background-color: rgba(253, 185, 39, 0.1); }
 
 .section__bg-color--bos {
   background-color: rgba(0, 130, 72, 0.1); }
@@ -427,37 +700,37 @@ body {
   background-color: rgba(0, 120, 140, 0.1); }
 
 .section__bg-color--chi {
-  background-color: rgba(206, 17, 65, 0.1); }
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .section__bg-color--cle {
-  background-color: rgba(134, 0, 56, 0.1); }
+  background-color: rgba(188, 148, 92, 0.1); }
 
 .section__bg-color--dal {
-  background-color: rgba(0, 100, 177, 0.1); }
+  background-color: rgba(0, 40, 94, 0.1); }
 
 .section__bg-color--den {
-  background-color: rgba(14, 34, 64, 0.1); }
+  background-color: rgba(254, 197, 36, 0.1); }
 
 .section__bg-color--det {
   background-color: rgba(29, 66, 138, 0.1); }
 
 .section__bg-color--gsw {
-  background-color: rgba(29, 66, 138, 0.1); }
+  background-color: rgba(253, 185, 39, 0.1); }
 
 .section__bg-color--hou {
-  background-color: rgba(206, 17, 65, 0.1); }
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .section__bg-color--ind {
-  background-color: rgba(253, 187, 48, 0.1); }
+  background-color: rgba(0, 45, 98, 0.1); }
 
 .section__bg-color--lac {
   background-color: rgba(29, 66, 138, 0.1); }
 
 .section__bg-color--lal {
-  background-color: rgba(85, 37, 131, 0.1); }
+  background-color: rgba(253, 185, 39, 0.1); }
 
 .section__bg-color--mem {
-  background-color: rgba(125, 155, 193, 0.1); }
+  background-color: rgba(12, 35, 64, 0.1); }
 
 .section__bg-color--mia {
   background-color: rgba(0, 0, 0, 0.1); }
@@ -466,31 +739,31 @@ body {
   background-color: rgba(0, 71, 27, 0.1); }
 
 .section__bg-color--min {
-  background-color: rgba(12, 35, 64, 0.1); }
+  background-color: rgba(35, 97, 146, 0.1); }
 
 .section__bg-color--nop {
-  background-color: rgba(10, 34, 64, 0.1); }
+  background-color: rgba(140, 115, 75, 0.1); }
 
 .section__bg-color--nyk {
-  background-color: rgba(0, 107, 182, 0.1); }
+  background-color: rgba(245, 132, 38, 0.1); }
 
 .section__bg-color--okc {
-  background-color: rgba(0, 122, 193, 0.1); }
+  background-color: rgba(240, 81, 51, 0.1); }
 
 .section__bg-color--orl {
-  background-color: rgba(0, 119, 192, 0.1); }
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .section__bg-color--phi {
   background-color: rgba(0, 107, 182, 0.1); }
 
 .section__bg-color--phx {
-  background-color: rgba(29, 17, 96, 0.1); }
+  background-color: rgba(229, 96, 32, 0.1); }
 
 .section__bg-color--por {
-  background-color: rgba(224, 58, 62, 0.1); }
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .section__bg-color--sas {
-  background-color: rgba(196, 206, 212, 0.1); }
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .section__bg-color--sac {
   background-color: rgba(90, 45, 129, 0.1); }
@@ -499,10 +772,10 @@ body {
   background-color: rgba(206, 17, 65, 0.1); }
 
 .section__bg-color--uta {
-  background-color: rgba(13, 34, 64, 0.1); }
+  background-color: rgba(43, 81, 52, 0.1); }
 
 .section__bg-color--was {
-  background-color: rgba(255, 255, 255, 0.1); }
+  background-color: rgba(13, 34, 64, 0.1); }
 
 /* ---------------- SECTION BOX DETAIL */
 .section-box__detail {
@@ -629,126 +902,126 @@ body {
   overflow: hidden;
   z-index: 2; }
 
-/* ---------------- ADDITIONAL TEAM COLOR  */
-.additional__color--atl {
+/* ---------------- ADDITIONAL TEAM COLORS  */
+.additional__colors--atl {
   background-color: #e03a3e;
   color: #fdb927; }
 
-.additional__color--bos {
+.additional__colors--bos {
   background-color: #008248;
   color: #ffffff; }
 
-.additional__color--bkn {
+.additional__colors--bkn {
   background-color: #000000;
   color: #707271; }
 
-.additional__color--cha {
+.additional__colors--cha {
   background-color: #00788c;
   color: #1d1160; }
 
-.additional__color--chi {
+.additional__colors--chi {
   background-color: #ce1141;
   color: #000000; }
 
-.additional__color--cle {
+.additional__colors--cle {
   background-color: #860038;
   color: #bc945c; }
 
-.additional__color--dal {
+.additional__colors--dal {
   background-color: #0064b1;
   color: #00285e; }
 
-.additional__color--den {
+.additional__colors--den {
   background-color: #0e2240;
   color: #fec524; }
 
-.additional__color--det {
+.additional__colors--det {
   background-color: #1d428a;
   color: #c8102e; }
 
-.additional__color--gsw {
+.additional__colors--gsw {
   background-color: #1d428a;
   color: #fdb927; }
 
-.additional__color--hou {
+.additional__colors--hou {
   background-color: #ce1141;
   color: #ffffff; }
 
-.additional__color--ind {
+.additional__colors--ind {
   background-color: #fdbb30;
   color: #002d62; }
 
-.additional__color--lac {
+.additional__colors--lac {
   background-color: #1d428a;
   color: #ffffff; }
 
-.additional__color--lal {
+.additional__colors--lal {
   background-color: #552583;
-  color: #ffffff; }
+  color: #fdb927; }
 
-.additional__color--mem {
+.additional__colors--mem {
   background-color: #7d9bc1;
   color: #0c2340; }
 
-.additional__color--mia {
+.additional__colors--mia {
   background-color: #000000;
   color: #98002e; }
 
-.additional__color--mil {
+.additional__colors--mil {
   background-color: #00471b;
   color: #eee1c6; }
 
-.additional__color--min {
+.additional__colors--min {
   background-color: #0c2340;
   color: #236192; }
 
-.additional__color--nop {
+.additional__colors--nop {
   background-color: #0a2240;
   color: #8c734b; }
 
-.additional__color--nyk {
+.additional__colors--nyk {
   background-color: #006bb6;
   color: #f58426; }
 
-.additional__color--okc {
+.additional__colors--okc {
   background-color: #007ac1;
-  color: #ef3b24; }
+  color: #f05133; }
 
-.additional__color--orl {
+.additional__colors--orl {
   background-color: #0077c0;
   color: #c4ced4; }
 
-.additional__color--phi {
+.additional__colors--phi {
   background-color: #006bb6;
   color: #ffffff; }
 
-.additional__color--phx {
+.additional__colors--phx {
   background-color: #1d1160;
-  color: #63727a; }
+  color: #e56020; }
 
-.additional__color--por {
+.additional__colors--por {
   background-color: #e03a3e;
   color: #000000; }
 
-.additional__color--sas {
-  background-color: #c4ced4;
-  color: #000000; }
+.additional__colors--sas {
+  background-color: #000000;
+  color: #c4ced4; }
 
-.additional__color--sac {
+.additional__colors--sac {
   background-color: #5a2d81;
   color: #63727a; }
 
-.additional__color--tor {
+.additional__colors--tor {
   background-color: #ce1141;
   color: #000000; }
 
-.additional__color--uta {
+.additional__colors--uta {
   background-color: #0d2240;
   color: #ffa400; }
 
-.additional__color--was {
-  background-color: #ffffff;
-  color: #0d2240; }
+.additional__colors--was {
+  background-color: #0d2240;
+  color: #ffffff; }
 
 .additional:hover {
   width: 100%;
@@ -766,23 +1039,13 @@ body {
   justify-content: center;
   text-align: center; }
 
-.players__header-info::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 10%;
-  right: -2px;
-  height: 80%;
-  border-left: 2px solid rgba(0, 0, 0, 0.025); }
-
 /* ---------------- PLAYERS NAME */
 .players__name {
   top: 15%;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  padding: 0.125rem 0.75rem;
-  border-radius: 100px; }
+  padding: 0.125rem 0.75rem; }
 
 /* ---------------- PLAYERS NUMBER */
 .players__number {
@@ -792,16 +1055,16 @@ body {
 
 /* ---------------- PLAYERS POSITION */
 .players__position {
-  font-size: 1.75em;
+  font-size: 2em;
   font-weight: bold;
   padding: 0.125rem 0.75rem;
   border-radius: 100px; }
 
 /* ---------------- PLAYERS LABEL */
 .players__label {
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  font-size: 1.2rem; }
+  font-size: 1.4rem; }
 
 /* ---------------- PLAYERS TEXT */
 .players__text {

@@ -13,7 +13,7 @@ mixin sectionBox(label, text, icon)
   .section-box__detail
     svg.section-box__icon
       //- use(xlink:href=`/img/icons.svg#icon-${icon}`)
-    span.section-box__label(class=`heading__color--${alias}`)= label
+    span.section-box__label(class=`label__color--${alias}`)= label
     span.section-box__text= text
 
 block content
@@ -70,7 +70,7 @@ block content
         .players__card
           //////////////////////// ADDITIONAL
           - const alias = team.alias.toLowerCase()
-          .additional(class=`additional__color--${alias}`)
+          .additional(class=`additional__colors--${alias}`)
             //////////// PLAYER HEADER
             .players__header
               .players__header-info
@@ -81,24 +81,24 @@ block content
             //////////// PLAYER HISTORY
             .players__history
               .players__history-school
-                p.players__label High School 
-                p.players__text= player.high_school ?  player.high_school : 'N/A'
+                p.players__label(class=`additional__label-color--${alias}`) High School 
+                p.players__text(class=`additional__text-color--${alias}`)= player.high_school ?  player.high_school : 'N/A'
               .players__history-college
-                p.players__label College  
-                p.players__text= player.college ?  player.college : 'N/A'
+                p.players__label(class=`additional__label-color--${alias}`) College  
+                p.players__text(class=`additional__text-color--${alias}`)= player.college ?  player.college : 'N/A'
               .players__history-draft-year
-                p.players__label Draft Year  
-                p.players__text= player.draft.year 
+                p.players__label(class=`additional__label-color--${alias}`) Draft Year  
+                p.players__text(class=`additional__text-color--${alias}`)= player.draft.year 
               .players__history-draft-round
-                p.players__label Draft Round  
-                p.players__text= player.draft.round ?  player.draft.round : 'N/A'
+                p.players__label(class=`additional__label-color--${alias}`) Round  
+                p.players__text(class=`additional__text-color--${alias}`)= player.draft.round ?  player.draft.round : 'Undrafted'
               .players__history-draft-pick
-                p.players__label Draft Pick
-                p.players__text= player.draft.pick ?  player.draft.pick : 'N/A'
+                p.players__label(class=`additional__label-color--${alias}`) Pick
+                p.players__text(class=`additional__text-color--${alias}`)= player.draft.pick ?  player.draft.pick : 'Undrafted'
               .players__history-draft-team
                 - let {name: teamName, market: teamMarket} = player.draft.team_id
-                p.players__label Draft Team  
-                p.players__text= `${teamMarket} ${teamName}`
+                p.players__label(class=`additional__label-color--${alias}`) Draft Team  
+                p.players__text(class=`additional__text-color--${alias}`)= `${teamMarket} ${teamName}`
 
           //////////////////////// PLAYERS PROFILE
           .players__profile(class=`section__bg-color--${alias}`)
