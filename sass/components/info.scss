@@ -1,0 +1,27 @@
+/* ---------------------------------------------- SECTION INFO */
+.section-info {
+	position: relative;
+	height: 45vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	& > * {
+		padding: 0 8vw;
+		padding-bottom: calc(1vw + var(--section-rotate));
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+	}
+}
+/* ------------------------------- INFO HERO */
+.info__hero {
+	height: 100%;
+
+	&-img {
+		-o-object-fit: contain;
+		object-fit: contain;
+		height: 100%;
+		width: 100%;
+	}
+}

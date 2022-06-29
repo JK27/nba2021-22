@@ -1,4 +1,5 @@
-/* -------------------------------------------------------- VARIABLES */
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
 /* -------------------------------- HAWKS */
 /* -------------------------------- CELTICS */
 /* -------------------------------- NETS */
@@ -70,18 +71,38 @@ body {
   -ms-flex-direction: column;
   flex-direction: column; }
 
-/* ---------------------------------------------- HEADINGS */
-/* ------------------------------- HEADING SECTION */
-.heading-section {
-  font-size: 2.25rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  -webkit-background-clip: text;
-  letter-spacing: 0.1rem;
-  line-height: 1.3;
-  display: inline-block;
-  margin: 3rem 0; }
-
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
+/* -------------------------------- HAWKS */
+/* -------------------------------- CELTICS */
+/* -------------------------------- NETS */
+/* -------------------------------- HORNETS */
+/* -------------------------------- BULLS */
+/* -------------------------------- CAVS */
+/* -------------------------------- MAVS */
+/* -------------------------------- NUGGETS */
+/* -------------------------------- PISTONS */
+/* -------------------------------- WARRIORS */
+/* -------------------------------- ROCKETS */
+/* -------------------------------- PACERS */
+/* -------------------------------- CLIPPERS */
+/* -------------------------------- LAKERS */
+/* -------------------------------- GRIZZLIES */
+/* -------------------------------- HEAT */
+/* -------------------------------- BUCKS */
+/* -------------------------------- WOLVES */
+/* -------------------------------- PELICANS */
+/* -------------------------------- KNICKS */
+/* -------------------------------- THUNDER */
+/* -------------------------------- MAGIC */
+/* -------------------------------- 76ERS */
+/* -------------------------------- SUNS */
+/* -------------------------------- BLAZERS */
+/* -------------------------------- SPURS */
+/* -------------------------------- KINGS */
+/* -------------------------------- RAPTORS */
+/* -------------------------------- JAZZ */
+/* -------------------------------- WIZARDS */
 /* ---------------- HEADING TEAM COLOR  */
 .heading__color--atl {
   color: #e03a3e; }
@@ -446,385 +467,247 @@ body {
 .additional__text-color--was {
   color: #ffffff; }
 
-/* ---------------------------------------------- HEADER */
-.header {
-  background: linear-gradient(135deg, rgba(0, 66, 139, 0.85) 49%, rgba(255, 255, 255, 0.85) 51%, rgba(217, 26, 50, 0.85) 100%);
-  padding: 0 5rem;
-  height: 8rem;
-  position: relative;
-  z-index: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+/* ---------------- CARD FOOTER TEAM COLORS  */
+.card__footer-colors--atl {
+  background-color: #e03a3e;
+  color: #fdb927; }
 
-@media only screen and (max-width: 62.5em) {
-  .header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; } }
+.card__footer-colors--bos {
+  background-color: #008248;
+  color: #ffffff; }
 
-/* ------------------------------- HEADER LOGO */
-.header__logo img {
-  height: 3.5rem; }
+.card__footer-colors--bkn {
+  background-color: #000000;
+  color: #ffffff; }
 
-@media only screen and (max-width: 62.5em) {
-  .header__logo {
-    -webkit-box-ordinal-group: 0;
-    -ms-flex-order: -1;
-    order: -1;
-    margin-bottom: 1.5rem; } }
+.card__footer-colors--cha {
+  background-color: #00788c;
+  color: #1d1160; }
 
-/* ---------------------------------------------- NAVIGATION */
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+.card__footer-colors--chi {
+  background-color: #ce1141;
+  color: #000000; }
 
-@media only screen and (max-width: 37.5em) {
-  .nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; } }
+.card__footer-colors--cle {
+  background-color: #860038;
+  color: #bc945c; }
 
-/* ------------------------------- NAV TEAMS */
-.nav--teams {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 40%;
-  flex: 0 1 40%; }
+.card__footer-colors--dal {
+  background-color: #0064b1;
+  color: #00285e; }
 
-@media only screen and (max-width: 62.5em) {
-  .nav--teams {
-    margin-bottom: 1.5rem; } }
+.card__footer-colors--den {
+  background-color: #0e2240;
+  color: #fec524; }
 
-@media only screen and (max-width: 37.5em) {
-  .nav--teams {
-    margin-bottom: 0; } }
+.card__footer-colors--det {
+  background-color: #1d428a;
+  color: #c8102e; }
 
-/* ------------------------------- NAV EL */
-.nav__el,
-.nav__el:link,
-.nav__el:visited {
-  color: #f7f7f7;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  text-decoration: none;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  font-weight: 400;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: inherit; }
+.card__footer-colors--gsw {
+  background-color: #1d428a;
+  color: #fdb927; }
 
-.nav__el:hover,
-.nav__el:active {
-  -webkit-transform: translateY(-2px);
-  transform: translateY(-2px);
-  text-shadow: 0 0.7rem 1rem black; }
+.card__footer-colors--hou {
+  background-color: #ce1141;
+  color: #ffffff; }
 
-.nav__el:not(:last-child) {
-  margin-right: 3rem; }
+.card__footer-colors--ind {
+  background-color: #fdbb30;
+  color: #002d62; }
 
-@media only screen and (max-width: 37.5em) {
-  .nav__el:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 1.2rem; } }
+.card__footer-colors--lac {
+  background-color: #1d428a;
+  color: #ffffff; }
 
-.nav__el:focus {
-  outline: none; }
+.card__footer-colors--lal {
+  background-color: #fdb927;
+  color: #552583; }
 
-/* ---------------------------------------------- MAIN */
-.main {
-  background-color: #f7f7f7;
-  padding: 8rem 6rem;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative; }
+.card__footer-colors--mem {
+  background-color: #7d9bc1;
+  color: #0c2340; }
 
-/* ---------------------------------------------- FLEX */
-/* ---------------------------------------------- CONTAINER */
-.container {
-  max-width: 120rem;
-  margin: 0 auto; }
+.card__footer-colors--mia {
+  background-color: #000000;
+  color: #98002e; }
 
-/* ---------------------------------------------- CARD CONTAINER */
-.card-container {
-  max-width: 120rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 7rem; }
+.card__footer-colors--mil {
+  background-color: #00471b;
+  color: #eee1c6; }
 
-/* ------------------------------- CARD */
-.card {
-  text-decoration: none;
-  border-radius: 100px;
-  overflow: hidden;
-  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  outline: none;
-  /* ---------------- CARD HEADER */
-  /* ---------------- CARD PICTURE */
-  /* -------------- CARD FOOTER */ }
-  .card__header {
-    position: relative; }
-  .card__picture {
-    position: relative;
-    height: 22rem;
-    z-index: 1;
-    /* - CARD PICTURE IMG */
-    /* - CARD PICTURE CAPTION */ }
-    .card__picture-img {
-      -o-object-fit: contain;
-      object-fit: contain;
-      object-position: center;
-      /* Margins make logos be centerd in the middle of the card for all square, portrait and landscape logos */
-      margin-top: 3rem;
-      margin-left: 4.5rem;
-      height: 70%;
-      width: 70%;
-      transition: all 0.8s;
-      backface-visibility: hidden; }
-    .card__picture-caption {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 60%;
-      border-radius: 50px;
-      transform: translate(-50%, 20%);
-      text-transform: uppercase;
-      font-size: 2.5rem;
-      font-weight: 800;
-      text-align: center;
-      opacity: 0;
-      transition: all 0.8s;
-      backface-visibility: hidden; }
-  .card__footer {
-    padding: 1.5rem 3rem;
-    border-top: 1px solid #f1f1f1;
-    font-size: 1.75rem;
-    text-align: center;
-    z-index: 2;
-    /* ---------------- SECTION BACKGROUND TEAM COLORS  */ }
-    .card__footer-text {
-      font-weight: 800; }
-    .card__footer-colors--atl {
-      background-color: #e03a3e;
-      color: #fdb927; }
-    .card__footer-colors--bos {
-      background-color: #008248;
-      color: #ffffff; }
-    .card__footer-colors--bkn {
-      background-color: #000000;
-      color: #ffffff; }
-    .card__footer-colors--cha {
-      background-color: #00788c;
-      color: #1d1160; }
-    .card__footer-colors--chi {
-      background-color: #ce1141;
-      color: #000000; }
-    .card__footer-colors--cle {
-      background-color: #860038;
-      color: #bc945c; }
-    .card__footer-colors--dal {
-      background-color: #0064b1;
-      color: #00285e; }
-    .card__footer-colors--den {
-      background-color: #0e2240;
-      color: #fec524; }
-    .card__footer-colors--det {
-      background-color: #1d428a;
-      color: #c8102e; }
-    .card__footer-colors--gsw {
-      background-color: #1d428a;
-      color: #fdb927; }
-    .card__footer-colors--hou {
-      background-color: #ce1141;
-      color: #ffffff; }
-    .card__footer-colors--ind {
-      background-color: #fdbb30;
-      color: #002d62; }
-    .card__footer-colors--lac {
-      background-color: #1d428a;
-      color: #ffffff; }
-    .card__footer-colors--lal {
-      background-color: #fdb927;
-      color: #552583; }
-    .card__footer-colors--mem {
-      background-color: #7d9bc1;
-      color: #0c2340; }
-    .card__footer-colors--mia {
-      background-color: #000000;
-      color: #98002e; }
-    .card__footer-colors--mil {
-      background-color: #00471b;
-      color: #eee1c6; }
-    .card__footer-colors--min {
-      background-color: #0c2340;
-      color: #236192; }
-    .card__footer-colors--nop {
-      background-color: #0a2240;
-      color: #8c734b; }
-    .card__footer-colors--nyk {
-      background-color: #f58426;
-      color: #006bb6; }
-    .card__footer-colors--okc {
-      background-color: #007ac1;
-      color: #f05133; }
-    .card__footer-colors--orl {
-      background-color: #000000;
-      color: #0077c0; }
-    .card__footer-colors--phi {
-      background-color: #006bb6;
-      color: #ffffff; }
-    .card__footer-colors--phx {
-      background-color: #1d1160;
-      color: #e56020; }
-    .card__footer-colors--por {
-      background-color: #000000;
-      color: #c90a2b; }
-    .card__footer-colors--sas {
-      background-color: #c4ced4;
-      color: #000000; }
-    .card__footer-colors--sac {
-      background-color: #5a2d81;
-      color: #ffffff; }
-    .card__footer-colors--tor {
-      background-color: #ce1141;
-      color: #000000; }
-    .card__footer-colors--uta {
-      background-color: #0d2240;
-      color: #ffa400; }
-    .card__footer-colors--was {
-      background-color: #0d2240;
-      color: #ffffff; }
-  .card:hover .card__picture-caption {
-    opacity: 1;
-    transform: translate(-50%, -50%); }
-  .card:hover .card__picture-img {
-    transform: scale(0.8);
-    filter: blur(3px) brightness(80%); }
+.card__footer-colors--min {
+  background-color: #0c2340;
+  color: #236192; }
 
-/* ---------------------------------------------- SECTION HEADER */
-.section-header {
-  position: relative;
-  height: 45vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .section-header > * {
-    padding: 0 8vw;
-    padding-bottom: calc(1vw + var(--section-rotate));
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%; }
+.card__footer-colors--nop {
+  background-color: #0a2240;
+  color: #8c734b; }
 
-/* ------------------------------- HEADER HERO */
-.header__hero {
-  height: 100%; }
-  .header__hero-img {
-    -o-object-fit: contain;
-    object-fit: contain;
-    height: 100%;
-    width: 100%; }
+.card__footer-colors--nyk {
+  background-color: #f58426;
+  color: #006bb6; }
 
-/* ---------------------------------------------- SECTION DESCRIPTION */
-.section-description {
-  background-color: #fcfcfc;
-  margin-top: calc(0px - var(--section-rotate));
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .section-description > * {
-    padding: 0 8vw;
-    padding-top: 14vw;
-    padding-bottom: calc(1vw + var(--section-rotate));
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%; }
+.card__footer-colors--okc {
+  background-color: #007ac1;
+  color: #f05133; }
 
-/* ------------------------------- DESCRIPTION BOX */
-.description-box .description {
-  margin-right: 5rem; }
+.card__footer-colors--orl {
+  background-color: #000000;
+  color: #0077c0; }
 
-.description-box .description__text {
-  font-size: 1.7rem; }
+.card__footer-colors--phi {
+  background-color: #006bb6;
+  color: #ffffff; }
 
-.description-box .description__text:not(:last-child) {
-  margin-bottom: 2rem; }
+.card__footer-colors--phx {
+  background-color: #1d1160;
+  color: #e56020; }
 
-/* ------------------------------- SECTION BOX */
-.section-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  /* ---------------- SECTION BOX DETAIL */
-  /* ---------------- SECTION BOX ICON */
-  /* ---------------- SECTION BOX LABEL */
-  /* ---------------- SECTION BOX TEXT */
-  /* ---------------- SECTION BOX IMG */ }
-  .section-box__detail {
-    font-size: 1.5rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-weight: 400;
-    margin-bottom: 2.25rem; }
-  .section-box__detail svg {
-    margin-right: 1.25rem; }
-  .section-box__icon {
-    height: 2.25rem;
-    width: 2.25rem;
-    fill: #55c57a; }
-  .section-box__label {
-    font-weight: 700;
-    margin-right: 2.25rem;
-    text-transform: uppercase;
-    font-size: 1.4rem; }
-  .section-box__text {
-    margin-right: 2.25rem;
-    text-transform: capitalize; }
-  .section-box__img {
-    border-radius: 50%;
-    height: 3.5rem;
-    margin-right: 1.25rem; }
+.card__footer-colors--por {
+  background-color: #000000;
+  color: #c90a2b; }
+
+.card__footer-colors--sas {
+  background-color: #c4ced4;
+  color: #000000; }
+
+.card__footer-colors--sac {
+  background-color: #5a2d81;
+  color: #ffffff; }
+
+.card__footer-colors--tor {
+  background-color: #ce1141;
+  color: #000000; }
+
+.card__footer-colors--uta {
+  background-color: #0d2240;
+  color: #ffa400; }
+
+.card__footer-colors--was {
+  background-color: #0d2240;
+  color: #ffffff; }
+
+/* ---------------- ADDITIONAL TEAM COLORS  */
+.additional__colors--atl {
+  background-color: #e03a3e;
+  color: #fdb927; }
+
+.additional__colors--bos {
+  background-color: #008248;
+  color: #ffffff; }
+
+.additional__colors--bkn {
+  background-color: #000000;
+  color: #707271; }
+
+.additional__colors--cha {
+  background-color: #00788c;
+  color: #1d1160; }
+
+.additional__colors--chi {
+  background-color: #ce1141;
+  color: #000000; }
+
+.additional__colors--cle {
+  background-color: #860038;
+  color: #bc945c; }
+
+.additional__colors--dal {
+  background-color: #0064b1;
+  color: #00285e; }
+
+.additional__colors--den {
+  background-color: #0e2240;
+  color: #fec524; }
+
+.additional__colors--det {
+  background-color: #1d428a;
+  color: #c8102e; }
+
+.additional__colors--gsw {
+  background-color: #1d428a;
+  color: #fdb927; }
+
+.additional__colors--hou {
+  background-color: #ce1141;
+  color: #ffffff; }
+
+.additional__colors--ind {
+  background-color: #fdbb30;
+  color: #002d62; }
+
+.additional__colors--lac {
+  background-color: #1d428a;
+  color: #ffffff; }
+
+.additional__colors--lal {
+  background-color: #552583;
+  color: #fdb927; }
+
+.additional__colors--mem {
+  background-color: #7d9bc1;
+  color: #0c2340; }
+
+.additional__colors--mia {
+  background-color: #000000;
+  color: #98002e; }
+
+.additional__colors--mil {
+  background-color: #00471b;
+  color: #eee1c6; }
+
+.additional__colors--min {
+  background-color: #0c2340;
+  color: #236192; }
+
+.additional__colors--nop {
+  background-color: #0a2240;
+  color: #8c734b; }
+
+.additional__colors--nyk {
+  background-color: #006bb6;
+  color: #f58426; }
+
+.additional__colors--okc {
+  background-color: #007ac1;
+  color: #f05133; }
+
+.additional__colors--orl {
+  background-color: #0077c0;
+  color: #c4ced4; }
+
+.additional__colors--phi {
+  background-color: #006bb6;
+  color: #ffffff; }
+
+.additional__colors--phx {
+  background-color: #1d1160;
+  color: #e56020; }
+
+.additional__colors--por {
+  background-color: #c90a2b;
+  color: #000000; }
+
+.additional__colors--sas {
+  background-color: #000000;
+  color: #c4ced4; }
+
+.additional__colors--sac {
+  background-color: #5a2d81;
+  color: #63727a; }
+
+.additional__colors--tor {
+  background-color: #ce1141;
+  color: #000000; }
+
+.additional__colors--uta {
+  background-color: #0d2240;
+  color: #ffa400; }
+
+.additional__colors--was {
+  background-color: #0d2240;
+  color: #ffffff; }
 
 /* ---------------- SECTION BACKGROUND TEAM COLORS  */
 .section__bg-colors--atl {
@@ -916,6 +799,40 @@ body {
 
 .section__bg-colors--was {
   background-color: rgba(13, 34, 64, 0.1); }
+
+/* ------------------------------- HEADING SECTION */
+.section__heading {
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-background-clip: text;
+  letter-spacing: 0.1rem;
+  line-height: 1.3;
+  display: inline-block;
+  margin: 3rem 0; }
+
+/* ---------------------------------------------- SECTION INFO */
+.section-info {
+  position: relative;
+  height: 45vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .section-info > * {
+    padding: 0 8vw;
+    padding-bottom: calc(1vw + var(--section-rotate));
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%; }
+
+/* ------------------------------- INFO HERO */
+.info__hero {
+  height: 100%; }
+  .info__hero-img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    height: 100%;
+    width: 100%; }
 
 /* ---------------------------------------------- SECTION MAP */
 .section-map {
@@ -1080,7 +997,7 @@ body {
 ::-webkit-scrollbar {
   display: none; }
 
-/* ---------------- PLAYER HEADER  */
+/* ---------------- ADDITIONAL  */
 .additional {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1093,102 +1010,153 @@ body {
   height: 100%;
   transition: width 0.4s;
   overflow: hidden;
-  z-index: 2;
-  /* ---------------- ADDITIONAL TEAM COLORS  */ }
-  .additional__colors--atl {
-    background-color: #e03a3e;
-    color: #fdb927; }
-  .additional__colors--bos {
-    background-color: #008248;
-    color: #ffffff; }
-  .additional__colors--bkn {
-    background-color: #000000;
-    color: #707271; }
-  .additional__colors--cha {
-    background-color: #00788c;
-    color: #1d1160; }
-  .additional__colors--chi {
-    background-color: #ce1141;
-    color: #000000; }
-  .additional__colors--cle {
-    background-color: #860038;
-    color: #bc945c; }
-  .additional__colors--dal {
-    background-color: #0064b1;
-    color: #00285e; }
-  .additional__colors--den {
-    background-color: #0e2240;
-    color: #fec524; }
-  .additional__colors--det {
-    background-color: #1d428a;
-    color: #c8102e; }
-  .additional__colors--gsw {
-    background-color: #1d428a;
-    color: #fdb927; }
-  .additional__colors--hou {
-    background-color: #ce1141;
-    color: #ffffff; }
-  .additional__colors--ind {
-    background-color: #fdbb30;
-    color: #002d62; }
-  .additional__colors--lac {
-    background-color: #1d428a;
-    color: #ffffff; }
-  .additional__colors--lal {
-    background-color: #552583;
-    color: #fdb927; }
-  .additional__colors--mem {
-    background-color: #7d9bc1;
-    color: #0c2340; }
-  .additional__colors--mia {
-    background-color: #000000;
-    color: #98002e; }
-  .additional__colors--mil {
-    background-color: #00471b;
-    color: #eee1c6; }
-  .additional__colors--min {
-    background-color: #0c2340;
-    color: #236192; }
-  .additional__colors--nop {
-    background-color: #0a2240;
-    color: #8c734b; }
-  .additional__colors--nyk {
-    background-color: #006bb6;
-    color: #f58426; }
-  .additional__colors--okc {
-    background-color: #007ac1;
-    color: #f05133; }
-  .additional__colors--orl {
-    background-color: #0077c0;
-    color: #c4ced4; }
-  .additional__colors--phi {
-    background-color: #006bb6;
-    color: #ffffff; }
-  .additional__colors--phx {
-    background-color: #1d1160;
-    color: #e56020; }
-  .additional__colors--por {
-    background-color: #c90a2b;
-    color: #000000; }
-  .additional__colors--sas {
-    background-color: #000000;
-    color: #c4ced4; }
-  .additional__colors--sac {
-    background-color: #5a2d81;
-    color: #63727a; }
-  .additional__colors--tor {
-    background-color: #ce1141;
-    color: #000000; }
-  .additional__colors--uta {
-    background-color: #0d2240;
-    color: #ffa400; }
-  .additional__colors--was {
-    background-color: #0d2240;
-    color: #ffffff; }
+  z-index: 2; }
   .additional:hover {
     width: 100%;
     border-radius: 0 5px 5px 0; }
 
+/* ------------------------------- SECTION BOX */
+.section-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /* ---------------- SECTION BOX DETAIL */
+  /* ---------------- SECTION BOX LABEL */
+  /* ---------------- SECTION BOX TEXT */ }
+  .section-box__detail {
+    font-size: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 400;
+    margin-bottom: 2.25rem; }
+  .section-box__detail svg {
+    margin-right: 1.25rem; }
+  .section-box__label {
+    font-weight: 700;
+    margin-right: 2.25rem;
+    text-transform: uppercase;
+    font-size: 1.4rem; }
+  .section-box__text {
+    margin-right: 2.25rem;
+    text-transform: capitalize; }
+
+/* ---------------------------------------------- CARD CONTAINER */
+.card-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 7rem; }
+
+/* ------------------------------- CARD */
+.card {
+  text-decoration: none;
+  border-radius: 100px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  outline: none;
+  /* ---------------- CARD HEADER */
+  /* ---------------- CARD PICTURE */
+  /* -------------- CARD FOOTER */ }
+  .card__header {
+    position: relative; }
+  .card__picture {
+    position: relative;
+    height: 22rem;
+    z-index: 1;
+    /* - CARD PICTURE IMG */
+    /* - CARD PICTURE CAPTION */ }
+    .card__picture-img {
+      -o-object-fit: contain;
+      object-fit: contain;
+      object-position: center;
+      height: 70%;
+      width: 70%;
+      transform: translate(20%, 25%);
+      transition: all 0.8s;
+      backface-visibility: hidden; }
+    .card__picture-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60%;
+      border-radius: 50px;
+      transform: translate(-50%, 20%);
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-align: center;
+      opacity: 0;
+      transition: all 0.8s;
+      backface-visibility: hidden; }
+  .card__footer {
+    padding: 1.5rem 3rem;
+    border-top: 1px solid #f1f1f1;
+    font-size: 1.75rem;
+    text-align: center;
+    z-index: 2; }
+    .card__footer-text {
+      font-weight: 800; }
+  .card:hover .card__picture-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .card:hover .card__picture-img {
+    transform: translate(20%, 25%) scale(0.8);
+    filter: blur(3px) brightness(80%); }
+
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
+/* -------------------------------- HAWKS */
+/* -------------------------------- CELTICS */
+/* -------------------------------- NETS */
+/* -------------------------------- HORNETS */
+/* -------------------------------- BULLS */
+/* -------------------------------- CAVS */
+/* -------------------------------- MAVS */
+/* -------------------------------- NUGGETS */
+/* -------------------------------- PISTONS */
+/* -------------------------------- WARRIORS */
+/* -------------------------------- ROCKETS */
+/* -------------------------------- PACERS */
+/* -------------------------------- CLIPPERS */
+/* -------------------------------- LAKERS */
+/* -------------------------------- GRIZZLIES */
+/* -------------------------------- HEAT */
+/* -------------------------------- BUCKS */
+/* -------------------------------- WOLVES */
+/* -------------------------------- PELICANS */
+/* -------------------------------- KNICKS */
+/* -------------------------------- THUNDER */
+/* -------------------------------- MAGIC */
+/* -------------------------------- 76ERS */
+/* -------------------------------- SUNS */
+/* -------------------------------- BLAZERS */
+/* -------------------------------- SPURS */
+/* -------------------------------- KINGS */
+/* -------------------------------- RAPTORS */
+/* -------------------------------- JAZZ */
+/* -------------------------------- WIZARDS */
 /* ---------------------------------------------- FOOTER */
 .footer {
   background-color: #f7f7f7;
@@ -1239,3 +1207,145 @@ body {
   @media only screen and (max-width: 50em) {
     .footer__copyright {
       justify-self: center; } }
+
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
+/* -------------------------------- HAWKS */
+/* -------------------------------- CELTICS */
+/* -------------------------------- NETS */
+/* -------------------------------- HORNETS */
+/* -------------------------------- BULLS */
+/* -------------------------------- CAVS */
+/* -------------------------------- MAVS */
+/* -------------------------------- NUGGETS */
+/* -------------------------------- PISTONS */
+/* -------------------------------- WARRIORS */
+/* -------------------------------- ROCKETS */
+/* -------------------------------- PACERS */
+/* -------------------------------- CLIPPERS */
+/* -------------------------------- LAKERS */
+/* -------------------------------- GRIZZLIES */
+/* -------------------------------- HEAT */
+/* -------------------------------- BUCKS */
+/* -------------------------------- WOLVES */
+/* -------------------------------- PELICANS */
+/* -------------------------------- KNICKS */
+/* -------------------------------- THUNDER */
+/* -------------------------------- MAGIC */
+/* -------------------------------- 76ERS */
+/* -------------------------------- SUNS */
+/* -------------------------------- BLAZERS */
+/* -------------------------------- SPURS */
+/* -------------------------------- KINGS */
+/* -------------------------------- RAPTORS */
+/* -------------------------------- JAZZ */
+/* -------------------------------- WIZARDS */
+/* ---------------------------------------------- HEADER */
+.header {
+  background: linear-gradient(135deg, rgba(0, 66, 139, 0.85) 49%, rgba(255, 255, 255, 0.85) 51%, rgba(217, 26, 50, 0.85) 100%);
+  padding: 0 5rem;
+  height: 8rem;
+  position: relative;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* ------------------------------- HEADER LOGO */ }
+  @media only screen and (max-width: 62.5em) {
+    .header .header {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+  .header__logo img {
+    height: 3.5rem; }
+  @media only screen and (max-width: 62.5em) {
+    .header .header__logo {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+      order: -1;
+      margin-bottom: 1.5rem; } }
+
+/* ---------------------------------------------- NAVIGATION */
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+@media only screen and (max-width: 37.5em) {
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
+
+/* ------------------------------- NAV TEAMS */
+.nav--teams {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 40%;
+  flex: 0 1 40%; }
+
+@media only screen and (max-width: 62.5em) {
+  .nav--teams {
+    margin-bottom: 1.5rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .nav--teams {
+    margin-bottom: 0; } }
+
+/* ------------------------------- NAV EL */
+.nav__el,
+.nav__el:link,
+.nav__el:visited {
+  color: #f7f7f7;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: 400;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit; }
+
+.nav__el:hover,
+.nav__el:active {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  text-shadow: 0 0.7rem 1rem black; }
+
+.nav__el:not(:last-child) {
+  margin-right: 3rem; }
+
+@media only screen and (max-width: 37.5em) {
+  .nav__el:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 1.2rem; } }
+
+.nav__el:focus {
+  outline: none; }
+
+/* ---------------------------------------------- MAIN */
+.main {
+  background-color: #f7f7f7;
+  padding: 8rem 6rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative; }

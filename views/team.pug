@@ -11,31 +11,29 @@ block append head
 mixin sectionBox(label, text, icon)
   - const alias = team.alias.toLowerCase()
   .section-box__detail
-    svg.section-box__icon
-      //- use(xlink:href=`/img/icons.svg#icon-${icon}`)
     span.section-box__label(class=`label__color--${alias}`)= label
     span.section-box__text= text
 
 block content
-  ///////////////////////////////////////////////////////// HEADER
-  section.section-header
-    //////////////////////////////////////// HEADER HERO
-    .header__hero
-      img.header__hero-img(src=`/img/logos/${team.logo}`, alt=`${team.market} ${team.name}`)
+  ///////////////////////////////////////////////////////// INFO
+  section.section-info
+    //////////////////////////////////////// info HERO
+    .info__hero
+      img.info__hero-img(src=`/img/logos/${team.logo}`, alt=`${team.market} ${team.name}`)
     //////////////////////////////////////// SECTION BOX
     - const alias = team.alias.toLowerCase()
     .section-box(class=`section__bg-colors--${alias}`)
       div
         ///////////////////// QUICK FACTS
         .section-box__group
-          h2.heading-section(class=`heading__color--${alias}`) Quick facts
+          h2.section__heading(class=`heading__color--${alias}`) Quick facts
           //// FOUNDED
           +sectionBox("Founded", team.founded, "calendar")
           //// CONFERENCE
           +sectionBox("Conference", team.conference , "trending-up")
           //// DIVISION
           +sectionBox("Division", team.division, "user")
-          h2.heading-section(class=`heading__color--${alias}`) Titles
+          h2.section__heading(class=`heading__color--${alias}`) Titles
           //// CHAMPIONSHIPS
           +sectionBox("Championships", team.championships, "star")
           +sectionBox("Conference Titles", team.conf_titles, "star")
@@ -49,7 +47,7 @@ block content
       div
         ///////////////////// VENUE DETAILS
         .section-box__group
-          h2.heading-section(class=`heading__color--${alias}`) Venue details
+          h2.section__heading(class=`heading__color--${alias}`) Venue details
           //// NAME
           +sectionBox("Name", team.venue.name, "calendar")
           //// ADDRESS

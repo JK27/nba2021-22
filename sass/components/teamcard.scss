@@ -1,0 +1,96 @@
+/* ---------------------------------------------- CARD CONTAINER */
+.card-container {
+	max-width: 120rem;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 7rem;
+}
+
+/* ------------------------------- CARD */
+.card {
+	text-decoration: none;
+	border-radius: 100px;
+	overflow: hidden;
+	-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	-webkit-transition: 0.3s all;
+	transition: 0.3s all;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	position: relative;
+	outline: none;
+
+	/* ---------------- CARD HEADER */
+	&__header {
+		position: relative;
+	}
+
+	/* ---------------- CARD PICTURE */
+	&__picture {
+		position: relative;
+		height: 22rem;
+		z-index: 1;
+
+		/* - CARD PICTURE IMG */
+		&-img {
+			-o-object-fit: contain;
+			object-fit: contain;
+			object-position: center;
+			height: 70%;
+			width: 70%;
+			transform: translate(20%, 25%);
+
+			transition: all 0.8s;
+			backface-visibility: hidden;
+		}
+
+		/* - CARD PICTURE CAPTION */
+		&-caption {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 60%;
+			border-radius: 50px;
+			transform: translate(-50%, 20%);
+			text-transform: uppercase;
+			font-size: 2.5rem;
+			font-weight: 800;
+			text-align: center;
+			opacity: 0;
+			transition: all 0.8s;
+			backface-visibility: hidden;
+		}
+	}
+	/* -------------- CARD FOOTER */
+	&__footer {
+		padding: 1.5rem 3rem;
+		border-top: 1px solid #f1f1f1;
+		font-size: 1.75rem;
+		text-align: center;
+		z-index: 2;
+
+		&-text {
+			font-weight: 800;
+		}
+	}
+
+	&:hover &__picture-caption {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+
+	&:hover &__picture-img {
+		transform: translate(20%, 25%) scale(0.8);
+		filter: blur(3px) brightness(80%);
+	}
+}

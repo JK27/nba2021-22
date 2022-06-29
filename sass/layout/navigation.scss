@@ -1,0 +1,74 @@
+/* ---------------------------------------------- NAVIGATION */
+.nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+	.nav {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+}
+/* ------------------------------- NAV TEAMS */
+.nav--teams {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 40%;
+	flex: 0 1 40%;
+}
+@media only screen and (max-width: 62.5em) {
+	.nav--teams {
+		margin-bottom: 1.5rem;
+	}
+}
+@media only screen and (max-width: 37.5em) {
+	.nav--teams {
+		margin-bottom: 0;
+	}
+}
+
+/* ------------------------------- NAV EL */
+.nav__el,
+.nav__el:link,
+.nav__el:visited {
+	color: #f7f7f7;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	text-decoration: none;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	font-weight: 400;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-family: inherit;
+}
+.nav__el:hover,
+.nav__el:active {
+	-webkit-transform: translateY(-2px);
+	transform: translateY(-2px);
+	text-shadow: 0 0.7rem 1rem black;
+}
+.nav__el:not(:last-child) {
+	margin-right: 3rem;
+}
+@media only screen and (max-width: 37.5em) {
+	.nav__el:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 1.2rem;
+	}
+}
+.nav__el:focus {
+	outline: none;
+}

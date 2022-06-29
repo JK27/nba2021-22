@@ -1,0 +1,36 @@
+/* ---------------------------------------------- SECTION MAP */
+.section-map {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row-reverse;
+	margin-top: calc(0px - var(--section-rotate));
+	-ms-flex: 0 0 50%;
+	flex: 0 0 70%;
+
+	& > * {
+		padding: 1rem 8rem;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+	}
+}
+
+/* ------------------------------- MAP */
+#map {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	top: 0;
+	bottom: 0;
+}
+
+/* ------------------------------- MARKER */
+.marker {
+	background-image: url(../img/nba_logo.png);
+	background-size: cover;
+	width: 20px;
+	height: 45px;
+	cursor: pointer;
+}

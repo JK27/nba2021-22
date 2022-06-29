@@ -1,0 +1,45 @@
+:root {
+	--section-rotate: 9vw;
+}
+
+::-moz-selection {
+	background-color: #c8102e;
+	color: #fff;
+}
+
+::selection {
+	background-color: #c8102e;
+	color: #fff;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+/* -------------------------------------------------------- HTML */
+html {
+	font-size: 62.5%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* -------------------------------------------------------- BODY */
+body {
+	line-height: 1.6;
+	font-weight: 300;
+	font-family: "Open Sans", sans-serif;
+	color: $color-text-primary;
+	padding: 3rem;
+	min-height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
