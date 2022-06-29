@@ -9,11 +9,13 @@ block content
       //- Loops through each team in the database creating a card for each
       each team in teams 
         a.card(href=`/team/${team.slug}`)
+          - const alias = team.alias.toLowerCase()
           //////////////////////// CARD HEADER
           .card__header
             .card__picture
               img.card__picture-img(src=`/img/logos/${team.logo}`, alt=`${team.market} ${team.name}`)
+              figcaption.card__picture-caption(class=`card__footer-colors--${alias}`) More info
 
           /////////////////////// CARD FOOTER
-          .card__footer
+          .card__footer(class=`card__footer-colors--${alias}`)
             span.card__footer-text= `${team.market} ${team.name}`

@@ -156,7 +156,7 @@ body {
   color: #1d1160; }
 
 .heading__color--por {
-  color: #e03a3e; }
+  color: #c90a2b; }
 
 .heading__color--sas {
   color: #000000; }
@@ -591,40 +591,150 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
-
-/* ---------------- CARD HEADER */
-.card__header {
-  position: relative; }
-
-/* ---------------- CARD PICTURE */
-.card__picture {
+  flex-direction: column;
   position: relative;
-  height: 22rem; }
-
-/* - CARD PICTURE IMG */
-.card__picture-img {
-  -o-object-fit: contain;
-  object-fit: contain;
-  object-position: center;
-  /* Margins make logos be centerd in the middle of the card for all square, portrait and landscape logos */
-  margin-top: 3rem;
-  margin-left: 4.5rem;
-  height: 70%;
-  width: 70%; }
-
-/* -------------- CARD FOOTER */
-.card__footer {
-  background: linear-gradient(135deg, rgba(0, 66, 138, 0.85) 49%, rgba(247, 250, 254, 0.85) 51%, rgba(200, 16, 46, 0.85) 100%);
-  opacity: 0.7;
-  padding: 1.5rem 3rem;
-  border-top: 1px solid #f1f1f1;
-  font-size: 1.75rem;
-  text-align: center; }
-
-.card__footer-text {
-  color: black;
-  font-weight: 800; }
+  outline: none;
+  /* ---------------- CARD HEADER */
+  /* ---------------- CARD PICTURE */
+  /* -------------- CARD FOOTER */ }
+  .card__header {
+    position: relative; }
+  .card__picture {
+    position: relative;
+    height: 22rem;
+    z-index: 1;
+    /* - CARD PICTURE IMG */
+    /* - CARD PICTURE CAPTION */ }
+    .card__picture-img {
+      -o-object-fit: contain;
+      object-fit: contain;
+      object-position: center;
+      /* Margins make logos be centerd in the middle of the card for all square, portrait and landscape logos */
+      margin-top: 3rem;
+      margin-left: 4.5rem;
+      height: 70%;
+      width: 70%;
+      transition: all 0.8s;
+      backface-visibility: hidden; }
+    .card__picture-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60%;
+      border-radius: 50px;
+      transform: translate(-50%, 20%);
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-align: center;
+      opacity: 0;
+      transition: all 0.8s;
+      backface-visibility: hidden; }
+  .card__footer {
+    padding: 1.5rem 3rem;
+    border-top: 1px solid #f1f1f1;
+    font-size: 1.75rem;
+    text-align: center;
+    z-index: 2;
+    /* ---------------- SECTION BACKGROUND TEAM COLORS  */ }
+    .card__footer-text {
+      font-weight: 800; }
+    .card__footer-colors--atl {
+      background-color: #e03a3e;
+      color: #fdb927; }
+    .card__footer-colors--bos {
+      background-color: #008248;
+      color: #ffffff; }
+    .card__footer-colors--bkn {
+      background-color: #000000;
+      color: #ffffff; }
+    .card__footer-colors--cha {
+      background-color: #00788c;
+      color: #1d1160; }
+    .card__footer-colors--chi {
+      background-color: #ce1141;
+      color: #000000; }
+    .card__footer-colors--cle {
+      background-color: #860038;
+      color: #bc945c; }
+    .card__footer-colors--dal {
+      background-color: #0064b1;
+      color: #00285e; }
+    .card__footer-colors--den {
+      background-color: #0e2240;
+      color: #fec524; }
+    .card__footer-colors--det {
+      background-color: #1d428a;
+      color: #c8102e; }
+    .card__footer-colors--gsw {
+      background-color: #1d428a;
+      color: #fdb927; }
+    .card__footer-colors--hou {
+      background-color: #ce1141;
+      color: #ffffff; }
+    .card__footer-colors--ind {
+      background-color: #fdbb30;
+      color: #002d62; }
+    .card__footer-colors--lac {
+      background-color: #1d428a;
+      color: #ffffff; }
+    .card__footer-colors--lal {
+      background-color: #fdb927;
+      color: #552583; }
+    .card__footer-colors--mem {
+      background-color: #7d9bc1;
+      color: #0c2340; }
+    .card__footer-colors--mia {
+      background-color: #000000;
+      color: #98002e; }
+    .card__footer-colors--mil {
+      background-color: #00471b;
+      color: #eee1c6; }
+    .card__footer-colors--min {
+      background-color: #0c2340;
+      color: #236192; }
+    .card__footer-colors--nop {
+      background-color: #0a2240;
+      color: #8c734b; }
+    .card__footer-colors--nyk {
+      background-color: #f58426;
+      color: #006bb6; }
+    .card__footer-colors--okc {
+      background-color: #007ac1;
+      color: #f05133; }
+    .card__footer-colors--orl {
+      background-color: #000000;
+      color: #0077c0; }
+    .card__footer-colors--phi {
+      background-color: #006bb6;
+      color: #ffffff; }
+    .card__footer-colors--phx {
+      background-color: #1d1160;
+      color: #e56020; }
+    .card__footer-colors--por {
+      background-color: #000000;
+      color: #c90a2b; }
+    .card__footer-colors--sas {
+      background-color: #c4ced4;
+      color: #000000; }
+    .card__footer-colors--sac {
+      background-color: #5a2d81;
+      color: #ffffff; }
+    .card__footer-colors--tor {
+      background-color: #ce1141;
+      color: #000000; }
+    .card__footer-colors--uta {
+      background-color: #0d2240;
+      color: #ffa400; }
+    .card__footer-colors--was {
+      background-color: #0d2240;
+      color: #ffffff; }
+  .card:hover .card__picture-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .card:hover .card__picture-img {
+    transform: scale(0.8);
+    filter: blur(3px) brightness(80%); }
 
 /* ---------------------------------------------- SECTION HEADER */
 .section-header {
@@ -633,23 +743,21 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
-.section-header > * {
-  padding: 0 8vw;
-  padding-bottom: calc(1vw + var(--section-rotate));
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%; }
+  .section-header > * {
+    padding: 0 8vw;
+    padding-bottom: calc(1vw + var(--section-rotate));
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%; }
 
 /* ------------------------------- HEADER HERO */
 .header__hero {
   height: 100%; }
-
-.header__hero-img {
-  -o-object-fit: contain;
-  object-fit: contain;
-  height: 100%;
-  width: 100%; }
+  .header__hero-img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    height: 100%;
+    width: 100%; }
 
 /* ---------------------------------------------- SECTION DESCRIPTION */
 .section-description {
@@ -658,14 +766,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
-.section-description > * {
-  padding: 0 8vw;
-  padding-top: 14vw;
-  padding-bottom: calc(1vw + var(--section-rotate));
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%; }
+  .section-description > * {
+    padding: 0 8vw;
+    padding-top: 14vw;
+    padding-bottom: calc(1vw + var(--section-rotate));
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%; }
 
 /* ------------------------------- DESCRIPTION BOX */
 .description-box .description {
@@ -684,137 +791,131 @@ body {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  /* ---------------- SECTION BOX DETAIL */
+  /* ---------------- SECTION BOX ICON */
+  /* ---------------- SECTION BOX LABEL */
+  /* ---------------- SECTION BOX TEXT */
+  /* ---------------- SECTION BOX IMG */ }
+  .section-box__detail {
+    font-size: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 400;
+    margin-bottom: 2.25rem; }
+  .section-box__detail svg {
+    margin-right: 1.25rem; }
+  .section-box__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: #55c57a; }
+  .section-box__label {
+    font-weight: 700;
+    margin-right: 2.25rem;
+    text-transform: uppercase;
+    font-size: 1.4rem; }
+  .section-box__text {
+    margin-right: 2.25rem;
+    text-transform: capitalize; }
+  .section-box__img {
+    border-radius: 50%;
+    height: 3.5rem;
+    margin-right: 1.25rem; }
 
 /* ---------------- SECTION BACKGROUND TEAM COLORS  */
-.section__bg-color--atl {
+.section__bg-colors--atl {
   background-color: rgba(253, 185, 39, 0.1); }
 
-.section__bg-color--bos {
+.section__bg-colors--bos {
   background-color: rgba(0, 130, 72, 0.1); }
 
-.section__bg-color--bkn {
+.section__bg-colors--bkn {
   background-color: rgba(0, 0, 0, 0.1); }
 
-.section__bg-color--cha {
+.section__bg-colors--cha {
   background-color: rgba(0, 120, 140, 0.1); }
 
-.section__bg-color--chi {
+.section__bg-colors--chi {
   background-color: rgba(0, 0, 0, 0.1); }
 
-.section__bg-color--cle {
+.section__bg-colors--cle {
   background-color: rgba(188, 148, 92, 0.1); }
 
-.section__bg-color--dal {
+.section__bg-colors--dal {
   background-color: rgba(0, 40, 94, 0.1); }
 
-.section__bg-color--den {
+.section__bg-colors--den {
   background-color: rgba(254, 197, 36, 0.1); }
 
-.section__bg-color--det {
+.section__bg-colors--det {
   background-color: rgba(29, 66, 138, 0.1); }
 
-.section__bg-color--gsw {
+.section__bg-colors--gsw {
   background-color: rgba(253, 185, 39, 0.1); }
 
-.section__bg-color--hou {
+.section__bg-colors--hou {
   background-color: rgba(0, 0, 0, 0.1); }
 
-.section__bg-color--ind {
+.section__bg-colors--ind {
   background-color: rgba(0, 45, 98, 0.1); }
 
-.section__bg-color--lac {
+.section__bg-colors--lac {
   background-color: rgba(29, 66, 138, 0.1); }
 
-.section__bg-color--lal {
+.section__bg-colors--lal {
   background-color: rgba(253, 185, 39, 0.1); }
 
-.section__bg-color--mem {
+.section__bg-colors--mem {
   background-color: rgba(12, 35, 64, 0.1); }
 
-.section__bg-color--mia {
+.section__bg-colors--mia {
   background-color: rgba(0, 0, 0, 0.1); }
 
-.section__bg-color--mil {
+.section__bg-colors--mil {
   background-color: rgba(0, 71, 27, 0.1); }
 
-.section__bg-color--min {
+.section__bg-colors--min {
   background-color: rgba(35, 97, 146, 0.1); }
 
-.section__bg-color--nop {
+.section__bg-colors--nop {
   background-color: rgba(140, 115, 75, 0.1); }
 
-.section__bg-color--nyk {
+.section__bg-colors--nyk {
   background-color: rgba(245, 132, 38, 0.1); }
 
-.section__bg-color--okc {
+.section__bg-colors--okc {
   background-color: rgba(240, 81, 51, 0.1); }
 
-.section__bg-color--orl {
+.section__bg-colors--orl {
   background-color: rgba(0, 0, 0, 0.1); }
 
-.section__bg-color--phi {
+.section__bg-colors--phi {
   background-color: rgba(0, 107, 182, 0.1); }
 
-.section__bg-color--phx {
+.section__bg-colors--phx {
   background-color: rgba(229, 96, 32, 0.1); }
 
-.section__bg-color--por {
+.section__bg-colors--por {
   background-color: rgba(0, 0, 0, 0.1); }
 
-.section__bg-color--sas {
+.section__bg-colors--sas {
   background-color: rgba(0, 0, 0, 0.1); }
 
-.section__bg-color--sac {
+.section__bg-colors--sac {
   background-color: rgba(90, 45, 129, 0.1); }
 
-.section__bg-color--tor {
+.section__bg-colors--tor {
   background-color: rgba(206, 17, 65, 0.1); }
 
-.section__bg-color--uta {
+.section__bg-colors--uta {
   background-color: rgba(43, 81, 52, 0.1); }
 
-.section__bg-color--was {
+.section__bg-colors--was {
   background-color: rgba(13, 34, 64, 0.1); }
-
-/* ---------------- SECTION BOX DETAIL */
-.section-box__detail {
-  font-size: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 400;
-  margin-bottom: 2.25rem; }
-
-.section-box__detail svg {
-  margin-right: 1.25rem; }
-
-/* ---------------- SECTION BOX ICON */
-.section-box__icon {
-  height: 2.25rem;
-  width: 2.25rem;
-  fill: #55c57a; }
-
-/* ---------------- SECTION BOX LABEL */
-.section-box__label {
-  font-weight: 700;
-  margin-right: 2.25rem;
-  text-transform: uppercase;
-  font-size: 1.4rem; }
-
-/* ---------------- SECTION BOX TEXT */
-.section-box__text {
-  margin-right: 2.25rem;
-  text-transform: capitalize; }
-
-/* ---------------- SECTION BOX IMG */
-.section-box__img {
-  border-radius: 50%;
-  height: 3.5rem;
-  margin-right: 1.25rem; }
 
 /* ---------------------------------------------- SECTION MAP */
 .section-map {
@@ -826,12 +927,11 @@ body {
   margin-top: calc(0px - var(--section-rotate));
   -ms-flex: 0 0 50%;
   flex: 0 0 70%; }
-
-.section-map > * {
-  padding: 1rem 8rem;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%; }
+  .section-map > * {
+    padding: 1rem 8rem;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%; }
 
 /* ------------------------------- MAP */
 #map {
@@ -857,35 +957,128 @@ body {
   grid-auto-flow: column;
   overflow-x: scroll;
   -ms-scroll-snap-type: x mandatory;
-  scroll-snap-type: x mandatory; }
+  scroll-snap-type: x mandatory;
+  /* ------------------------------- PLAYERS CARD */
+  /* ---------------- PLAYERS HEADER INFO */
+  /* ---------------- PLAYERS NAME */
+  /* ---------------- PLAYERS NUMBER */
+  /* ---------------- PLAYERS POSITION */
+  /* ---------------- PLAYERS LABEL */
+  /* ---------------- PLAYERS TEXT */
+  /* ---------------- PLAYERS HISTORY */
+  /* ---------------- PLAYERS HISTORY */
+  /* ---------------- PLAYERS PROFILE */ }
+  .players__card {
+    width: 45rem;
+    height: 25rem;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    scroll-snap-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative; }
+  .players__card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: -2px;
+    height: 80%;
+    border-left: 2px solid rgba(0, 0, 0, 0.025); }
+  .players__header-info {
+    width: 15rem;
+    height: 100%;
+    position: relative;
+    float: left;
+    display: grid;
+    grid-template-rows: auto auto max-content;
+    padding: 1rem;
+    justify-content: center;
+    text-align: center; }
+  .players__name {
+    top: 15%;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 0.125rem 0.75rem; }
+  .players__number {
+    font-family: "Stardos Stencil", cursive;
+    font-size: 7.5rem;
+    top: 50%; }
+  .players__position {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0.125rem 0.75rem;
+    border-radius: 100px; }
+  .players__label {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.4rem; }
+  .players__text {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    font-weight: 400; }
+  .players__history {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    float: left;
+    left: 150px;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center; }
+  .players__history-school {
+    grid-column: 1 / span 3;
+    text-align: center; }
+  .players__history-college {
+    grid-column: 1 / span 3;
+    text-align: center; }
+  .players__history-draft-team {
+    grid-column: 1 / span 3;
+    text-align: center; }
+  .players__profile {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
+    gap: 0.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center; }
+  .players__profile-birthplace {
+    grid-column: 1 / 3;
+    text-align: center; }
+  .players__profile-country {
+    grid-column: 1 / 3;
+    text-align: center; }
+  .players__profile-birthdate {
+    grid-column: 1 / 3;
+    text-align: center; }
 
-/* ------------------------------- PLAYERS CARD */
-.players__card {
-  width: 45rem;
-  height: 25rem;
-  background-color: #f7f7f7;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  scroll-snap-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: hidden;
-  position: relative; }
-
-.players__card::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 10%;
-  right: -2px;
-  height: 80%;
-  border-left: 2px solid rgba(0, 0, 0, 0.025); }
+/* ---------------- PLAYERS SCROLLBAR */
+::-webkit-scrollbar {
+  display: none; }
 
 /* ---------------- PLAYER HEADER  */
 .additional {
@@ -900,241 +1093,101 @@ body {
   height: 100%;
   transition: width 0.4s;
   overflow: hidden;
-  z-index: 2; }
-
-/* ---------------- ADDITIONAL TEAM COLORS  */
-.additional__colors--atl {
-  background-color: #e03a3e;
-  color: #fdb927; }
-
-.additional__colors--bos {
-  background-color: #008248;
-  color: #ffffff; }
-
-.additional__colors--bkn {
-  background-color: #000000;
-  color: #707271; }
-
-.additional__colors--cha {
-  background-color: #00788c;
-  color: #1d1160; }
-
-.additional__colors--chi {
-  background-color: #ce1141;
-  color: #000000; }
-
-.additional__colors--cle {
-  background-color: #860038;
-  color: #bc945c; }
-
-.additional__colors--dal {
-  background-color: #0064b1;
-  color: #00285e; }
-
-.additional__colors--den {
-  background-color: #0e2240;
-  color: #fec524; }
-
-.additional__colors--det {
-  background-color: #1d428a;
-  color: #c8102e; }
-
-.additional__colors--gsw {
-  background-color: #1d428a;
-  color: #fdb927; }
-
-.additional__colors--hou {
-  background-color: #ce1141;
-  color: #ffffff; }
-
-.additional__colors--ind {
-  background-color: #fdbb30;
-  color: #002d62; }
-
-.additional__colors--lac {
-  background-color: #1d428a;
-  color: #ffffff; }
-
-.additional__colors--lal {
-  background-color: #552583;
-  color: #fdb927; }
-
-.additional__colors--mem {
-  background-color: #7d9bc1;
-  color: #0c2340; }
-
-.additional__colors--mia {
-  background-color: #000000;
-  color: #98002e; }
-
-.additional__colors--mil {
-  background-color: #00471b;
-  color: #eee1c6; }
-
-.additional__colors--min {
-  background-color: #0c2340;
-  color: #236192; }
-
-.additional__colors--nop {
-  background-color: #0a2240;
-  color: #8c734b; }
-
-.additional__colors--nyk {
-  background-color: #006bb6;
-  color: #f58426; }
-
-.additional__colors--okc {
-  background-color: #007ac1;
-  color: #f05133; }
-
-.additional__colors--orl {
-  background-color: #0077c0;
-  color: #c4ced4; }
-
-.additional__colors--phi {
-  background-color: #006bb6;
-  color: #ffffff; }
-
-.additional__colors--phx {
-  background-color: #1d1160;
-  color: #e56020; }
-
-.additional__colors--por {
-  background-color: #e03a3e;
-  color: #000000; }
-
-.additional__colors--sas {
-  background-color: #000000;
-  color: #c4ced4; }
-
-.additional__colors--sac {
-  background-color: #5a2d81;
-  color: #63727a; }
-
-.additional__colors--tor {
-  background-color: #ce1141;
-  color: #000000; }
-
-.additional__colors--uta {
-  background-color: #0d2240;
-  color: #ffa400; }
-
-.additional__colors--was {
-  background-color: #0d2240;
-  color: #ffffff; }
-
-.additional:hover {
-  width: 100%;
-  border-radius: 0 5px 5px 0; }
-
-/* ---------------- PLAYERS HEADER INFO */
-.players__header-info {
-  width: 15rem;
-  height: 100%;
-  position: relative;
-  float: left;
-  display: grid;
-  grid-template-rows: auto auto max-content;
-  padding: 1rem;
-  justify-content: center;
-  text-align: center; }
-
-/* ---------------- PLAYERS NAME */
-.players__name {
-  top: 15%;
-  font-size: 1.5rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  padding: 0.125rem 0.75rem; }
-
-/* ---------------- PLAYERS NUMBER */
-.players__number {
-  font-family: "Stardos Stencil", cursive;
-  font-size: 7.5rem;
-  top: 50%; }
-
-/* ---------------- PLAYERS POSITION */
-.players__position {
-  font-size: 2em;
-  font-weight: bold;
-  padding: 0.125rem 0.75rem;
-  border-radius: 100px; }
-
-/* ---------------- PLAYERS LABEL */
-.players__label {
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 1.4rem; }
-
-/* ---------------- PLAYERS TEXT */
-.players__text {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-style: italic;
-  font-weight: 400; }
-
-/* ---------------- PLAYERS HISTORY */
-.players__history {
-  width: 300px;
-  height: 100%;
-  position: absolute;
-  float: left;
-  left: 150px;
-  padding: 1rem;
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center; }
-
-/* ---------------- PLAYERS HISTORY */
-.players__history-school {
-  grid-column: 1 / span 3;
-  text-align: center; }
-
-.players__history-college {
-  grid-column: 1 / span 3;
-  text-align: center; }
-
-.players__history-draft-team {
-  grid-column: 1 / span 3;
-  text-align: center; }
-
-/* ---------------- PLAYERS PROFILE */
-.players__profile {
-  width: 300px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  box-sizing: border-box;
-  padding: 1rem;
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: repeat(2, auto);
-  gap: 0.5rem;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center; }
-
-.players__profile-birthplace {
-  grid-column: 1 / 3;
-  text-align: center; }
-
-.players__profile-country {
-  grid-column: 1 / 3;
-  text-align: center; }
-
-.players__profile-birthdate {
-  grid-column: 1 / 3;
-  text-align: center; }
-
-/* ---------------- PLAYERS SCROLLBAR */
-::-webkit-scrollbar {
-  display: none; }
+  z-index: 2;
+  /* ---------------- ADDITIONAL TEAM COLORS  */ }
+  .additional__colors--atl {
+    background-color: #e03a3e;
+    color: #fdb927; }
+  .additional__colors--bos {
+    background-color: #008248;
+    color: #ffffff; }
+  .additional__colors--bkn {
+    background-color: #000000;
+    color: #707271; }
+  .additional__colors--cha {
+    background-color: #00788c;
+    color: #1d1160; }
+  .additional__colors--chi {
+    background-color: #ce1141;
+    color: #000000; }
+  .additional__colors--cle {
+    background-color: #860038;
+    color: #bc945c; }
+  .additional__colors--dal {
+    background-color: #0064b1;
+    color: #00285e; }
+  .additional__colors--den {
+    background-color: #0e2240;
+    color: #fec524; }
+  .additional__colors--det {
+    background-color: #1d428a;
+    color: #c8102e; }
+  .additional__colors--gsw {
+    background-color: #1d428a;
+    color: #fdb927; }
+  .additional__colors--hou {
+    background-color: #ce1141;
+    color: #ffffff; }
+  .additional__colors--ind {
+    background-color: #fdbb30;
+    color: #002d62; }
+  .additional__colors--lac {
+    background-color: #1d428a;
+    color: #ffffff; }
+  .additional__colors--lal {
+    background-color: #552583;
+    color: #fdb927; }
+  .additional__colors--mem {
+    background-color: #7d9bc1;
+    color: #0c2340; }
+  .additional__colors--mia {
+    background-color: #000000;
+    color: #98002e; }
+  .additional__colors--mil {
+    background-color: #00471b;
+    color: #eee1c6; }
+  .additional__colors--min {
+    background-color: #0c2340;
+    color: #236192; }
+  .additional__colors--nop {
+    background-color: #0a2240;
+    color: #8c734b; }
+  .additional__colors--nyk {
+    background-color: #006bb6;
+    color: #f58426; }
+  .additional__colors--okc {
+    background-color: #007ac1;
+    color: #f05133; }
+  .additional__colors--orl {
+    background-color: #0077c0;
+    color: #c4ced4; }
+  .additional__colors--phi {
+    background-color: #006bb6;
+    color: #ffffff; }
+  .additional__colors--phx {
+    background-color: #1d1160;
+    color: #e56020; }
+  .additional__colors--por {
+    background-color: #c90a2b;
+    color: #000000; }
+  .additional__colors--sas {
+    background-color: #000000;
+    color: #c4ced4; }
+  .additional__colors--sac {
+    background-color: #5a2d81;
+    color: #63727a; }
+  .additional__colors--tor {
+    background-color: #ce1141;
+    color: #000000; }
+  .additional__colors--uta {
+    background-color: #0d2240;
+    color: #ffa400; }
+  .additional__colors--was {
+    background-color: #0d2240;
+    color: #ffffff; }
+  .additional:hover {
+    width: 100%;
+    border-radius: 0 5px 5px 0; }
 
 /* ---------------------------------------------- FOOTER */
 .footer {
@@ -1146,53 +1199,43 @@ body {
   row-gap: 0.75rem;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
-
-@media only screen and (max-width: 50em) {
-  .footer {
-    grid-template-columns: 1fr;
-    grid-row-gap: 1.25rem;
-    justify-items: center; } }
-
-/* ------------------------------- FOOTER LOGO */
-.footer__logo {
-  grid-row: 1 / 3;
-  -ms-flex-item-align: center;
-  align-self: center; }
-
-@media only screen and (max-width: 50em) {
+  justify-content: space-between;
+  /* ------------------------------- FOOTER LOGO */
+  /* ------------------------------- FOOTER NAV */
+  /* ------------------------------- FOOTER COPYRIGHT */ }
+  @media only screen and (max-width: 50em) {
+    .footer .footer {
+      grid-template-columns: 1fr;
+      grid-row-gap: 1.25rem;
+      justify-items: center; } }
   .footer__logo {
-    grid-row: 1; } }
-
-.footer__logo img {
-  height: 3rem; }
-
-/* ------------------------------- FOOTER NAV */
-.footer__nav {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: flex-end; }
-
-.footer__nav li {
-  margin-left: 1.5rem; }
-
-.footer__nav a {
-  color: #777;
-  text-decoration: none !important;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
-
-.footer__nav a:hover,
-.footer__nav a:active {
-  color: #55c57a; }
-
-/* ------------------------------- FOOTER COPYRIGHT */
-.footer__copyright {
-  justify-self: end;
-  color: #999; }
-
-@media only screen and (max-width: 50em) {
+    grid-row: 1 / 3;
+    -ms-flex-item-align: center;
+    align-self: center; }
+  @media only screen and (max-width: 50em) {
+    .footer__logo {
+      grid-row: 1; } }
+  .footer__logo img {
+    height: 3rem; }
+  .footer__nav {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-end; }
+  .footer__nav li {
+    margin-left: 1.5rem; }
+  .footer__nav a {
+    color: #777;
+    text-decoration: none !important;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
+  .footer__nav a:hover,
+  .footer__nav a:active {
+    color: #55c57a; }
   .footer__copyright {
-    justify-self: center; } }
+    justify-self: end;
+    color: #999; }
+  @media only screen and (max-width: 50em) {
+    .footer__copyright {
+      justify-self: center; } }

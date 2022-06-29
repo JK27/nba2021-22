@@ -24,7 +24,7 @@ block content
       img.header__hero-img(src=`/img/logos/${team.logo}`, alt=`${team.market} ${team.name}`)
     //////////////////////////////////////// SECTION BOX
     - const alias = team.alias.toLowerCase()
-    .section-box(class=`section__bg-color--${alias}`)
+    .section-box(class=`section__bg-colors--${alias}`)
       div
         ///////////////////// QUICK FACTS
         .section-box__group
@@ -45,7 +45,7 @@ block content
   section.section-map
     #map(data-venue=`${JSON.stringify(team.venue)}`)
     //////////////////////////////////////// section BOX
-    .section-box(class=`section__bg-color--${alias}`)
+    .section-box(class=`section__bg-colors--${alias}`)
       div
         ///////////////////// VENUE DETAILS
         .section-box__group
@@ -101,7 +101,7 @@ block content
                 p.players__text(class=`additional__text-color--${alias}`)= `${teamMarket} ${teamName}`
 
           //////////////////////// PLAYERS PROFILE
-          .players__profile(class=`section__bg-color--${alias}`)
+          .players__profile(class=`section__bg-colors--${alias}`)
             .players__profile-height-weight 
               ////////// HEIGHT
               //- DOES=> Converts player's height from inches to foot, taking only one decimal.

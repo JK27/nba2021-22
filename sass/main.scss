@@ -1,4 +1,6 @@
 /* -------------------------------------------------------- VARIABLES */
+$color-text-primary: #777;
+
 $color-nba-red: #d91a32;
 $color-nba-blue: #00428b;
 $color-nba-white: #ffffff;
@@ -100,7 +102,7 @@ $color-phx-primary: #1d1160;
 $color-phx-secondary: #e56020;
 $color-phx-tertiary: #63727a;
 /* -------------------------------- BLAZERS */
-$color-por-primary: #e03a3e;
+$color-por-primary: #c90a2b;
 $color-por-secondary: #000000;
 $color-por-tertiary: #ffffff;
 /* -------------------------------- SPURS */
@@ -158,7 +160,7 @@ body {
 	line-height: 1.6;
 	font-weight: 300;
 	font-family: "Open Sans", sans-serif;
-	color: #777;
+	color: $color-text-primary;
 	padding: 3rem;
 	min-height: 100vh;
 	display: -webkit-box;
@@ -695,18 +697,6 @@ body {
 	margin: 0 auto;
 }
 
-// .ma-bt-md {
-// 	margin-bottom: 3rem !important;
-// }
-
-// .ma-bt-lg {
-// 	margin-bottom: 3.5rem !important;
-// }
-
-// .right {
-// 	text-align: right !important;
-// }
-
 /* ---------------------------------------------- CARD CONTAINER */
 .card-container {
 	max-width: 120rem;
@@ -735,47 +725,257 @@ body {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
-}
-/* ---------------- CARD HEADER */
-.card__header {
+
 	position: relative;
-}
-/* ---------------- CARD PICTURE */
-.card__picture {
-	position: relative;
-	height: 22rem;
-}
+	outline: none;
 
-/* - CARD PICTURE IMG */
-.card__picture-img {
-	-o-object-fit: contain;
-	object-fit: contain;
-	object-position: center;
-	/* Margins make logos be centerd in the middle of the card for all square, portrait and landscape logos */
-	margin-top: 3rem;
-	margin-left: 4.5rem;
-	height: 70%;
-	width: 70%;
-}
+	// &:before,
+	// &:after {
+	// 	position: absolute;
+	// 	content: "";
 
-/* -------------- CARD FOOTER */
-.card__footer {
-	background: linear-gradient(
-		135deg,
-		rgba(0, 66, 138, 0.85) 49%,
-		rgba(247, 250, 254, 0.85) 51%,
-		rgba(200, 16, 46, 0.85) 100%
-	);
-	opacity: 0.7;
-	padding: 1.5rem 3rem;
-	border-top: 1px solid #f1f1f1;
-	font-size: 1.75rem;
-	text-align: center;
-}
+	// 	transition: all 0.8s ease;
+	// }
 
-.card__footer-text {
-	color: rgb(0, 0, 0);
-	font-weight: 800;
+	// &:before {
+	// 	left: 0;
+	// 	top: 0;
+	// 	background: #38f704;
+	// 	width: 20px;
+	// 	height: 0%;
+	// 	width: 20px;
+	// }
+	// &:after {
+	// 	// right: 0;
+	// 	bottom: 0;
+	// 	background: #04e2f1;
+	// 	height: 100%;
+	// 	width: 0%;
+	// 	// height: 20px;
+	// }
+	// &:hover:before {
+	// 	height: 100%;
+	// }
+	// &:hover:after {
+	// 	width: 100%;
+	// }
+
+	/* ---------------- CARD HEADER */
+	&__header {
+		position: relative;
+
+		// &:before,
+		// &:after {
+		// 	position: absolute;
+		// 	content: "";
+
+		// 	transition: all 0.3s ease;
+		// }
+		// &:before {
+		// 	left: 0;
+		// 	top: 0;
+		// 	background: #38f704;
+		// 	width: 20px;
+		// 	height: 0%;
+		// }
+		// &:after {
+		// 	right: 0;
+		// 	bottom: 0;
+		// 	background: #04e2f1;
+		// 	height: 100%;
+		// 	width: 0%;
+		// }
+		// &:hover:before {
+		// 	height: 100%;
+		// }
+		// &:hover:after {
+		// 	width: 100%;
+		// }
+	}
+
+	/* ---------------- CARD PICTURE */
+	&__picture {
+		position: relative;
+		height: 22rem;
+		z-index: 1;
+
+		/* - CARD PICTURE IMG */
+		&-img {
+			-o-object-fit: contain;
+			object-fit: contain;
+			object-position: center;
+			/* Margins make logos be centerd in the middle of the card for all square, portrait and landscape logos */
+			margin-top: 3rem;
+			margin-left: 4.5rem;
+			height: 70%;
+			width: 70%;
+
+			transition: all 0.8s;
+			backface-visibility: hidden;
+		}
+
+		/* - CARD PICTURE CAPTION */
+		&-caption {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 60%;
+			border-radius: 50px;
+			transform: translate(-50%, 20%);
+			text-transform: uppercase;
+			font-size: 2.5rem;
+			font-weight: 800;
+			// color: $color-text-primary;
+			text-align: center;
+			opacity: 0;
+			transition: all 0.8s;
+			backface-visibility: hidden;
+		}
+	}
+	/* -------------- CARD FOOTER */
+	&__footer {
+		padding: 1.5rem 3rem;
+		border-top: 1px solid #f1f1f1;
+		font-size: 1.75rem;
+		text-align: center;
+		z-index: 2;
+
+		&-text {
+			font-weight: 800;
+		}
+
+		/* ---------------- SECTION BACKGROUND TEAM COLORS  */
+		&-colors--atl {
+			background-color: $color-atl-primary;
+			color: $color-atl-secondary;
+		}
+		&-colors--bos {
+			background-color: $color-bos-primary;
+			color: $color-bos-secondary;
+		}
+		&-colors--bkn {
+			background-color: $color-bkn-primary;
+			color: $color-bkn-tertiary;
+		}
+		&-colors--cha {
+			background-color: $color-cha-primary;
+			color: $color-cha-secondary;
+		}
+		&-colors--chi {
+			background-color: $color-chi-primary;
+			color: $color-chi-secondary;
+		}
+		&-colors--cle {
+			background-color: $color-cle-primary;
+			color: $color-cle-secondary;
+		}
+		&-colors--dal {
+			background-color: $color-dal-primary;
+			color: $color-dal-secondary;
+		}
+		&-colors--den {
+			background-color: $color-den-primary;
+			color: $color-den-secondary;
+		}
+		&-colors--det {
+			background-color: $color-det-primary;
+			color: $color-det-secondary;
+		}
+		&-colors--gsw {
+			background-color: $color-gsw-primary;
+			color: $color-gsw-secondary;
+		}
+		&-colors--hou {
+			background-color: $color-hou-primary;
+			color: $color-hou-secondary;
+		}
+		&-colors--ind {
+			background-color: $color-ind-primary;
+			color: $color-ind-secondary;
+		}
+		&-colors--lac {
+			background-color: $color-lac-primary;
+			color: $color-lac-secondary;
+		}
+		&-colors--lal {
+			background-color: $color-lal-secondary;
+			color: $color-lal-primary;
+		}
+		&-colors--mem {
+			background-color: $color-mem-primary;
+			color: $color-mem-secondary;
+		}
+		&-colors--mia {
+			background-color: $color-mia-primary;
+			color: $color-mia-secondary;
+		}
+		&-colors--mil {
+			background-color: $color-mil-primary;
+			color: $color-mil-secondary;
+		}
+		&-colors--min {
+			background-color: $color-min-primary;
+			color: $color-min-secondary;
+		}
+		&-colors--nop {
+			background-color: $color-nop-primary;
+			color: $color-nop-secondary;
+		}
+		&-colors--nyk {
+			background-color: $color-nyk-secondary;
+			color: $color-nyk-primary;
+		}
+		&-colors--okc {
+			background-color: $color-okc-primary;
+			color: $color-okc-secondary;
+		}
+		&-colors--orl {
+			background-color: $color-orl-tertiary;
+			color: $color-orl-primary;
+		}
+		&-colors--phi {
+			background-color: $color-phi-primary;
+			color: $color-phi-secondary;
+		}
+		&-colors--phx {
+			background-color: $color-phx-primary;
+			color: $color-phx-secondary;
+		}
+		&-colors--por {
+			background-color: $color-por-secondary;
+			color: $color-por-primary;
+		}
+		&-colors--sas {
+			background-color: $color-sas-secondary;
+			color: $color-sas-primary;
+		}
+		&-colors--sac {
+			background-color: $color-sac-primary;
+			color: $color-sac-tertiary;
+		}
+		&-colors--tor {
+			background-color: $color-tor-primary;
+			color: $color-tor-secondary;
+		}
+		&-colors--uta {
+			background-color: $color-uta-primary;
+			color: $color-uta-secondary;
+		}
+		&-colors--was {
+			background-color: $color-was-secondary;
+			color: $color-was-primary;
+		}
+	}
+
+	&:hover &__picture-caption {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+
+	&:hover &__picture-img {
+		transform: scale(0.8);
+		filter: blur(3px) brightness(80%);
+	}
 }
 
 /* ---------------------------------------------- SECTION HEADER */
@@ -785,25 +985,25 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-}
-.section-header > * {
-	padding: 0 8vw;
-	padding-bottom: calc(1vw + var(--section-rotate));
-	-webkit-box-flex: 0;
-	-ms-flex: 0 0 50%;
-	flex: 0 0 50%;
-}
 
+	& > * {
+		padding: 0 8vw;
+		padding-bottom: calc(1vw + var(--section-rotate));
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+	}
+}
 /* ------------------------------- HEADER HERO */
 .header__hero {
 	height: 100%;
-}
 
-.header__hero-img {
-	-o-object-fit: contain;
-	object-fit: contain;
-	height: 100%;
-	width: 100%;
+	&-img {
+		-o-object-fit: contain;
+		object-fit: contain;
+		height: 100%;
+		width: 100%;
+	}
 }
 
 /* ---------------------------------------------- SECTION DESCRIPTION */
@@ -813,16 +1013,16 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-}
-.section-description > * {
-	padding: 0 8vw;
-	padding-top: 14vw;
-	padding-bottom: calc(1vw + var(--section-rotate));
-	-webkit-box-flex: 0;
-	-ms-flex: 0 0 50%;
-	flex: 0 0 50%;
-}
 
+	& > * {
+		padding: 0 8vw;
+		padding-top: 14vw;
+		padding-bottom: calc(1vw + var(--section-rotate));
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+	}
+}
 /* ------------------------------- DESCRIPTION BOX */
 .description-box .description {
 	margin-right: 5rem;
@@ -842,139 +1042,139 @@ body {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
+
+	/* ---------------- SECTION BOX DETAIL */
+	&__detail {
+		font-size: 1.5rem;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		font-weight: 400;
+		margin-bottom: 2.25rem;
+	}
+	&__detail svg {
+		margin-right: 1.25rem;
+	}
+
+	/* ---------------- SECTION BOX ICON */
+	&__icon {
+		height: 2.25rem;
+		width: 2.25rem;
+		fill: #55c57a;
+	}
+	/* ---------------- SECTION BOX LABEL */
+	&__label {
+		font-weight: 700;
+		margin-right: 2.25rem;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+	}
+	/* ---------------- SECTION BOX TEXT */
+	&__text {
+		margin-right: 2.25rem;
+		text-transform: capitalize;
+	}
+	/* ---------------- SECTION BOX IMG */
+	&__img {
+		border-radius: 50%;
+		height: 3.5rem;
+		margin-right: 1.25rem;
+	}
 }
 
 /* ---------------- SECTION BACKGROUND TEAM COLORS  */
-.section__bg-color--atl {
+.section__bg-colors--atl {
 	background-color: rgba($color-atl-secondary, 0.1);
 }
-.section__bg-color--bos {
+.section__bg-colors--bos {
 	background-color: rgba($color-bos-primary, 0.1);
 }
-.section__bg-color--bkn {
+.section__bg-colors--bkn {
 	background-color: rgba($color-bkn-primary, 0.1);
 }
-.section__bg-color--cha {
+.section__bg-colors--cha {
 	background-color: rgba($color-cha-primary, 0.1);
 }
-.section__bg-color--chi {
+.section__bg-colors--chi {
 	background-color: rgba($color-chi-secondary, 0.1);
 }
-.section__bg-color--cle {
+.section__bg-colors--cle {
 	background-color: rgba($color-cle-secondary, 0.1);
 }
-.section__bg-color--dal {
+.section__bg-colors--dal {
 	background-color: rgba($color-dal-secondary, 0.1);
 }
-.section__bg-color--den {
+.section__bg-colors--den {
 	background-color: rgba($color-den-secondary, 0.1);
 }
-.section__bg-color--det {
+.section__bg-colors--det {
 	background-color: rgba($color-det-primary, 0.1);
 }
-.section__bg-color--gsw {
+.section__bg-colors--gsw {
 	background-color: rgba($color-gsw-secondary, 0.1);
 }
-.section__bg-color--hou {
+.section__bg-colors--hou {
 	background-color: rgba($color-hou-tertiary, 0.1);
 }
-.section__bg-color--ind {
+.section__bg-colors--ind {
 	background-color: rgba($color-ind-secondary, 0.1);
 }
-.section__bg-color--lac {
+.section__bg-colors--lac {
 	background-color: rgba($color-lac-primary, 0.1);
 }
-.section__bg-color--lal {
+.section__bg-colors--lal {
 	background-color: rgba($color-lal-secondary, 0.1);
 }
-.section__bg-color--mem {
+.section__bg-colors--mem {
 	background-color: rgba($color-mem-secondary, 0.1);
 }
-.section__bg-color--mia {
+.section__bg-colors--mia {
 	background-color: rgba($color-mia-primary, 0.1);
 }
-.section__bg-color--mil {
+.section__bg-colors--mil {
 	background-color: rgba($color-mil-primary, 0.1);
 }
-.section__bg-color--min {
+.section__bg-colors--min {
 	background-color: rgba($color-min-secondary, 0.1);
 }
-.section__bg-color--nop {
+.section__bg-colors--nop {
 	background-color: rgba($color-nop-secondary, 0.1);
 }
-.section__bg-color--nyk {
+.section__bg-colors--nyk {
 	background-color: rgba($color-nyk-secondary, 0.1);
 }
-.section__bg-color--okc {
+.section__bg-colors--okc {
 	background-color: rgba($color-okc-secondary, 0.1);
 }
-.section__bg-color--orl {
+.section__bg-colors--orl {
 	background-color: rgba($color-orl-tertiary, 0.1);
 }
-.section__bg-color--phi {
+.section__bg-colors--phi {
 	background-color: rgba($color-phi-primary, 0.1);
 }
-.section__bg-color--phx {
+.section__bg-colors--phx {
 	background-color: rgba($color-phx-secondary, 0.1);
 }
-.section__bg-color--por {
+.section__bg-colors--por {
 	background-color: rgba($color-por-secondary, 0.1);
 }
-.section__bg-color--sas {
+.section__bg-colors--sas {
 	background-color: rgba($color-sas-primary, 0.1);
 }
-.section__bg-color--sac {
+.section__bg-colors--sac {
 	background-color: rgba($color-sac-primary, 0.1);
 }
-.section__bg-color--tor {
+.section__bg-colors--tor {
 	background-color: rgba($color-tor-primary, 0.1);
 }
-.section__bg-color--uta {
+.section__bg-colors--uta {
 	background-color: rgba($color-uta-tertiary, 0.1);
 }
-.section__bg-color--was {
+.section__bg-colors--was {
 	background-color: rgba($color-was-secondary, 0.1);
-}
-
-/* ---------------- SECTION BOX DETAIL */
-.section-box__detail {
-	font-size: 1.5rem;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-weight: 400;
-	margin-bottom: 2.25rem;
-}
-.section-box__detail svg {
-	margin-right: 1.25rem;
-}
-
-/* ---------------- SECTION BOX ICON */
-.section-box__icon {
-	height: 2.25rem;
-	width: 2.25rem;
-	fill: #55c57a;
-}
-/* ---------------- SECTION BOX LABEL */
-.section-box__label {
-	font-weight: 700;
-	margin-right: 2.25rem;
-	text-transform: uppercase;
-	font-size: 1.4rem;
-}
-/* ---------------- SECTION BOX TEXT */
-.section-box__text {
-	margin-right: 2.25rem;
-	text-transform: capitalize;
-}
-/* ---------------- SECTION BOX IMG */
-.section-box__img {
-	border-radius: 50%;
-	height: 3.5rem;
-	margin-right: 1.25rem;
 }
 
 /* ---------------------------------------------- SECTION MAP */
@@ -987,13 +1187,13 @@ body {
 	margin-top: calc(0px - var(--section-rotate));
 	-ms-flex: 0 0 50%;
 	flex: 0 0 70%;
-}
 
-.section-map > * {
-	padding: 1rem 8rem;
-	-webkit-box-flex: 0;
-	-ms-flex: 0 0 50%;
-	flex: 0 0 50%;
+	& > * {
+		padding: 1rem 8rem;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+	}
 }
 /* ------------------------------- MAP */
 #map {
@@ -1022,35 +1222,163 @@ body {
 	overflow-x: scroll;
 	-ms-scroll-snap-type: x mandatory;
 	scroll-snap-type: x mandatory;
-}
-/* ------------------------------- PLAYERS CARD */
-.players__card {
-	width: 45rem;
-	height: 25rem;
-	background-color: #f7f7f7;
-	border-radius: 3px;
-	-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-	scroll-snap-align: center;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	overflow: hidden;
-	position: relative;
+
+	/* ------------------------------- PLAYERS CARD */
+	&__card {
+		width: 45rem;
+		height: 25rem;
+		background-color: #f7f7f7;
+		border-radius: 3px;
+		-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+		box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+		scroll-snap-align: center;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		overflow: hidden;
+		position: relative;
+	}
+
+	&__card::after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 10%;
+		right: -2px;
+		height: 80%;
+		border-left: 2px solid rgba(0, 0, 0, 0.025);
+	}
+
+	/* ---------------- PLAYERS HEADER INFO */
+	&__header-info {
+		width: 15rem;
+		height: 100%;
+		position: relative;
+		float: left;
+
+		display: grid;
+		grid-template-rows: auto auto max-content;
+		padding: 1rem;
+		justify-content: center;
+		text-align: center;
+	}
+
+	/* ---------------- PLAYERS NAME */
+	&__name {
+		top: 15%;
+		font-size: 1.5rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		padding: 0.125rem 0.75rem;
+	}
+
+	/* ---------------- PLAYERS NUMBER */
+	&__number {
+		font-family: "Stardos Stencil", cursive;
+		font-size: 7.5rem;
+		top: 50%;
+	}
+
+	/* ---------------- PLAYERS POSITION */
+	&__position {
+		font-size: 2em;
+		font-weight: bold;
+		padding: 0.125rem 0.75rem;
+		border-radius: 100px;
+	}
+
+	/* ---------------- PLAYERS LABEL */
+	&__label {
+		font-weight: 800;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+	}
+
+	/* ---------------- PLAYERS TEXT */
+	&__text {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		font-style: italic;
+		font-weight: 400;
+	}
+
+	/* ---------------- PLAYERS HISTORY */
+	&__history {
+		width: 300px;
+		height: 100%;
+		position: absolute;
+		float: left;
+		left: 150px;
+		padding: 1rem;
+
+		display: grid;
+		grid-template-rows: repeat(3, auto);
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.5rem;
+		justify-content: space-evenly;
+		align-items: center;
+		text-align: center;
+	}
+
+	/* ---------------- PLAYERS HISTORY */
+	&__history-school {
+		grid-column: 1 / span 3;
+		text-align: center;
+	}
+
+	&__history-college {
+		grid-column: 1 / span 3;
+		text-align: center;
+	}
+
+	&__history-draft-team {
+		grid-column: 1 / span 3;
+		text-align: center;
+	}
+
+	/* ---------------- PLAYERS PROFILE */
+	&__profile {
+		width: 300px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		box-sizing: border-box;
+		padding: 1rem;
+
+		display: grid;
+		grid-template-rows: repeat(4, auto);
+		grid-template-columns: repeat(2, auto);
+		gap: 0.5rem;
+		justify-content: space-evenly;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__profile-birthplace {
+		grid-column: 1 / 3;
+		text-align: center;
+	}
+
+	&__profile-country {
+		grid-column: 1 / 3;
+		text-align: center;
+	}
+
+	&__profile-birthdate {
+		grid-column: 1 / 3;
+		text-align: center;
+	}
 }
 
-.players__card::after {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 10%;
-	right: -2px;
-	height: 80%;
-	border-left: 2px solid rgba(0, 0, 0, 0.025);
+/* ---------------- PLAYERS SCROLLBAR */
+::-webkit-scrollbar {
+	display: none;
 }
 
 /* ---------------- PLAYER HEADER  */
@@ -1068,260 +1396,133 @@ body {
 	transition: width 0.4s;
 	overflow: hidden;
 	z-index: 2;
-}
 
-/* ---------------- ADDITIONAL TEAM COLORS  */
-.additional__colors--atl {
-	background-color: $color-atl-primary;
-	color: $color-atl-secondary;
-}
-.additional__colors--bos {
-	background-color: $color-bos-primary;
-	color: $color-bos-secondary;
-}
-.additional__colors--bkn {
-	background-color: $color-bkn-primary;
-	color: $color-bkn-secondary;
-}
-.additional__colors--cha {
-	background-color: $color-cha-primary;
-	color: $color-cha-secondary;
-}
-.additional__colors--chi {
-	background-color: $color-chi-primary;
-	color: $color-chi-secondary;
-}
-.additional__colors--cle {
-	background-color: $color-cle-primary;
-	color: $color-cle-secondary;
-}
-.additional__colors--dal {
-	background-color: $color-dal-primary;
-	color: $color-dal-secondary;
-}
-.additional__colors--den {
-	background-color: $color-den-primary;
-	color: $color-den-secondary;
-}
-.additional__colors--det {
-	background-color: $color-det-primary;
-	color: $color-det-secondary;
-}
-.additional__colors--gsw {
-	background-color: $color-gsw-primary;
-	color: $color-gsw-secondary;
-}
-.additional__colors--hou {
-	background-color: $color-hou-primary;
-	color: $color-hou-secondary;
-}
-.additional__colors--ind {
-	background-color: $color-ind-primary;
-	color: $color-ind-secondary;
-}
-.additional__colors--lac {
-	background-color: $color-lac-primary;
-	color: $color-lac-secondary;
-}
-.additional__colors--lal {
-	background-color: $color-lal-primary;
-	color: $color-lal-secondary;
-}
-.additional__colors--mem {
-	background-color: $color-mem-primary;
-	color: $color-mem-secondary;
-}
-.additional__colors--mia {
-	background-color: $color-mia-primary;
-	color: $color-mia-secondary;
-}
-.additional__colors--mil {
-	background-color: $color-mil-primary;
-	color: $color-mil-secondary;
-}
-.additional__colors--min {
-	background-color: $color-min-primary;
-	color: $color-min-secondary;
-}
-.additional__colors--nop {
-	background-color: $color-nop-primary;
-	color: $color-nop-secondary;
-}
-.additional__colors--nyk {
-	background-color: $color-nyk-primary;
-	color: $color-nyk-secondary;
-}
-.additional__colors--okc {
-	background-color: $color-okc-primary;
-	color: $color-okc-secondary;
-}
-.additional__colors--orl {
-	background-color: $color-orl-primary;
-	color: $color-orl-secondary;
-}
-.additional__colors--phi {
-	background-color: $color-phi-primary;
-	color: $color-phi-secondary;
-}
-.additional__colors--phx {
-	background-color: $color-phx-primary;
-	color: $color-phx-secondary;
-}
-.additional__colors--por {
-	background-color: $color-por-primary;
-	color: $color-por-secondary;
-}
-.additional__colors--sas {
-	background-color: $color-sas-primary;
-	color: $color-sas-secondary;
-}
-.additional__colors--sac {
-	background-color: $color-sac-primary;
-	color: $color-sac-secondary;
-}
-.additional__colors--tor {
-	background-color: $color-tor-primary;
-	color: $color-tor-secondary;
-}
-.additional__colors--uta {
-	background-color: $color-uta-primary;
-	color: $color-uta-secondary;
-}
-.additional__colors--was {
-	background-color: $color-was-secondary;
-	color: $color-was-primary;
-}
+	/* ---------------- ADDITIONAL TEAM COLORS  */
+	&__colors--atl {
+		background-color: $color-atl-primary;
+		color: $color-atl-secondary;
+	}
+	&__colors--bos {
+		background-color: $color-bos-primary;
+		color: $color-bos-secondary;
+	}
+	&__colors--bkn {
+		background-color: $color-bkn-primary;
+		color: $color-bkn-secondary;
+	}
+	&__colors--cha {
+		background-color: $color-cha-primary;
+		color: $color-cha-secondary;
+	}
+	&__colors--chi {
+		background-color: $color-chi-primary;
+		color: $color-chi-secondary;
+	}
+	&__colors--cle {
+		background-color: $color-cle-primary;
+		color: $color-cle-secondary;
+	}
+	&__colors--dal {
+		background-color: $color-dal-primary;
+		color: $color-dal-secondary;
+	}
+	&__colors--den {
+		background-color: $color-den-primary;
+		color: $color-den-secondary;
+	}
+	&__colors--det {
+		background-color: $color-det-primary;
+		color: $color-det-secondary;
+	}
+	&__colors--gsw {
+		background-color: $color-gsw-primary;
+		color: $color-gsw-secondary;
+	}
+	&__colors--hou {
+		background-color: $color-hou-primary;
+		color: $color-hou-secondary;
+	}
+	&__colors--ind {
+		background-color: $color-ind-primary;
+		color: $color-ind-secondary;
+	}
+	&__colors--lac {
+		background-color: $color-lac-primary;
+		color: $color-lac-secondary;
+	}
+	&__colors--lal {
+		background-color: $color-lal-primary;
+		color: $color-lal-secondary;
+	}
+	&__colors--mem {
+		background-color: $color-mem-primary;
+		color: $color-mem-secondary;
+	}
+	&__colors--mia {
+		background-color: $color-mia-primary;
+		color: $color-mia-secondary;
+	}
+	&__colors--mil {
+		background-color: $color-mil-primary;
+		color: $color-mil-secondary;
+	}
+	&__colors--min {
+		background-color: $color-min-primary;
+		color: $color-min-secondary;
+	}
+	&__colors--nop {
+		background-color: $color-nop-primary;
+		color: $color-nop-secondary;
+	}
+	&__colors--nyk {
+		background-color: $color-nyk-primary;
+		color: $color-nyk-secondary;
+	}
+	&__colors--okc {
+		background-color: $color-okc-primary;
+		color: $color-okc-secondary;
+	}
+	&__colors--orl {
+		background-color: $color-orl-primary;
+		color: $color-orl-secondary;
+	}
+	&__colors--phi {
+		background-color: $color-phi-primary;
+		color: $color-phi-secondary;
+	}
+	&__colors--phx {
+		background-color: $color-phx-primary;
+		color: $color-phx-secondary;
+	}
+	&__colors--por {
+		background-color: $color-por-primary;
+		color: $color-por-secondary;
+	}
+	&__colors--sas {
+		background-color: $color-sas-primary;
+		color: $color-sas-secondary;
+	}
+	&__colors--sac {
+		background-color: $color-sac-primary;
+		color: $color-sac-secondary;
+	}
+	&__colors--tor {
+		background-color: $color-tor-primary;
+		color: $color-tor-secondary;
+	}
+	&__colors--uta {
+		background-color: $color-uta-primary;
+		color: $color-uta-secondary;
+	}
+	&__colors--was {
+		background-color: $color-was-secondary;
+		color: $color-was-primary;
+	}
 
-.additional:hover {
-	width: 100%;
-	border-radius: 0 5px 5px 0;
-}
-
-/* ---------------- PLAYERS HEADER INFO */
-.players__header-info {
-	width: 15rem;
-	height: 100%;
-	position: relative;
-	float: left;
-
-	display: grid;
-	grid-template-rows: auto auto max-content;
-	padding: 1rem;
-	justify-content: center;
-	text-align: center;
-}
-
-/* ---------------- PLAYERS NAME */
-.players__name {
-	top: 15%;
-	font-size: 1.5rem;
-	font-weight: 800;
-	text-transform: uppercase;
-	padding: 0.125rem 0.75rem;
-}
-
-/* ---------------- PLAYERS NUMBER */
-.players__number {
-	font-family: "Stardos Stencil", cursive;
-	font-size: 7.5rem;
-	top: 50%;
-}
-
-/* ---------------- PLAYERS POSITION */
-.players__position {
-	font-size: 2em;
-	font-weight: bold;
-	padding: 0.125rem 0.75rem;
-	border-radius: 100px;
-}
-
-/* ---------------- PLAYERS LABEL */
-.players__label {
-	font-weight: 800;
-	text-transform: uppercase;
-	font-size: 1.4rem;
-}
-
-/* ---------------- PLAYERS TEXT */
-.players__text {
-	font-size: 1.5rem;
-	margin-bottom: 1rem;
-	font-style: italic;
-	font-weight: 400;
-}
-
-/* ---------------- PLAYERS HISTORY */
-.players__history {
-	width: 300px;
-	height: 100%;
-	position: absolute;
-	float: left;
-	left: 150px;
-	padding: 1rem;
-
-	display: grid;
-	grid-template-rows: repeat(3, auto);
-	grid-template-columns: repeat(3, 1fr);
-	gap: 0.5rem;
-	justify-content: space-evenly;
-	align-items: center;
-	text-align: center;
-}
-
-/* ---------------- PLAYERS HISTORY */
-.players__history-school {
-	grid-column: 1 / span 3;
-	text-align: center;
-}
-
-.players__history-college {
-	grid-column: 1 / span 3;
-	text-align: center;
-}
-
-.players__history-draft-team {
-	grid-column: 1 / span 3;
-	text-align: center;
-}
-
-/* ---------------- PLAYERS PROFILE */
-.players__profile {
-	width: 300px;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 1;
-	box-sizing: border-box;
-	padding: 1rem;
-
-	display: grid;
-	grid-template-rows: repeat(4, auto);
-	grid-template-columns: repeat(2, auto);
-	gap: 0.5rem;
-	justify-content: space-evenly;
-	align-items: center;
-	text-align: center;
-}
-
-.players__profile-birthplace {
-	grid-column: 1 / 3;
-	text-align: center;
-}
-
-.players__profile-country {
-	grid-column: 1 / 3;
-	text-align: center;
-}
-
-.players__profile-birthdate {
-	grid-column: 1 / 3;
-	text-align: center;
-}
-
-/* ---------------- PLAYERS SCROLLBAR */
-::-webkit-scrollbar {
-	display: none;
+	&:hover {
+		width: 100%;
+		border-radius: 0 5px 5px 0;
+	}
 }
 
 /* ---------------------------------------------- FOOTER */
@@ -1335,56 +1536,57 @@ body {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
-}
-@media only screen and (max-width: 50em) {
-	.footer {
-		grid-template-columns: 1fr;
-		grid-row-gap: 1.25rem;
-		justify-items: center;
+
+	@media only screen and (max-width: 50em) {
+		.footer {
+			grid-template-columns: 1fr;
+			grid-row-gap: 1.25rem;
+			justify-items: center;
+		}
 	}
-}
-/* ------------------------------- FOOTER LOGO */
-.footer__logo {
-	grid-row: 1 / 3;
-	-ms-flex-item-align: center;
-	align-self: center;
-}
-@media only screen and (max-width: 50em) {
-	.footer__logo {
-		grid-row: 1;
+	/* ------------------------------- FOOTER LOGO */
+	&__logo {
+		grid-row: 1 / 3;
+		-ms-flex-item-align: center;
+		align-self: center;
 	}
-}
-.footer__logo img {
-	height: 3rem;
-}
-/* ------------------------------- FOOTER NAV */
-.footer__nav {
-	list-style: none;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	justify-content: flex-end;
-}
-.footer__nav li {
-	margin-left: 1.5rem;
-}
-.footer__nav a {
-	color: #777;
-	text-decoration: none !important;
-	-webkit-transition: all 0.2s;
-	transition: all 0.2s;
-}
-.footer__nav a:hover,
-.footer__nav a:active {
-	color: #55c57a;
-}
-/* ------------------------------- FOOTER COPYRIGHT */
-.footer__copyright {
-	justify-self: end;
-	color: #999;
-}
-@media only screen and (max-width: 50em) {
-	.footer__copyright {
-		justify-self: center;
+	@media only screen and (max-width: 50em) {
+		&__logo {
+			grid-row: 1;
+		}
+	}
+	&__logo img {
+		height: 3rem;
+	}
+	/* ------------------------------- FOOTER NAV */
+	&__nav {
+		list-style: none;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__nav li {
+		margin-left: 1.5rem;
+	}
+	&__nav a {
+		color: $color-text-primary;
+		text-decoration: none !important;
+		-webkit-transition: all 0.2s;
+		transition: all 0.2s;
+	}
+	&__nav a:hover,
+	&__nav a:active {
+		color: #55c57a;
+	}
+	/* ------------------------------- FOOTER COPYRIGHT */
+	&__copyright {
+		justify-self: end;
+		color: #999;
+	}
+	@media only screen and (max-width: 50em) {
+		&__copyright {
+			justify-self: center;
+		}
 	}
 }
