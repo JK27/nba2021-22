@@ -7,12 +7,12 @@ const AppError = require("./../utils/appError");
 exports.getAll = Model => catchAsync(async (req, res, next) => {
   // DOES => 'filter' is used to find only players for the team matching the teamId in the params. It works as if it was 'getPlayerByTeamId'.
   let filter = {}
-  if (req.params.teamId) filter = {team_id: req.params.teamId}
-
   // DOES => Executes the query.
   // NOTE => Chaining methods is possible because after calling each method, we always return "this".
   const features = new APIFeatures(Model.find(filter), req.query).filter().sort().limitFields().paginate();
   const doc = await features.query;
+  console.log(`${doc.length} results found`)
+
 
   // DOES => Sends the response.
   res.status(200).json({
@@ -23,7 +23,6 @@ exports.getAll = Model => catchAsync(async (req, res, next) => {
     },
   });
 });
-
 
 
 /////////////////////////////////////////////////////////// GET ONE

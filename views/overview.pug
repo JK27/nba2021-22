@@ -7,8 +7,9 @@ block content
     //////////////////////////////////////// CARD CONTAINER
     .card-container
       //- Loops through each team in the database creating a card for each
-      each team in teams 
+      each team in teams  
         a.card(href=`/team/${team.slug}`)
+          //- NOTE => Uses alias field as identifier for the team as both name and market fields may contain 2 or more words.
           - const alias = team.alias.toLowerCase()
           //////////////////////// CARD HEADER
           .card__header

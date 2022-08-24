@@ -1,5 +1,4 @@
 const venue = JSON.parse(document.getElementById("map").dataset.venue);
-console.log(venue);
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiamsyNyIsImEiOiJjbDM4bXRxYXowMWc1M2lxZjN0dWl3cHZnIn0.pagSzy_FQ6Q090bac7p6Gw';
 

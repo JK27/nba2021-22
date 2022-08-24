@@ -4,137 +4,140 @@ block append head
   script(src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js')
   link(href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet')
 
-
-
-//- ///////////////////////////////////////////////////////////////// MIXINS
-//- /////////////////////////////////////////////////////// SECTION BOX
-mixin sectionBox(label, text, icon)
+//- /////////////////////////////////////////////////////// MIXINS
+//- //////////////////////////////////////// SECTION BOX
+mixin sectionBox(label, text)
+  //- DOES => Creates the label and text properties to be specified in the section-box element.
+  //- NOTE => Uses alias field as identifier for the team as both name and market fields may contain 2 or more words.
   - const alias = team.alias.toLowerCase()
   .section-box__detail
     span.section-box__label(class=`label__color--${alias}`)= label
     span.section-box__text= text
 
 block content
-  ///////////////////////////////////////////////////////// INFO
-  section.section-info
-    //////////////////////////////////////// info HERO
-    .info__hero
-      img.info__hero-img(src=`/img/logos/${team.logo}`, alt=`${team.market} ${team.name}`)
-    //////////////////////////////////////// SECTION BOX
-    - const alias = team.alias.toLowerCase()
-    .section-box(class=`section__bg-colors--${alias}`)
-      div
+    ///////////////////////////////////////////////////////// INFO
+    section.section-info
+      //////////////////////////////////////// INFO HERO
+      .info__hero
+        img.info__hero-img(src=`/img/logos/${team.logo}`, alt=`${team.market} ${team.name}`)
+      //////////////////////////////////////// SECTION BOX
+      - const alias = team.alias.toLowerCase()
+      //- NOTE => Uses alias field as identifier for the team as both name and market fields may contain 2 or more words.
+      .section-box(class=`section__bg-colors--${alias}`)
         ///////////////////// QUICK FACTS
         .section-box__group
           h2.section__heading(class=`heading__color--${alias}`) Quick facts
           //// FOUNDED
-          +sectionBox("Founded", team.founded, "calendar")
+          +sectionBox("Founded", team.founded)
           //// CONFERENCE
-          +sectionBox("Conference", team.conference , "trending-up")
+          +sectionBox("Conference", team.conference)
           //// DIVISION
-          +sectionBox("Division", team.division, "user")
+          +sectionBox("Division", team.division)
           h2.section__heading(class=`heading__color--${alias}`) Titles
           //// CHAMPIONSHIPS
-          +sectionBox("Championships", team.championships, "star")
-          +sectionBox("Conference Titles", team.conf_titles, "star")
-          +sectionBox("Division Titles", team.div_titles, "star")
+          +sectionBox("Championships", team.championships)
+          +sectionBox("Conference Titles", team.conf_titles)
+          +sectionBox("Division Titles", team.div_titles)
 
-  ////////////////////////////////////////// MAP
-  section.section-map
-    #map(data-venue=`${JSON.stringify(team.venue)}`)
-    //////////////////////////////////////// section BOX
-    .section-box(class=`section__bg-colors--${alias}`)
-      div
-        ///////////////////// VENUE DETAILS
-        .section-box__group
-          h2.section__heading(class=`heading__color--${alias}`) Venue details
-          //// NAME
-          +sectionBox("Name", team.venue.name, "calendar")
-          //// ADDRESS
-          +sectionBox("Address", team.venue.address, "trending-up")
-          //// CITY
-          +sectionBox("City", team.venue.city, "user")
-          //// STATE
-          +sectionBox("State", team.venue.state_name, "star")
-          //// CAPACITY
-          +sectionBox("Capacity", team.venue.capacity, "star")
+    ////////////////////////////////////////// MAP
+    section.section-map
+      //- DOES=> Retrieves the venues data from the database.
+      #map(data-venue=`${JSON.stringify(team.venue)}`)
+      //////////////////////////////////////// section BOX
+      .section-box(class=`section__bg-colors--${alias}`)
+        div
+          ///////////////////// VENUE DETAILS
+          .section-box__group
+            h2.section__heading(class=`heading__color--${alias}`) Venue details
+            //// NAME
+            +sectionBox("Name", team.venue.name)
+            //// ADDRESS
+            +sectionBox("Address", team.venue.address)
+            //// CITY
+            +sectionBox("City", team.venue.city)
+            //// STATE
+            +sectionBox("State", team.venue.state_name)
+            //// CAPACITY
+            +sectionBox("Capacity", team.venue.capacity)
 
-  //- ///////////////////////////////////////////////////////// PLAYERS
-  section.section-players
-    .players
-      //- Loops through all guides creating an img with name and label for each.
-      each player in team.players
-        //////////////////////////////////// PLAYER CARD
-        .players__card
-          //////////////////////// ADDITIONAL
-          - const alias = team.alias.toLowerCase()
-          .additional(class=`additional__colors--${alias}`)
-            //////////// PLAYER HEADER
-            .players__header
-              .players__header-info
-                h6.players__name= player.first_name
-                h6.players__name= `${player.last_name} ${player.name_suffix ?  player.name_suffix : ''}`
-                p.players__number= player.jersey_number
-                p.players__position= player.primary_position
-            //////////// PLAYER HISTORY
-            .players__history
-              .players__history-school
-                p.players__label(class=`additional__label-color--${alias}`) High School 
-                p.players__text(class=`additional__text-color--${alias}`)= player.high_school ?  player.high_school : 'N/A'
-              .players__history-college
-                p.players__label(class=`additional__label-color--${alias}`) College  
-                p.players__text(class=`additional__text-color--${alias}`)= player.college ?  player.college : 'N/A'
-              .players__history-draft-year
-                p.players__label(class=`additional__label-color--${alias}`) Draft Year  
-                p.players__text(class=`additional__text-color--${alias}`)= player.draft.year 
-              .players__history-draft-round
-                p.players__label(class=`additional__label-color--${alias}`) Round  
-                p.players__text(class=`additional__text-color--${alias}`)= player.draft.round ?  player.draft.round : 'Undrafted'
-              .players__history-draft-pick
-                p.players__label(class=`additional__label-color--${alias}`) Pick
-                p.players__text(class=`additional__text-color--${alias}`)= player.draft.pick ?  player.draft.pick : 'Undrafted'
-              .players__history-draft-team
-                - let {name: teamName, market: teamMarket} = player.draft.team_id
-                p.players__label(class=`additional__label-color--${alias}`) Draft Team  
-                p.players__text(class=`additional__text-color--${alias}`)= `${teamMarket} ${teamName}`
+    //- ///////////////////////////////////////////////////////// PLAYERS
+    section.section-players
+      .players__heading
+        h2.section__heading(class=`heading__color--${alias}`) Team Roster
+        p.players__subheading Hover over the left side of the card for more information.
+      .players
+        //- DOES => Loops through all guides creating an img with name and label for each.
+        each player in team.players
+          //////////////////////////////////// PLAYER CARD
+          .players__card
+            //////////////////////// ADDITIONAL
+            .additional(class=`additional__colors--${alias}`)
+              //////////// PLAYER HEADER
+              .players__header
+                .players__header-info
+                  p.players__name= player.first_name
+                  p.players__name= `${player.last_name} ${player.name_suffix ?  player.name_suffix : ''}`
+                  p.players__number= player.jersey_number
+                  p.players__position= player.primary_position
+              //////////// PLAYER HISTORY
+              .players__history
+                .players__history-school
+                  p.players__label(class=`additional__label-color--${alias}`) High School 
+                  p.players__text(class=`additional__text-color--${alias}`)= player.high_school ?  player.high_school : 'N/A'
+                .players__history-college
+                  p.players__label(class=`additional__label-color--${alias}`) College  
+                  p.players__text(class=`additional__text-color--${alias}`)= player.college ?  player.college : 'N/A'
+                .players__history-draft-year
+                  p.players__label(class=`additional__label-color--${alias}`) Draft Year  
+                  p.players__text(class=`additional__text-color--${alias}`)= player.draft.year 
+                .players__history-draft-round
+                  p.players__label(class=`additional__label-color--${alias}`) Round  
+                  p.players__text(class=`additional__text-color--${alias}`)= player.draft.round ?  player.draft.round : 'Undrafted'
+                .players__history-draft-pick
+                  p.players__label(class=`additional__label-color--${alias}`) Pick
+                  p.players__text(class=`additional__text-color--${alias}`)= player.draft.pick ?  player.draft.pick : 'Undrafted'
+                .players__history-draft-team
+                  - let {name: teamName, market: teamMarket} = player.draft.team_id
+                  p.players__label(class=`additional__label-color--${alias}`) Draft Team  
+                  p.players__text(class=`additional__text-color--${alias}`)= `${teamMarket} ${teamName}`
 
-          //////////////////////// PLAYERS PROFILE
-          .players__profile(class=`section__bg-colors--${alias}`)
-            .players__profile-height-weight 
-              ////////// HEIGHT
-              //- DOES=> Converts player's height from inches to foot, taking only one decimal.
-              - const height = (player.height * 0.0833).toFixed(1)
-              p.players__label(class=`heading__color--${alias}`) Height
-              p.players__text= `${height} ft`
+            //////////////////////// PLAYERS PROFILE
+            .players__profile(class=`section__bg-colors--${alias}`)
+              .players__profile-height-weight 
+                ////////// HEIGHT
+                //- DOES=> Converts player's height from inches to foot, taking only one decimal.
+                - const height = (player.height * 0.0833).toFixed(1)
+                p.players__label(class=`heading__color--${alias}`) Height
+                p.players__text= `${height} ft`
 
-            .players__profile-height-weight 
-              ////////// WEIGHT
-              p.players__label(class=`heading__color--${alias}`) Weight
-              p.players__text=`${player.weight} lbs`
+              .players__profile-height-weight 
+                ////////// WEIGHT
+                p.players__label(class=`heading__color--${alias}`) Weight
+                p.players__text=`${player.weight} lbs`
 
-            .players__profile-birthplace
-              ////////// BIRTH PLACE
-              //- DOES=> Splits birth_place string by the commas, returning an array with the city, state and country ISO code.
-              - const place = player.birth_place.split(",")
-              - const birth_city = place[0]
-              - const birth_state = place[1].trim()
+              .players__profile-birthplace
+                ////////// BIRTH PLACE
+                //- DOES=> Splits birth_place string by the commas, returning an array with the city, state and country ISO code.
+                - const place = player.birth_place.split(",")
+                - const birth_city = place[0]
+                - const birth_state = place[1].trim()
 
-              //- DOES=> Removes whitespace from the string, leaving only the country ISO code.
-              - const birth_country = place[2].trim()
-              //- DOES=> Converts the county ISO code into the country name.
-              - const country_name = new Intl.DisplayNames(['en'], {type: 'region'}).of(birth_country)
-              p.players__label(class=`heading__color--${alias}`) Birth Place
-              //- DOES=> If there is a birth_state (it is not blank) then displays it separating it with a comma from the birth_city.
-              p.players__text= `${birth_city}  ${birth_state ? `, ${birth_state}` : ''}`
-            
-            .players__profile-country
-              ////////// COUNTRY
-              p.players__label(class=`heading__color--${alias}`) Country
-              p.players__text= `${country_name}`
+                //- DOES=> Removes whitespace from the string, leaving only the country ISO code.
+                - const birth_country = place[2].trim()
+                //- DOES=> Converts the county ISO code into the country name.
+                - const country_name = new Intl.DisplayNames(['en'], {type: 'region'}).of(birth_country)
+                p.players__label(class=`heading__color--${alias}`) Birth Place
+                //- DOES=> If there is a birth_state (it is not blank) then displays it separating it with a comma from the birth_city.
+                p.players__text= `${birth_city}  ${birth_state ? `, ${birth_state}` : ''}`
 
-            .players__profile-birthdate  
-              ////////// BIRTH DATE
-              //- DOES=> Converts the birthdate string into a Date instance and then returns a string with a language sensitive representation of that date.
-              - const date = new Date(player.birthdate).toLocaleString("en-gb", {day: "numeric", month: "long", year: "numeric"})
-              p.players__label(class=`heading__color--${alias}`) Birth Date 
-              p.players__text= date
+              .players__profile-country
+                ////////// COUNTRY
+                p.players__label(class=`heading__color--${alias}`) Country
+                p.players__text= `${country_name}`
+
+              .players__profile-birthdate  
+                ////////// BIRTH DATE
+                //- DOES=> Converts the birthdate string into a Date instance and then returns a string with a language sensitive representation of that date.
+                - const date = new Date(player.birthdate).toLocaleString("en-gb", {day: "numeric", month: "long", year: "numeric"})
+                p.players__label(class=`heading__color--${alias}`) Birth Date 
+                p.players__text= date

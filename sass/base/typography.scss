@@ -1,4 +1,4 @@
-/* ------------------------------- HEADING SECTION */
+/* -------------------------------------------------------- SECTION HEADING */
 .section__heading {
 	font-size: 2.25rem;
 	text-transform: uppercase;
@@ -8,4 +8,15 @@
 	line-height: 1.3;
 	display: inline-block;
 	margin: 3rem 0;
+}
+
+/* -------------------------------------------------------- PLAYERS HEADING */
+.players__heading {
+	text-align: center;
+	padding-top: 4rem;
+}
+/* ----------------------------------------- PLAYERS SUBHEADING */
+.players__subheading {
+	font-size: 1.5rem;
+	font-style: italic;
 }

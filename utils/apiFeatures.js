@@ -4,9 +4,11 @@ class APIFeatures {
     this.queryString = queryString;
   }
 
+
   // FUNCTIONALITY => FILTERING
   // DOES => Creates a new object containing all the key-value pairs from the query parameters.
   filter() {
+    // DOES => Creates a shallow hard copy of the queryString object. First takes all the fields out of the object using destructuring and then creates a new object containing all the key-value pairs from the query.
     const queryObj = {...this.queryString};
     // DOES => Removes all the fields in the array from the queryObj.
     const excludedFields = ["page", "sort", "limit", "fields"];
@@ -14,12 +16,15 @@ class APIFeatures {
     // DOES => Advance filtering. Allows to use greater and lower than operators adding a "$" to the query to match the mongoDB operators.
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte?|lte?)\b/g, match => `$${match}`);
-
+    console.log(`This is queryStr ${queryStr}`);
     // DOES => Builds the query.
     this.query = this.query.find(JSON.parse(queryStr));
+    console.log(`This is this.query ${this.query}`);
+    console.log(typeof (this.query))
     // NOTE => We need to return the entire object in order to be able to chain other methods.
     return this;
   }
+
 
   // FUNCTIONALITY => SORTING
   sort() {

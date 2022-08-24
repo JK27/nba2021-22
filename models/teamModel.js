@@ -7,6 +7,7 @@ const teamSchema = new mongoose.Schema({
 	name: {
 		type: String,
 		required: [true, "A team must have a name."],
+		unique: true,
 	},
 	market: {
 		type: String,
@@ -15,6 +16,7 @@ const teamSchema = new mongoose.Schema({
 	alias: {
 		type: String,
 		length: 3,
+		unique: true,
 	},
 	logo: {
 		type: String,

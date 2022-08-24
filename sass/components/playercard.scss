@@ -1,4 +1,4 @@
-/* ------------------------------- PLAYERS */
+/* -------------------------------------------------------- PLAYERS */
 .players {
 	padding: 5rem 0;
 	display: grid;
@@ -8,12 +8,12 @@
 	-ms-scroll-snap-type: x mandatory;
 	scroll-snap-type: x mandatory;
 
-	/* ------------------------------- PLAYERS CARD */
+	/* ---------------------------------- PLAYERS CARD */
 	&__card {
-		width: 45rem;
+		width: 50rem;
 		height: 25rem;
 		background-color: #f7f7f7;
-		border-radius: 3px;
+		border-radius: 25px;
 		-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 		box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 		scroll-snap-align: center;
@@ -28,22 +28,34 @@
 		position: relative;
 	}
 
-	&__card::after {
-		content: "";
-		display: block;
+	/* ------------------------------------ ADDITIONAL  */
+	.additional {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+
 		position: absolute;
-		top: 10%;
-		right: -2px;
-		height: 80%;
-		border-left: 2px solid rgba(0, 0, 0, 0.025);
+		// NOTE => Width cannot be higher than 17rem, as it will show players history contents.
+		width: 17rem;
+		height: 100%;
+		transition: width 0.4s;
+		overflow: hidden;
+		z-index: 2;
+
+		&:hover {
+			width: 100%;
+		}
 	}
 
-	/* ---------------- PLAYERS HEADER INFO */
+	/* ------------------- PLAYERS HEADER INFO */
 	&__header-info {
-		width: 15rem;
+		// NOTE => Width needs to match the initial additional element's width to make items be centered within the parent element.
+		width: 17rem;
 		height: 100%;
 		position: relative;
-		float: left;
 
 		display: grid;
 		grid-template-rows: auto auto max-content;
@@ -52,38 +64,35 @@
 		text-align: center;
 	}
 
-	/* ---------------- PLAYERS NAME */
+	/* ------------------- PLAYERS NAME */
 	&__name {
-		top: 15%;
 		font-size: 1.5rem;
 		font-weight: 800;
 		text-transform: uppercase;
 		padding: 0.125rem 0.75rem;
 	}
 
-	/* ---------------- PLAYERS NUMBER */
+	/* ------------------- PLAYERS NUMBER */
 	&__number {
 		font-family: "Stardos Stencil", cursive;
 		font-size: 7.5rem;
-		top: 50%;
 	}
 
-	/* ---------------- PLAYERS POSITION */
+	/* ------------------- PLAYERS POSITION */
 	&__position {
 		font-size: 2em;
-		font-weight: bold;
+		font-weight: 700;
 		padding: 0.125rem 0.75rem;
-		border-radius: 100px;
 	}
 
-	/* ---------------- PLAYERS LABEL */
+	/* ------------------- PLAYERS LABEL */
 	&__label {
 		font-weight: 800;
 		text-transform: uppercase;
 		font-size: 1.4rem;
 	}
 
-	/* ---------------- PLAYERS TEXT */
+	/* ------------------- PLAYERS TEXT */
 	&__text {
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
@@ -91,12 +100,11 @@
 		font-weight: 400;
 	}
 
-	/* ---------------- PLAYERS HISTORY */
+	/* ---------------------------------- PLAYERS HISTORY */
 	&__history {
-		width: 300px;
+		width: 35rem;
 		height: 100%;
 		position: absolute;
-		float: left;
 		left: 150px;
 		padding: 1rem;
 
@@ -108,30 +116,29 @@
 		align-items: center;
 		text-align: center;
 	}
-
-	/* ---------------- PLAYERS HISTORY */
+	/* ------------------- PLAYERS SCHOOL */
 	&__history-school {
 		grid-column: 1 / span 3;
 		text-align: center;
 	}
-
+	/* ------------------- PLAYERS COLLEGE */
 	&__history-college {
 		grid-column: 1 / span 3;
 		text-align: center;
 	}
-
+	/* ------------------- PLAYERS DRAFT TEAM */
 	&__history-draft-team {
 		grid-column: 1 / span 3;
 		text-align: center;
 	}
 
-	/* ---------------- PLAYERS PROFILE */
+	/* ---------------------------------- PLAYERS PROFILE */
 	&__profile {
-		width: 300px;
+		width: 35rem;
 		height: 100%;
 		position: absolute;
-		top: 0;
 		right: 0;
+		// NOTE => Z-index needs to be lower than additional's so it is covered when hovering.
 		z-index: 1;
 		box-sizing: border-box;
 		padding: 1rem;
@@ -144,46 +151,25 @@
 		align-items: center;
 		text-align: center;
 	}
-
+	/* ------------------- PLAYERS BIRTHPLACE */
 	&__profile-birthplace {
 		grid-column: 1 / 3;
 		text-align: center;
 	}
-
+	/* ------------------- PLAYERS COUNTRY */
 	&__profile-country {
 		grid-column: 1 / 3;
 		text-align: center;
 	}
-
+	/* ------------------- PLAYERS BIRTH DATE */
 	&__profile-birthdate {
 		grid-column: 1 / 3;
 		text-align: center;
 	}
 }
 
-/* ---------------- PLAYERS SCROLLBAR */
+/* ------------------------------------ PLAYERS SCROLLBAR */
+// DOES => Hides scrollbar on players cards section.
 ::-webkit-scrollbar {
 	display: none;
-}
-
-/* ---------------- ADDITIONAL  */
-.additional {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-
-	position: absolute;
-	width: 15rem;
-	height: 100%;
-	transition: width 0.4s;
-	overflow: hidden;
-	z-index: 2;
-
-	&:hover {
-		width: 100%;
-		border-radius: 0 5px 5px 0;
-	}
 }
