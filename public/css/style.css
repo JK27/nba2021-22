@@ -821,32 +821,10 @@ body {
   font-size: 1.5rem;
   font-style: italic; }
 
-/* ---------------------------------------------- SECTION INFO */
-.section-info {
-  position: relative;
-  height: 45vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .section-info > * {
-    padding: 0 8vw;
-    padding-bottom: calc(1vw + var(--section-rotate));
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%; }
-
-/* ------------------------------- INFO HERO */
-.info__hero {
-  height: 100%; }
-  .info__hero-img {
-    -o-object-fit: contain;
-    object-fit: contain;
-    height: 100%;
-    width: 100%; }
-
 /* ---------------------------------------------- SECTION MAP */
 .section-map {
   position: relative;
+  height: 30vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -866,7 +844,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   top: 0;
-  bottom: 0; }
+  bottom: 0;
+  border-radius: 0 0 5rem 0; }
 
 /* ------------------------------- MARKER */
 .marker {
@@ -905,7 +884,7 @@ body {
     width: 50rem;
     height: 25rem;
     background-color: #f7f7f7;
-    border-radius: 25px;
+    border-radius: 5rem;
     -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     scroll-snap-align: center;
@@ -1043,9 +1022,16 @@ body {
     margin-right: 2.25rem;
     text-transform: capitalize; }
 
+#facts-box {
+  border-radius: 0 5rem 0 0; }
+
+#venue-box {
+  border-radius: 0 0 0 5rem; }
+
 /* ---------------------------------------------- CARD CONTAINER */
 .card-container {
   max-width: 120rem;
+  padding: 0 6rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1054,7 +1040,7 @@ body {
 /* ------------------------------- CARD */
 .card {
   text-decoration: none;
-  border-radius: 100px;
+  border-radius: 10rem;
   overflow: hidden;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
@@ -1097,7 +1083,7 @@ body {
       top: 50%;
       left: 50%;
       width: 60%;
-      border-radius: 50px;
+      border-radius: 5rem;
       transform: translate(-50%, 20%);
       text-transform: uppercase;
       font-size: 2.5rem;
@@ -1268,11 +1254,54 @@ body {
       order: -1;
       margin-bottom: 1.5rem; } }
 
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
+/* -------------------------------- ATLANTA HAWKS */
+/* -------------------------------- BOSTON CELTICS */
+/* -------------------------------- BROOKLYN NETS */
+/* -------------------------------- CHARLOTTE HORNETS */
+/* -------------------------------- CHICAGO BULLS */
+/* -------------------------------- CLEVELAND CAVALIERS */
+/* -------------------------------- DALLAS MAVERICKS */
+/* -------------------------------- DENVER NUGGETS */
+/* -------------------------------- DETROIT PISTONS */
+/* -------------------------------- GOLDEN STATE WARRIORS */
+/* -------------------------------- HOUSTON ROCKETS */
+/* -------------------------------- INDIANA PACERS */
+/* -------------------------------- LOS ANGELES CLIPPERS */
+/* -------------------------------- LOS ANGELES LAKERS */
+/* -------------------------------- MEMPHIS GRIZZLIES */
+/* -------------------------------- MIAMI HEAT */
+/* -------------------------------- MILWAUKEE BUCKS */
+/* -------------------------------- MINNESOTA TIMBERWOLVES */
+/* -------------------------------- NEW ORLEANS PELICANS */
+/* -------------------------------- NEW YORK KNICKS */
+/* -------------------------------- OKLAHOMA CITY THUNDER */
+/* -------------------------------- ORLANDO MAGIC */
+/* -------------------------------- PHILADELPHIA 76ERS */
+/* -------------------------------- PHOENIX SUNS */
+/* -------------------------------- PORTLAND TRAIL BLAZERS */
+/* -------------------------------- SAN ANTONIO SPURS */
+/* -------------------------------- SACRAMENTO KINGS */
+/* -------------------------------- TORONTO RAPTORS */
+/* -------------------------------- UTAH JAZZ */
+/* -------------------------------- WASHINGTON WIZARDS */
 /* ---------------------------------------------- NAVIGATION */
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(0, 66, 139, 0.85) 49%, rgba(255, 255, 255, 0.85) 51%, rgba(217, 26, 50, 0.85) 100%);
+  padding: 0 5rem;
+  height: 8rem;
+  position: relative;
+  z-index: 100;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
@@ -1285,11 +1314,6 @@ body {
     flex-direction: column; } }
 
 /* ------------------------------- NAV TEAMS */
-.nav--teams {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 40%;
-  flex: 0 1 40%; }
-
 @media only screen and (max-width: 62.5em) {
   .nav--teams {
     margin-bottom: 1.5rem; } }
@@ -1298,11 +1322,71 @@ body {
   .nav--teams {
     margin-bottom: 0; } }
 
+/* ------------------------------- NAV MENU */
+.nav__menu {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly; }
+  .nav__menu--item {
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    transition: transform 0.5s ease-in-out; }
+
+/* ------------------------------- NAV DROPDOWN LIST */
+.nav__dropdown--list {
+  position: absolute;
+  background-color: #ffffff;
+  color: #00428b;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  left: 0;
+  right: 0;
+  padding: 1.2rem;
+  opacity: 0;
+  transition: cubic-bezier(0.5, -0.15, 0.56, 1.51) 1000ms;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
+  gap: 0.75rem;
+  border-radius: 2.5rem; }
+
+#conference {
+  grid-column: 1 / 5; }
+
+#eastern-divisions {
+  transform: translate(-50%, 0%); }
+
+#western-divisions {
+  transform: translate(50%, 0%); }
+
+.nav__menu--item:hover #eastern-divisions,
+.nav__menu--item:hover #western-divisions {
+  opacity: 1;
+  transform: translateY(100%); }
+
+.nav__dropdown--item {
+  display: block;
+  padding: 0;
+  margin: 0; }
+
+.nav__dropdown--el {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #00428b;
+  text-decoration: none;
+  text-transform: uppercase; }
+
 /* ------------------------------- NAV EL */
-.nav__el,
-.nav__el:link,
-.nav__el:visited {
-  color: #f7f7f7;
+.nav__menu--el,
+.nav__menu--el:link,
+.nav__menu--el:visited {
+  color: inherit;
   text-transform: uppercase;
   font-size: 1.6rem;
   text-decoration: none;
@@ -1320,27 +1404,51 @@ body {
   cursor: pointer;
   font-family: inherit; }
 
-.nav__el:hover,
-.nav__el:active {
+.nav__menu--el:hover,
+.nav__menu--el:active {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
   text-shadow: 0 0.7rem 1rem black; }
 
-.nav__el:not(:last-child) {
+.nav__menu--el:not(:last-child) {
   margin-right: 3rem; }
 
 @media only screen and (max-width: 37.5em) {
-  .nav__el:not(:last-child) {
+  .nav__menu--el:not(:last-child) {
     margin-right: 0;
     margin-bottom: 1.2rem; } }
 
-.nav__el:focus {
+.nav__menu--el:focus {
   outline: none; }
+
+/* ---------------------------------------------- SECTION INFO */
+.section-info {
+  position: relative;
+  height: 45vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .section-info > * {
+    padding: 0 8vw;
+    padding-bottom: calc(1vw + var(--section-rotate));
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%; }
+
+/* ------------------------------- INFO HERO */
+.info__hero {
+  height: 100%;
+  border-radius: 5rem 0 0 0; }
+  .info__hero-img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    height: 100%;
+    width: 100%; }
 
 /* ---------------------------------------------- MAIN */
 .main {
   background-color: #f7f7f7;
-  padding: 8rem 6rem;
+  padding: 10rem 0;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;

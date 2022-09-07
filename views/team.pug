@@ -15,6 +15,7 @@ mixin sectionBox(label, text)
     span.section-box__text= text
 
 block content
+  main.main
     ///////////////////////////////////////////////////////// INFO
     section.section-info
       //////////////////////////////////////// INFO HERO
@@ -23,7 +24,7 @@ block content
       //////////////////////////////////////// SECTION BOX
       - const alias = team.alias.toLowerCase()
       //- NOTE => Uses alias field as identifier for the team as both name and market fields may contain 2 or more words.
-      .section-box(class=`section__bg-colors--${alias}`)
+      .section-box(class=`section__bg-colors--${alias}` id="facts-box")
         ///////////////////// QUICK FACTS
         .section-box__group
           h2.section__heading(class=`heading__color--${alias}`) Quick facts
@@ -44,7 +45,7 @@ block content
       //- DOES=> Retrieves the venues data from the database.
       #map(data-venue=`${JSON.stringify(team.venue)}`)
       //////////////////////////////////////// section BOX
-      .section-box(class=`section__bg-colors--${alias}`)
+      .section-box(class=`section__bg-colors--${alias}` id="venue-box")
         div
           ///////////////////// VENUE DETAILS
           .section-box__group

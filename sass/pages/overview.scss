@@ -1,7 +1,8 @@
 /* ---------------------------------------------- MAIN */
 .main {
 	background-color: #f7f7f7;
-	padding: 8rem 6rem;
+	// DOES=> Creates real state at the top for displaying conference divisions dropdown without it overlapping the main content.
+	padding: 10rem 0;
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;

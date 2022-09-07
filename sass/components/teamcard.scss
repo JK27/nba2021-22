@@ -1,6 +1,7 @@
 /* ---------------------------------------------- CARD CONTAINER */
 .card-container {
 	max-width: 120rem;
+	padding: 0 6rem;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -10,7 +11,7 @@
 /* ------------------------------- CARD */
 .card {
 	text-decoration: none;
-	border-radius: 100px;
+	border-radius: 10rem;
 	overflow: hidden;
 	-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
 	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
@@ -60,7 +61,7 @@
 			top: 50%;
 			left: 50%;
 			width: 60%;
-			border-radius: 50px;
+			border-radius: 5rem;
 			transform: translate(-50%, 20%);
 			text-transform: uppercase;
 			font-size: 2.5rem;

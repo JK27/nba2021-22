@@ -17,6 +17,8 @@
 /* ------------------------------- INFO HERO */
 .info__hero {
 	height: 100%;
+	// DOES=> Imitates the border radius of the team and player cards, giving each section a border radius in only one corner depending on their position.
+	border-radius: 5rem 0 0 0;
 
 	&-img {
 		-o-object-fit: contain;

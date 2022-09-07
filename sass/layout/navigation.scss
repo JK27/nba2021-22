@@ -1,8 +1,26 @@
+@import "./../abstracts/variables.scss";
 /* ---------------------------------------------- NAVIGATION */
 .nav {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background: linear-gradient(
+		135deg,
+		rgba($color-nba-blue, 0.85) 49%,
+		rgba($color-nba-white, 0.85) 51%,
+		rgba($color-nba-red, 0.85) 100%
+	);
+	padding: 0 5rem;
+	height: 8rem;
+	position: relative;
+	z-index: 100;
+
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-around;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
@@ -16,11 +34,6 @@
 	}
 }
 /* ------------------------------- NAV TEAMS */
-.nav--teams {
-	-webkit-box-flex: 0;
-	-ms-flex: 0 1 40%;
-	flex: 0 1 40%;
-}
 @media only screen and (max-width: 62.5em) {
 	.nav--teams {
 		margin-bottom: 1.5rem;
@@ -32,11 +45,85 @@
 	}
 }
 
+/* ------------------------------- NAV MENU */
+.nav__menu {
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+
+	&--item {
+		color: $color-nba-white;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem 2rem;
+		transition: transform 0.5s ease-in-out;
+	}
+}
+
+/* ------------------------------- NAV DROPDOWN LIST */
+.nav__dropdown--list {
+	position: absolute;
+	// background-color: #03f048;
+	background-color: $color-nba-white;
+	color: $color-nba-blue;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	left: 0;
+	right: 0;
+	padding: 1.2rem;
+	opacity: 0;
+	transition: cubic-bezier(0.5, -0.15, 0.56, 1.51) 1000ms;
+
+	display: grid;
+	grid-template-rows: repeat(2, auto);
+	grid-template-columns: repeat(3, auto);
+	gap: 0.75rem;
+	border-radius: 2.5rem;
+}
+
+#conference {
+	grid-column: 1 / 5;
+}
+
+#eastern-divisions {
+	transform: translate(-50%, 0%);
+}
+
+#western-divisions {
+	transform: translate(50%, 0%);
+}
+
+.nav__menu--item:hover {
+	#eastern-divisions,
+	#western-divisions {
+		opacity: 1;
+		transform: translateY(100%);
+	}
+}
+
+.nav__dropdown--item {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.nav__dropdown--el {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: $color-nba-blue;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
 /* ------------------------------- NAV EL */
-.nav__el,
-.nav__el:link,
-.nav__el:visited {
-	color: #f7f7f7;
+.nav__menu--el,
+.nav__menu--el:link,
+.nav__menu--el:visited {
+	color: inherit;
 	text-transform: uppercase;
 	font-size: 1.6rem;
 	text-decoration: none;
@@ -54,21 +141,21 @@
 	cursor: pointer;
 	font-family: inherit;
 }
-.nav__el:hover,
-.nav__el:active {
+.nav__menu--el:hover,
+.nav__menu--el:active {
 	-webkit-transform: translateY(-2px);
 	transform: translateY(-2px);
 	text-shadow: 0 0.7rem 1rem black;
 }
-.nav__el:not(:last-child) {
+.nav__menu--el:not(:last-child) {
 	margin-right: 3rem;
 }
 @media only screen and (max-width: 37.5em) {
-	.nav__el:not(:last-child) {
+	.nav__menu--el:not(:last-child) {
 		margin-right: 0;
 		margin-bottom: 1.2rem;
 	}
 }
-.nav__el:focus {
+.nav__menu--el:focus {
 	outline: none;
 }

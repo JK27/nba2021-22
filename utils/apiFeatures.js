@@ -16,11 +16,8 @@ class APIFeatures {
     // DOES => Advance filtering. Allows to use greater and lower than operators adding a "$" to the query to match the mongoDB operators.
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte?|lte?)\b/g, match => `$${match}`);
-    console.log(`This is queryStr ${queryStr}`);
     // DOES => Builds the query.
     this.query = this.query.find(JSON.parse(queryStr));
-    console.log(`This is this.query ${this.query}`);
-    console.log(typeof (this.query))
     // NOTE => We need to return the entire object in order to be able to chain other methods.
     return this;
   }

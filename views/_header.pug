@@ -1,12 +1,32 @@
-header.header
-  ///////////////////////////////// NAV TEAMS
-  nav.nav.nav--teams 
-    a.nav__el(href="/") All teams 
-    a.nav__el(href="/Eastern") Eastern
-    a.nav__el(href="/Western") Western
-    
-
-  ///////////////////////////////// HEADER LOGO
-  .header__logo 
-    img(src="/img/nba_logo.png" alt="logo")
-
+///////////////////////////////// NAV TEAMS
+nav.nav.nav--teams(role="navigation")
+  ul.nav__menu
+    ///////////////////////////////////////////// EASTERN CONFERENCE
+    li.nav__menu--item(id="eastern")
+      span.nav__menu--el Eastern Conference
+      ///////////////////////////////// EASTERN DIVISIONS
+      ul.nav__dropdown--list(id="eastern-divisions")
+        li.nav__dropdown--item( id="conference")
+          a.nav__dropdown--el(href="/?conference=Eastern") All Eastern Conference
+        li.nav__dropdown--item
+          a.nav__dropdown--el(href="/?division=Atlantic") Atlantic Division
+        li.nav__dropdown--item
+          a.nav__dropdown--el(href="/?division=Central") Central Division
+        li.nav__dropdown--item
+          a.nav__dropdown--el(href="/?division=Southeast") Southeast Division
+    /////////////////////////////////////////// ALL TEAMS
+    li.nav__menu--item
+      a.nav__menu--el(href="/") All teams
+    /////////////////////////////////////////// WESTERN CONFERENCE
+    li.nav__menu--item(id="western")
+      span.nav__menu--el Western Conference
+      ///////////////////////////////// WESTERN DIVISIONS
+      ul.nav__dropdown--list(id="western-divisions")
+        li.nav__dropdown--item( id="conference")
+          a.nav__dropdown--el(href="/?conference=Western") All Western Conference
+        li.nav__dropdown--item
+          a.nav__dropdown--el(href="/?division=Northwest") Northwest Division
+        li.nav__dropdown--item
+          a.nav__dropdown--el(href="/?division=Pacific") Pacific Division
+        li.nav__dropdown--item
+          a.nav__dropdown--el(href="/?division=Southwest") Southwest Division
