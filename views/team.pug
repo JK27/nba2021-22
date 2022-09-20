@@ -10,7 +10,7 @@ mixin sectionBox(label, text)
   //- DOES => Creates the label and text properties to be specified in the section-box element.
   //- NOTE => Uses alias field as identifier for the team as both name and market fields may contain 2 or more words.
   - const alias = team.alias.toLowerCase()
-  .section-box__detail
+  .section-box__field
     span.section-box__label(class=`label__color--${alias}`)= label
     span.section-box__text= text
 

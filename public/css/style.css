@@ -823,14 +823,14 @@ body {
 
 /* ---------------------------------------------- SECTION MAP */
 .section-map {
-  position: relative;
-  height: 30vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   flex-direction: row-reverse;
   margin-top: calc(2rem - var(--section-rotate));
-  -ms-flex: 0 0 50%;
+  height: 30vw;
+  -ms-flex: 0 0 70%;
   flex: 0 0 70%; }
   .section-map > * {
     padding: 1rem 8rem;
@@ -843,8 +843,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 0;
-  bottom: 0;
   border-radius: 0 0 5rem 0; }
 
 /* ------------------------------- MARKER */
@@ -852,12 +850,43 @@ body {
   background-image: url(../img/nba_logo.png);
   background-size: cover;
   width: 20px;
-  height: 45px;
-  cursor: pointer; }
+  height: 45px; }
 
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
+/* -------------------------------- ATLANTA HAWKS */
+/* -------------------------------- BOSTON CELTICS */
+/* -------------------------------- BROOKLYN NETS */
+/* -------------------------------- CHARLOTTE HORNETS */
+/* -------------------------------- CHICAGO BULLS */
+/* -------------------------------- CLEVELAND CAVALIERS */
+/* -------------------------------- DALLAS MAVERICKS */
+/* -------------------------------- DENVER NUGGETS */
+/* -------------------------------- DETROIT PISTONS */
+/* -------------------------------- GOLDEN STATE WARRIORS */
+/* -------------------------------- HOUSTON ROCKETS */
+/* -------------------------------- INDIANA PACERS */
+/* -------------------------------- LOS ANGELES CLIPPERS */
+/* -------------------------------- LOS ANGELES LAKERS */
+/* -------------------------------- MEMPHIS GRIZZLIES */
+/* -------------------------------- MIAMI HEAT */
+/* -------------------------------- MILWAUKEE BUCKS */
+/* -------------------------------- MINNESOTA TIMBERWOLVES */
+/* -------------------------------- NEW ORLEANS PELICANS */
+/* -------------------------------- NEW YORK KNICKS */
+/* -------------------------------- OKLAHOMA CITY THUNDER */
+/* -------------------------------- ORLANDO MAGIC */
+/* -------------------------------- PHILADELPHIA 76ERS */
+/* -------------------------------- PHOENIX SUNS */
+/* -------------------------------- PORTLAND TRAIL BLAZERS */
+/* -------------------------------- SAN ANTONIO SPURS */
+/* -------------------------------- SACRAMENTO KINGS */
+/* -------------------------------- TORONTO RAPTORS */
+/* -------------------------------- UTAH JAZZ */
+/* -------------------------------- WASHINGTON WIZARDS */
 /* -------------------------------------------------------- PLAYERS */
 .players {
-  padding: 5rem 0;
+  padding: 5rem 6rem;
   display: grid;
   column-gap: 6rem;
   grid-auto-flow: column;
@@ -873,21 +902,8 @@ body {
   /* ------------------- PLAYERS LABEL */
   /* ------------------- PLAYERS TEXT */
   /* ---------------------------------- PLAYERS HISTORY */
-  /* ------------------- PLAYERS SCHOOL */
-  /* ------------------- PLAYERS COLLEGE */
-  /* ------------------- PLAYERS DRAFT TEAM */
-  /* ---------------------------------- PLAYERS PROFILE */
-  /* ------------------- PLAYERS BIRTHPLACE */
-  /* ------------------- PLAYERS COUNTRY */
-  /* ------------------- PLAYERS BIRTH DATE */ }
+  /* ---------------------------------- PLAYERS PROFILE */ }
   .players__card {
-    width: 50rem;
-    height: 25rem;
-    background-color: #f7f7f7;
-    border-radius: 5rem;
-    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    scroll-snap-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -895,8 +911,15 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    overflow: hidden;
-    position: relative; }
+    width: 50rem;
+    height: 25rem;
+    background-color: #f7f7f7;
+    border-radius: 5rem;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    scroll-snap-align: center;
+    position: relative;
+    overflow: hidden; }
   .players .additional {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -907,19 +930,16 @@ body {
     position: absolute;
     width: 17rem;
     height: 100%;
-    transition: width 0.4s;
     overflow: hidden;
-    z-index: 2; }
+    z-index: 2;
+    -webkit-transition: width 0.8s;
+    transition: width 0.8s; }
     .players .additional:hover {
       width: 100%; }
   .players__header-info {
-    width: 17rem;
-    height: 100%;
-    position: relative;
     display: grid;
     grid-template-rows: auto auto max-content;
-    padding: 1rem;
-    justify-content: center;
+    width: 17rem;
     text-align: center; }
   .players__name {
     font-size: 1.5rem;
@@ -943,49 +963,35 @@ body {
     font-style: italic;
     font-weight: 400; }
   .players__history {
-    width: 35rem;
-    height: 100%;
-    position: absolute;
-    left: 150px;
-    padding: 1rem;
+    text-align: center;
     display: grid;
     grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center; }
-  .players__history-school {
-    grid-column: 1 / span 3;
-    text-align: center; }
-  .players__history-college {
-    grid-column: 1 / span 3;
-    text-align: center; }
-  .players__history-draft-team {
-    grid-column: 1 / span 3;
-    text-align: center; }
-  .players__profile {
+    position: absolute;
     width: 35rem;
     height: 100%;
-    position: absolute;
-    right: 0;
-    z-index: 1;
-    box-sizing: border-box;
-    padding: 1rem;
+    left: 150px;
+    padding: 1rem; }
+    .players__history-school, .players__history-college, .players__history-draft-team {
+      grid-column: 1 / span 3;
+      text-align: center; }
+  .players__profile {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-evenly;
     display: grid;
     grid-template-rows: repeat(4, auto);
     grid-template-columns: repeat(2, auto);
     gap: 0.5rem;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center; }
-  .players__profile-birthplace {
-    grid-column: 1 / 3;
-    text-align: center; }
-  .players__profile-country {
-    grid-column: 1 / 3;
-    text-align: center; }
-  .players__profile-birthdate {
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    width: 35rem;
+    height: 100%;
+    right: 0;
+    padding: 1rem; }
+  .players__profile-birthplace, .players__profile-country, .players__profile-birthdate {
     grid-column: 1 / 3;
     text-align: center; }
 
@@ -1001,17 +1007,17 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  /* --------------------------------------- SECTION BOX DETAIL */
+  /* --------------------------------------- SECTION BOX FIELD */
   /* ---------------- SECTION BOX LABEL */
   /* ---------------- SECTION BOX TEXT */ }
-  .section-box__detail {
-    font-size: 1.6rem;
+  .section-box__field {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    font-size: 1.6rem;
     font-weight: 400;
     margin-bottom: 2.25rem; }
   .section-box__label {
@@ -1028,6 +1034,38 @@ body {
 #venue-box {
   border-radius: 0 0 0 5rem; }
 
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
+/* -------------------------------- ATLANTA HAWKS */
+/* -------------------------------- BOSTON CELTICS */
+/* -------------------------------- BROOKLYN NETS */
+/* -------------------------------- CHARLOTTE HORNETS */
+/* -------------------------------- CHICAGO BULLS */
+/* -------------------------------- CLEVELAND CAVALIERS */
+/* -------------------------------- DALLAS MAVERICKS */
+/* -------------------------------- DENVER NUGGETS */
+/* -------------------------------- DETROIT PISTONS */
+/* -------------------------------- GOLDEN STATE WARRIORS */
+/* -------------------------------- HOUSTON ROCKETS */
+/* -------------------------------- INDIANA PACERS */
+/* -------------------------------- LOS ANGELES CLIPPERS */
+/* -------------------------------- LOS ANGELES LAKERS */
+/* -------------------------------- MEMPHIS GRIZZLIES */
+/* -------------------------------- MIAMI HEAT */
+/* -------------------------------- MILWAUKEE BUCKS */
+/* -------------------------------- MINNESOTA TIMBERWOLVES */
+/* -------------------------------- NEW ORLEANS PELICANS */
+/* -------------------------------- NEW YORK KNICKS */
+/* -------------------------------- OKLAHOMA CITY THUNDER */
+/* -------------------------------- ORLANDO MAGIC */
+/* -------------------------------- PHILADELPHIA 76ERS */
+/* -------------------------------- PHOENIX SUNS */
+/* -------------------------------- PORTLAND TRAIL BLAZERS */
+/* -------------------------------- SAN ANTONIO SPURS */
+/* -------------------------------- SACRAMENTO KINGS */
+/* -------------------------------- TORONTO RAPTORS */
+/* -------------------------------- UTAH JAZZ */
+/* -------------------------------- WASHINGTON WIZARDS */
 /* ---------------------------------------------- CARD CONTAINER */
 .card-container {
   max-width: 120rem;
@@ -1039,16 +1077,6 @@ body {
 
 /* ------------------------------- CARD */
 .card {
-  text-decoration: none;
-  border-radius: 10rem;
-  overflow: hidden;
-  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  -webkit-transition: 0.4s all;
-  transition: 0.4s all;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1056,13 +1084,17 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  position: relative;
-  outline: none;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  border-radius: 10rem;
+  overflow: hidden;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
   /* ---------------- CARD HEADER */
   /* ---------------- CARD PICTURE */
   /* -------------- CARD FOOTER */ }
-  .card__header {
-    position: relative; }
   .card__picture {
     position: relative;
     height: 22rem;
@@ -1076,25 +1108,22 @@ body {
       height: 70%;
       width: 70%;
       transform: translate(20%, 25%);
-      transition: all 0.8s;
-      backface-visibility: hidden; }
+      transition: all 0.8s; }
     .card__picture-caption {
       position: absolute;
       top: 50%;
       left: 50%;
       width: 60%;
-      border-radius: 5rem;
-      transform: translate(-50%, 20%);
       text-transform: uppercase;
+      text-align: center;
       font-size: 2.5rem;
       font-weight: 800;
-      text-align: center;
+      border-radius: 2.5rem;
       opacity: 0;
-      transition: all 0.8s;
-      backface-visibility: hidden; }
+      transform: translate(-50%, 300%);
+      transition: all 0.8s; }
   .card__footer {
     padding: 1.5rem 3rem;
-    border-top: 1px solid #f1f1f1;
     font-size: 1.75rem;
     text-align: center;
     z-index: 2; }
@@ -1141,17 +1170,21 @@ body {
 /* -------------------------------- WASHINGTON WIZARDS */
 /* ---------------------------------------------- FOOTER */
 .footer {
-  background-color: #f7f7f7;
-  padding: 6rem 4rem 3rem 4rem;
-  font-size: 1.4rem;
-  display: grid;
-  grid-template-columns: auto auto;
-  row-gap: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
+  background-color: #f7f7f7;
+  padding: 4rem 6rem;
+  font-size: 1.4rem;
+  border-radius: 2.5rem;
   /* ------------------------------- FOOTER LOGO */
-  /* ------------------------------- FOOTER NAV */
   /* ------------------------------- FOOTER COPYRIGHT */ }
   @media only screen and (max-width: 50em) {
     .footer .footer {
@@ -1159,100 +1192,18 @@ body {
       grid-row-gap: 1.25rem;
       justify-items: center; } }
   .footer__logo {
-    grid-row: 1 / 3;
-    -ms-flex-item-align: center;
-    align-self: center; }
-  @media only screen and (max-width: 50em) {
-    .footer__logo {
-      grid-row: 1; } }
-  .footer__logo img {
-    height: 3rem; }
-  .footer__nav {
-    list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end; }
-  .footer__nav li {
-    margin-left: 1.5rem; }
-  .footer__nav a {
-    color: #777;
-    text-decoration: none !important;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s; }
-  .footer__nav a:hover,
-  .footer__nav a:active {
-    color: #55c57a; }
-  .footer__copyright {
-    justify-self: end;
-    color: #999; }
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .footer__logo img {
+    height: 3rem;
+    margin-right: 3rem; }
   @media only screen and (max-width: 50em) {
     .footer__copyright {
       justify-self: center; } }
-
-/* -------------------------------------------------------- COLOUR VARIABLES */
-/* -------------------------------- NBA */
-/* -------------------------------- ATLANTA HAWKS */
-/* -------------------------------- BOSTON CELTICS */
-/* -------------------------------- BROOKLYN NETS */
-/* -------------------------------- CHARLOTTE HORNETS */
-/* -------------------------------- CHICAGO BULLS */
-/* -------------------------------- CLEVELAND CAVALIERS */
-/* -------------------------------- DALLAS MAVERICKS */
-/* -------------------------------- DENVER NUGGETS */
-/* -------------------------------- DETROIT PISTONS */
-/* -------------------------------- GOLDEN STATE WARRIORS */
-/* -------------------------------- HOUSTON ROCKETS */
-/* -------------------------------- INDIANA PACERS */
-/* -------------------------------- LOS ANGELES CLIPPERS */
-/* -------------------------------- LOS ANGELES LAKERS */
-/* -------------------------------- MEMPHIS GRIZZLIES */
-/* -------------------------------- MIAMI HEAT */
-/* -------------------------------- MILWAUKEE BUCKS */
-/* -------------------------------- MINNESOTA TIMBERWOLVES */
-/* -------------------------------- NEW ORLEANS PELICANS */
-/* -------------------------------- NEW YORK KNICKS */
-/* -------------------------------- OKLAHOMA CITY THUNDER */
-/* -------------------------------- ORLANDO MAGIC */
-/* -------------------------------- PHILADELPHIA 76ERS */
-/* -------------------------------- PHOENIX SUNS */
-/* -------------------------------- PORTLAND TRAIL BLAZERS */
-/* -------------------------------- SAN ANTONIO SPURS */
-/* -------------------------------- SACRAMENTO KINGS */
-/* -------------------------------- TORONTO RAPTORS */
-/* -------------------------------- UTAH JAZZ */
-/* -------------------------------- WASHINGTON WIZARDS */
-/* ---------------------------------------------- HEADER */
-.header {
-  background: linear-gradient(135deg, rgba(0, 66, 139, 0.85) 49%, rgba(255, 255, 255, 0.85) 51%, rgba(217, 26, 50, 0.85) 100%);
-  padding: 0 5rem;
-  height: 8rem;
-  position: relative;
-  z-index: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  /* ------------------------------- HEADER LOGO */ }
-  @media only screen and (max-width: 62.5em) {
-    .header .header {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; } }
-  .header__logo img {
-    height: 3.5rem; }
-  @media only screen and (max-width: 62.5em) {
-    .header .header__logo {
-      -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-      order: -1;
-      margin-bottom: 1.5rem; } }
 
 /* -------------------------------------------------------- COLOUR VARIABLES */
 /* -------------------------------- NBA */
@@ -1294,132 +1245,130 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
   background: linear-gradient(135deg, rgba(0, 66, 139, 0.85) 49%, rgba(255, 255, 255, 0.85) 51%, rgba(217, 26, 50, 0.85) 100%);
-  padding: 0 5rem;
   height: 8rem;
-  position: relative;
+  border-radius: 2.5rem;
   z-index: 100;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-@media only screen and (max-width: 37.5em) {
-  .nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; } }
-
-/* ------------------------------- NAV TEAMS */
-@media only screen and (max-width: 62.5em) {
-  .nav--teams {
-    margin-bottom: 1.5rem; } }
-
-@media only screen and (max-width: 37.5em) {
-  .nav--teams {
-    margin-bottom: 0; } }
-
-/* ------------------------------- NAV MENU */
-.nav__menu {
-  position: relative;
-  display: flex;
-  justify-content: space-evenly; }
-  .nav__menu--item {
-    color: #ffffff;
-    text-align: center;
+  /* ---------------------------------- NAV MENU */
+  /* ------------------------------- NAV DROPDOWN LIST */
+  /* ------------------------------- NAV DROPDOWN ITEM */
+  /* ------------------------------- NAV DROPDOWN EL */ }
+  @media only screen and (max-width: 37.5em) {
+    .nav .nav {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-bottom: 0; } }
+  @media only screen and (max-width: 62.5em) {
+    .nav .nav {
+      margin-bottom: 1.5rem; } }
+  .nav__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    /* ---------------------- NAV MENU ITEM */
+    /* ------------------------------- NAV EL */ }
+    .nav__menu--item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: center;
+      text-align: center;
+      background-color: #ffffff;
+      border-radius: 2.5rem;
+      padding: 1rem 2rem;
+      transition: transform 0.5s ease-in-out;
+      /* ---------- HOVER */ }
+      .nav__menu--item:hover #eastern-divisions,
+      .nav__menu--item:hover #western-divisions, .nav__menu--item:active #eastern-divisions,
+      .nav__menu--item:active #western-divisions {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(110%); }
+    .nav__menu--el, .nav__menu--el:link, .nav__menu--el:visited {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: inherit;
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-decoration: none;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      background: none;
+      border: none;
+      cursor: pointer;
+      /* ---------- HOVER */
+      /* ---------- FOCUS */ }
+      .nav__menu--el:hover, .nav__menu--el:active, .nav__menu--el:link:hover, .nav__menu--el:link:active, .nav__menu--el:visited:hover, .nav__menu--el:visited:active {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+        text-shadow: 0 0.7rem 1rem black; }
+      .nav__menu--el:focus, .nav__menu--el:link:focus, .nav__menu--el:visited:focus {
+        outline: none; }
+    @media only screen and (max-width: 37.5em) {
+      .nav__menu_--el:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 1.2rem; } }
+  .nav__dropdown--list {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    justify-content: center;
-    padding: 1rem 2rem;
-    transition: transform 0.5s ease-in-out; }
-
-/* ------------------------------- NAV DROPDOWN LIST */
-.nav__dropdown--list {
-  position: absolute;
-  background-color: #ffffff;
-  color: #00428b;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-  left: 0;
-  right: 0;
-  padding: 1.2rem;
-  opacity: 0;
-  transition: cubic-bezier(0.5, -0.15, 0.56, 1.51) 1000ms;
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-  grid-template-columns: repeat(3, auto);
-  gap: 0.75rem;
-  border-radius: 2.5rem; }
-
-#conference {
-  grid-column: 1 / 5; }
-
-#eastern-divisions {
-  transform: translate(-50%, 0%); }
-
-#western-divisions {
-  transform: translate(50%, 0%); }
-
-.nav__menu--item:hover #eastern-divisions,
-.nav__menu--item:hover #western-divisions {
-  opacity: 1;
-  transform: translateY(100%); }
-
-.nav__dropdown--item {
-  display: block;
-  padding: 0;
-  margin: 0; }
-
-.nav__dropdown--el {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #00428b;
-  text-decoration: none;
-  text-transform: uppercase; }
-
-/* ------------------------------- NAV EL */
-.nav__menu--el,
-.nav__menu--el:link,
-.nav__menu--el:visited {
-  color: inherit;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  text-decoration: none;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  font-weight: 400;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: inherit; }
-
-.nav__menu--el:hover,
-.nav__menu--el:active {
-  -webkit-transform: translateY(-2px);
-  transform: translateY(-2px);
-  text-shadow: 0 0.7rem 1rem black; }
-
-.nav__menu--el:not(:last-child) {
-  margin-right: 3rem; }
-
-@media only screen and (max-width: 37.5em) {
-  .nav__menu--el:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 1.2rem; } }
-
-.nav__menu--el:focus {
-  outline: none; }
+    text-align: center;
+    position: absolute;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
+    gap: 0.75rem 1.8rem;
+    padding: 1.2rem;
+    border-radius: 2.5rem;
+    opacity: 0;
+    scale: 0.25;
+    transition: all 0.8s; }
+  .nav #eastern {
+    color: #00428b; }
+  .nav #western {
+    color: #d91a32; }
+  .nav #conference {
+    grid-column: 1 / 4; }
+  .nav #eastern-divisions {
+    background: linear-gradient(135deg, #00428b, rgba(0, 66, 139, 0.25)); }
+  .nav #western-divisions {
+    background: linear-gradient(135deg, rgba(217, 26, 50, 0.25), #d91a32); }
+  .nav__dropdown--item {
+    display: block;
+    padding: 0;
+    margin: 0;
+    /* ---------- HOVER */ }
+    .nav__dropdown--item:hover, .nav__dropdown--item:active {
+      -webkit-transform: translateY(-2px);
+      transform: translateY(-2px);
+      text-shadow: 0 0.7rem 1rem black; }
+  .nav__dropdown--el {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase; }
 
 /* ---------------------------------------------- SECTION INFO */
 .section-info {
@@ -1445,11 +1394,40 @@ body {
     height: 100%;
     width: 100%; }
 
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
+/* -------------------------------- ATLANTA HAWKS */
+/* -------------------------------- BOSTON CELTICS */
+/* -------------------------------- BROOKLYN NETS */
+/* -------------------------------- CHARLOTTE HORNETS */
+/* -------------------------------- CHICAGO BULLS */
+/* -------------------------------- CLEVELAND CAVALIERS */
+/* -------------------------------- DALLAS MAVERICKS */
+/* -------------------------------- DENVER NUGGETS */
+/* -------------------------------- DETROIT PISTONS */
+/* -------------------------------- GOLDEN STATE WARRIORS */
+/* -------------------------------- HOUSTON ROCKETS */
+/* -------------------------------- INDIANA PACERS */
+/* -------------------------------- LOS ANGELES CLIPPERS */
+/* -------------------------------- LOS ANGELES LAKERS */
+/* -------------------------------- MEMPHIS GRIZZLIES */
+/* -------------------------------- MIAMI HEAT */
+/* -------------------------------- MILWAUKEE BUCKS */
+/* -------------------------------- MINNESOTA TIMBERWOLVES */
+/* -------------------------------- NEW ORLEANS PELICANS */
+/* -------------------------------- NEW YORK KNICKS */
+/* -------------------------------- OKLAHOMA CITY THUNDER */
+/* -------------------------------- ORLANDO MAGIC */
+/* -------------------------------- PHILADELPHIA 76ERS */
+/* -------------------------------- PHOENIX SUNS */
+/* -------------------------------- PORTLAND TRAIL BLAZERS */
+/* -------------------------------- SAN ANTONIO SPURS */
+/* -------------------------------- SACRAMENTO KINGS */
+/* -------------------------------- TORONTO RAPTORS */
+/* -------------------------------- UTAH JAZZ */
+/* -------------------------------- WASHINGTON WIZARDS */
 /* ---------------------------------------------- MAIN */
 .main {
   background-color: #f7f7f7;
   padding: 10rem 0;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative; }
+  border-radius: 2.5rem; }

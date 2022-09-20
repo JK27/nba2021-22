@@ -26,8 +26,10 @@ class APIFeatures {
   // FUNCTIONALITY => SORTING
   sort() {
     if (this.queryString.sort) {
+      // DOES => If sorting is specified on the query, then sort results that way...
       const sortBy = this.queryString.sort.split(",").join(" ");
       this.query = this.query.sort(sortBy);
+      // DOES => ... otherwise, sort by _id as default.
     } else {
       this.query = this.query.sort("_id");
     }
@@ -37,9 +39,11 @@ class APIFeatures {
   // FUNCTIONALITY => FIELD LIMITING
   limitFields() {
     if (this.queryString.fields) {
+      // DOES => If limited fields are specified in the query, display only those fields...
       const fields = this.queryString.fields.split(",").join(" ");
       this.query = this.query.select(fields);
     } else {
+      // DOES => ... otherwise, display all fields except the reference.
       this.query = this.query.select("-reference");
     }
     return this;
@@ -47,6 +51,7 @@ class APIFeatures {
 
   // FUNCTIONALITY => PAGINATION
   paginate() {
+    // DOES => Sets the default page to 1 and the default limit of results to 30 (same as the number of teams as, by now, this is only used on the overview page to display all the teams).
     const page = this.queryString.page * 1 || 1;
     const limit = this.queryString.limit * 1 || 30;
     const skip = (page - 1) * limit;

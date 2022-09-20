@@ -1,5 +1,5 @@
 const Team = require("./../models/teamModel");
-const catchAsync = require("./../utils/catchAsync")
+// const catchAsync = require("./../utils/catchAsync")
 const factory = require("./handlerFactory");
 
 /////////////////////////////////////////////////////////// ROUTE HANDLERS

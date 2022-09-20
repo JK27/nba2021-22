@@ -1,3 +1,4 @@
+@import "./../abstracts/variables.scss";
 /* ---------------------------------------------- CARD CONTAINER */
 .card-container {
 	max-width: 120rem;
@@ -10,74 +11,88 @@
 
 /* ------------------------------- CARD */
 .card {
-	text-decoration: none;
-	border-radius: 10rem;
-	overflow: hidden;
-	-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
-	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
-	background-color: #fff;
-	-webkit-transition: 0.4s all;
-	transition: 0.4s all;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	// DOES => Places card__footer at the bottom of the card, underneath the team logo.
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
 
-	position: relative;
-	outline: none;
+	background-color: $color-nba-white;
+	-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+
+	text-decoration: none;
+	border-radius: 10rem;
+	// DOES => Makes card__footer respect the card border radius.
+	overflow: hidden;
+
+	-webkit-transition: 0.4s all;
+	transition: 0.4s all;
+	// -webkit-backface-visibility: hidden;
+	// backface-visibility: hidden;
+
+	// position: relative;
+	// outline: none;
 
 	/* ---------------- CARD HEADER */
 	&__header {
-		position: relative;
+		// position: relative;
 	}
 
 	/* ---------------- CARD PICTURE */
 	&__picture {
+		// DOES => Position: relative is required so caption is displayed on hovering.
 		position: relative;
+		// DOES => Height: 22rem is required so all cards mantain the same size regardless of size and direction of logo image (round, portrait or landscape).
 		height: 22rem;
+		// DOES => Ensures picture-caption displays over logo on hovering.
 		z-index: 1;
 
 		/* - CARD PICTURE IMG */
 		&-img {
+			// DOES => Mantains aspect ratio of logo while fitting within the content box.
 			-o-object-fit: contain;
 			object-fit: contain;
 			object-position: center;
+			// DOES => Height, width and transform: translate make logos to be placed centered within the content box.
 			height: 70%;
 			width: 70%;
 			transform: translate(20%, 25%);
 
 			transition: all 0.8s;
-			backface-visibility: hidden;
+			// backface-visibility: hidden;
 		}
 
 		/* - CARD PICTURE CAPTION */
 		&-caption {
+			// DOES => Position: absolute, top and left 50% make caption to be centered with team logo when hovered on.
 			position: absolute;
 			top: 50%;
 			left: 50%;
+
 			width: 60%;
-			border-radius: 5rem;
-			transform: translate(-50%, 20%);
 			text-transform: uppercase;
+			text-align: center;
 			font-size: 2.5rem;
 			font-weight: 800;
-			text-align: center;
+			border-radius: $border-radius;
 			opacity: 0;
+			// DOES => Places caption at the bottom of card__header so when hovering over the card, caption appears to come up from footer.
+			transform: translate(-50%, 300%);
 			transition: all 0.8s;
-			backface-visibility: hidden;
+			// backface-visibility: hidden;
 		}
 	}
 	/* -------------- CARD FOOTER */
 	&__footer {
+		// DOES => Padding creates more real state for the footer text, creating a better ratio with the card__header.
 		padding: 1.5rem 3rem;
-		border-top: 1px solid #f1f1f1;
 		font-size: 1.75rem;
 		text-align: center;
+		// DOES => Makes sure picture-caption is hidden behind footer, even if caption opacity is set to 0.
 		z-index: 2;
 
 		&-text {
@@ -86,11 +101,13 @@
 	}
 
 	&:hover &__picture-caption {
+		// DOES => Creates effect of caption appearing from the bottom of the card to the centre.
 		opacity: 1;
 		transform: translate(-50%, -50%);
 	}
 
 	&:hover &__picture-img {
+		// DOES => Creates effect of team logp fading into the background, making picutre-caption more visible.
 		transform: translate(20%, 25%) scale(0.8);
 		filter: blur(3px) brightness(80%);
 	}

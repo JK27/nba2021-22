@@ -3,19 +3,22 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
 
-	/* --------------------------------------- SECTION BOX DETAIL */
-	&__detail {
-		font-size: 1.6rem;
+	/* --------------------------------------- SECTION BOX FIELD */
+	&__field {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
+
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
+
+		font-size: 1.6rem;
 		font-weight: 400;
 		margin-bottom: 2.25rem;
 	}
@@ -33,7 +36,7 @@
 	}
 }
 
-// DOES=> Imitates the border radius of the team and player cards, giving each section a border radius in only one corner depending on their position.
+// DOES => Imitates the border radius of the team and player cards, giving each section a border radius in only one corner depending on their position.
 #facts-box {
 	border-radius: 0 5rem 0 0;
 }

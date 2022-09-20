@@ -32,7 +32,6 @@ exports.getTeam = catchAsync(async (req, res) => {
   // DOES => Gets data for the requested team.
   const team = await Team.findOne({slug: req.params.slug}).populate({
     path: "players",
-    fields: "full_name primary_position jersey_number -_id"
   })
 
   res.set("Content-Security-Policy",
@@ -42,3 +41,4 @@ exports.getTeam = catchAsync(async (req, res) => {
     team
   })
 })
+
