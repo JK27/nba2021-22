@@ -3,8 +3,8 @@
 90.1em+		->		1441px +			->		4K
 90em			->		1025 - 1440px	->		Desktop / Large laptop
 64em			->	 	769 - 1024px	->		(default styles apply) *****
-48em		  ->		425 - 768px	  ->		Tablet portrait
-26.5em		->		377 - 424px		->		Mobile large
+48em		  ->		426 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 425px		->		Mobile large
 23.5em		->		321 - 376px		->		Mobile medium
 20em			->		0 - 320px			->		Mobile small
  
@@ -864,8 +864,8 @@ body {
 90.1em+		->		1441px +			->		4K
 90em			->		1025 - 1440px	->		Desktop / Large laptop
 64em			->	 	769 - 1024px	->		(default styles apply) *****
-48em		  ->		425 - 768px	  ->		Tablet portrait
-26.5em		->		377 - 424px		->		Mobile large
+48em		  ->		426 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 425px		->		Mobile large
 23.5em		->		321 - 376px		->		Mobile medium
 20em			->		0 - 320px			->		Mobile small
  
@@ -976,8 +976,8 @@ ORDER:
 90.1em+		->		1441px +			->		4K
 90em			->		1025 - 1440px	->		Desktop / Large laptop
 64em			->	 	769 - 1024px	->		(default styles apply) *****
-48em		  ->		425 - 768px	  ->		Tablet portrait
-26.5em		->		377 - 424px		->		Mobile large
+48em		  ->		426 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 425px		->		Mobile large
 23.5em		->		321 - 376px		->		Mobile medium
 20em			->		0 - 320px			->		Mobile small
  
@@ -1084,8 +1084,8 @@ ORDER:
 90.1em+		->		1441px +			->		4K
 90em			->		1025 - 1440px	->		Desktop / Large laptop
 64em			->	 	769 - 1024px	->		(default styles apply) *****
-48em		  ->		425 - 768px	  ->		Tablet portrait
-26.5em		->		377 - 424px		->		Mobile large
+48em		  ->		426 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 425px		->		Mobile large
 23.5em		->		321 - 376px		->		Mobile medium
 20em			->		0 - 320px			->		Mobile small
  
@@ -1353,8 +1353,8 @@ ORDER:
 90.1em+		->		1441px +			->		4K
 90em			->		1025 - 1440px	->		Desktop / Large laptop
 64em			->	 	769 - 1024px	->		(default styles apply) *****
-48em		  ->		425 - 768px	  ->		Tablet portrait
-26.5em		->		377 - 424px		->		Mobile large
+48em		  ->		426 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 425px		->		Mobile large
 23.5em		->		321 - 376px		->		Mobile medium
 20em			->		0 - 320px			->		Mobile small
  
@@ -1473,8 +1473,8 @@ ORDER:
 90.1em+		->		1441px +			->		4K
 90em			->		1025 - 1440px	->		Desktop / Large laptop
 64em			->	 	769 - 1024px	->		(default styles apply) *****
-48em		  ->		425 - 768px	  ->		Tablet portrait
-26.5em		->		377 - 424px		->		Mobile large
+48em		  ->		426 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 425px		->		Mobile large
 23.5em		->		321 - 376px		->		Mobile medium
 20em			->		0 - 320px			->		Mobile small
  
@@ -1689,8 +1689,8 @@ ORDER:
 90.1em+		->		1441px +			->		4K
 90em			->		1025 - 1440px	->		Desktop / Large laptop
 64em			->	 	769 - 1024px	->		(default styles apply) *****
-48em		  ->		425 - 768px	  ->		Tablet portrait
-26.5em		->		377 - 424px		->		Mobile large
+48em		  ->		426 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 425px		->		Mobile large
 23.5em		->		321 - 376px		->		Mobile medium
 20em			->		0 - 320px			->		Mobile small
  
@@ -1787,8 +1787,201 @@ ORDER:
 90.1em+		->		1441px +			->		4K
 90em			->		1025 - 1440px	->		Desktop / Large laptop
 64em			->	 	769 - 1024px	->		(default styles apply) *****
-48em		  ->		425 - 768px	  ->		Tablet portrait
-26.5em		->		377 - 424px		->		Mobile large
+48em		  ->		426 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 425px		->		Mobile large
+23.5em		->		321 - 376px		->		Mobile medium
+20em			->		0 - 320px			->		Mobile small
+ 
+$breakpoint arg choices:
+- xl
+- desktop
+- tablet
+- mob-lg
+- mob-md
+- mob-sm
+
+ORDER:
+> Base and typography
+> General layout and grid 
+> Page layout
+> Components
+
+1em = 16px
+
+*/
+.mobile__button {
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer; }
+
+.mobile__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-evenly;
+  position: relative;
+  width: 100%;
+  /* ---------------------- NAV MENU ITEM */ }
+
+.mobile__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-color: #f7f7f7;
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1); }
+
+.mobile__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+
+.mobile__list {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
+  gap: 0.75rem 1.8rem;
+  text-align: center;
+  border-radius: 2.5rem;
+  margin: 2rem;
+  padding: 1.2rem;
+  list-style: none; }
+
+.mobile #conference {
+  grid-column: 1 / 4; }
+
+.mobile #eastern-divisions {
+  background: linear-gradient(135deg, #00428b, rgba(0, 66, 139, 0.25)); }
+
+.mobile #western-divisions {
+  background: linear-gradient(135deg, rgba(217, 26, 50, 0.25), #d91a32); }
+
+.mobile__link:link, .mobile__link:visited {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .mobile__link:link span, .mobile__link:visited span {
+    display: inline-block;
+    margin-right: 1.5rem; }
+
+.mobile__link:hover, .mobile__link:active {
+  transform: translateX(1rem); }
+
+.mobile__checkbox {
+  display: none; }
+
+.mobile__checkbox:checked ~ .mobile__background {
+  transform: scale(80); }
+
+.mobile__checkbox:checked ~ .mobile__nav {
+  opacity: 1;
+  width: 100%; }
+
+.mobile__icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  .mobile__icon, .mobile__icon::before, .mobile__icon::after {
+    display: inline-block;
+    width: 3rem;
+    height: 2px;
+    background-color: #d91a32; }
+  .mobile__icon::before, .mobile__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s; }
+  .mobile__icon::before {
+    top: -0.8rem; }
+  .mobile__icon::after {
+    top: 0.8rem; }
+
+.mobile__button:hover .mobile__icon::before {
+  top: -1rem; }
+
+.mobile__button:hover .mobile__icon::after {
+  top: 1rem; }
+
+.mobile__checkbox:checked + .mobile__button .mobile__icon {
+  background-color: transparent; }
+
+.mobile__checkbox:checked + .mobile__button .mobile__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.mobile__checkbox:checked + .mobile__button .mobile__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
+
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
+/* -------------------------------- ATLANTA HAWKS */
+/* -------------------------------- BOSTON CELTICS */
+/* -------------------------------- BROOKLYN NETS */
+/* -------------------------------- CHARLOTTE HORNETS */
+/* -------------------------------- CHICAGO BULLS */
+/* -------------------------------- CLEVELAND CAVALIERS */
+/* -------------------------------- DALLAS MAVERICKS */
+/* -------------------------------- DENVER NUGGETS */
+/* -------------------------------- DETROIT PISTONS */
+/* -------------------------------- GOLDEN STATE WARRIORS */
+/* -------------------------------- HOUSTON ROCKETS */
+/* -------------------------------- INDIANA PACERS */
+/* -------------------------------- LOS ANGELES CLIPPERS */
+/* -------------------------------- LOS ANGELES LAKERS */
+/* -------------------------------- MEMPHIS GRIZZLIES */
+/* -------------------------------- MIAMI HEAT */
+/* -------------------------------- MILWAUKEE BUCKS */
+/* -------------------------------- MINNESOTA TIMBERWOLVES */
+/* -------------------------------- NEW ORLEANS PELICANS */
+/* -------------------------------- NEW YORK KNICKS */
+/* -------------------------------- OKLAHOMA CITY THUNDER */
+/* -------------------------------- ORLANDO MAGIC */
+/* -------------------------------- PHILADELPHIA 76ERS */
+/* -------------------------------- PHOENIX SUNS */
+/* -------------------------------- PORTLAND TRAIL BLAZERS */
+/* -------------------------------- SAN ANTONIO SPURS */
+/* -------------------------------- SACRAMENTO KINGS */
+/* -------------------------------- TORONTO RAPTORS */
+/* -------------------------------- UTAH JAZZ */
+/* -------------------------------- WASHINGTON WIZARDS */
+/* ---------------------------------------------- @MEDIA MANAGER */
+/* BREAKPOINTS
+90.1em+		->		1441px +			->		4K
+90em			->		1025 - 1440px	->		Desktop / Large laptop
+64em			->	 	769 - 1024px	->		(default styles apply) *****
+48em		  ->		426 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 425px		->		Mobile large
 23.5em		->		321 - 376px		->		Mobile medium
 20em			->		0 - 320px			->		Mobile small
  
@@ -1835,6 +2028,12 @@ ORDER:
   /*----------------------------------- MOBILE LARGE */
   /*----------------------------------- MOBILE MEDIUM */
   /*----------------------------------- MOBILE SMALL */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */
   /* ---------------------------------- NAV MENU */
   /* ------------------------------- NAV DROPDOWN LIST */
   /* ------------------------------- NAV DROPDOWN ITEM */
@@ -1845,6 +2044,9 @@ ORDER:
   @media (max-width: 48em) {
     .nav {
       height: 6rem; } }
+  @media (max-width: 48em) {
+    .nav {
+      height: 5rem; } }
   .nav__menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1878,10 +2080,19 @@ ORDER:
       /*----------------------------------- MOBILE LARGE */
       /*----------------------------------- MOBILE MEDIUM */
       /*----------------------------------- MOBILE SMALL */
+      /*----------------------------------- 4K */
+      /*----------------------------------- LAPTOP */
+      /*----------------------------------- TABLET */
+      /*----------------------------------- MOBILE LARGE */
+      /*----------------------------------- MOBILE MEDIUM */
+      /*----------------------------------- MOBILE SMALL */
       /* ---------- HOVER */ }
       @media (max-width: 48em) {
         .nav__menu--item {
           padding: 0.75rem 1.75rem; } }
+      @media (max-width: 48em) {
+        .nav__menu--item {
+          padding: 0.5rem 1rem; } }
       .nav__menu--item:hover #eastern-divisions,
       .nav__menu--item:hover #western-divisions, .nav__menu--item:active #eastern-divisions,
       .nav__menu--item:active #western-divisions {
@@ -1946,6 +2157,12 @@ ORDER:
       /*----------------------------------- MOBILE LARGE */
       /*----------------------------------- MOBILE MEDIUM */
       /*----------------------------------- MOBILE SMALL */
+      /*----------------------------------- 4K */
+      /*----------------------------------- LAPTOP */
+      /*----------------------------------- TABLET */
+      /*----------------------------------- MOBILE LARGE */
+      /*----------------------------------- MOBILE MEDIUM */
+      /*----------------------------------- MOBILE SMALL */
       /* ---------- HOVER */
       /* ---------- FOCUS */ }
       @media (min-width: 90.01em) {
@@ -1957,6 +2174,9 @@ ORDER:
       @media (max-width: 48em) {
         .nav__menu--el, .nav__menu--el:link, .nav__menu--el:visited {
           font-size: 1.2rem; } }
+      @media (max-width: 26.6em) {
+        .nav__menu--el, .nav__menu--el:link, .nav__menu--el:visited {
+          font-size: 1rem; } }
       .nav__menu--el:hover, .nav__menu--el:active, .nav__menu--el:link:hover, .nav__menu--el:link:active, .nav__menu--el:visited:hover, .nav__menu--el:visited:active {
         -webkit-transform: translateY(-2px);
         transform: translateY(-2px);
@@ -2013,10 +2233,19 @@ ORDER:
     /*----------------------------------- TABLET */
     /*----------------------------------- MOBILE LARGE */
     /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
     /*----------------------------------- MOBILE SMALL */ }
     @media (max-width: 48em) {
       .nav__dropdown--el {
         font-size: 1.2rem; } }
+    @media (max-width: 48em) {
+      .nav__dropdown--el {
+        font-size: 1rem; } }
 
 /* ---------------------------------------------- SECTION INFO */
 .section-info {
@@ -2079,8 +2308,8 @@ ORDER:
 90.1em+		->		1441px +			->		4K
 90em			->		1025 - 1440px	->		Desktop / Large laptop
 64em			->	 	769 - 1024px	->		(default styles apply) *****
-48em		  ->		425 - 768px	  ->		Tablet portrait
-26.5em		->		377 - 424px		->		Mobile large
+48em		  ->		426 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 425px		->		Mobile large
 23.5em		->		321 - 376px		->		Mobile medium
 20em			->		0 - 320px			->		Mobile small
  

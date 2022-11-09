@@ -1,0 +1,35 @@
+.mobile
+  ////////////////////////////////////////// MOBILE NAV TOGGLE
+  input.mobile__checkbox(type="checkbox", id="nav-toggle")
+  label.mobile__button(for="nav-toggle")
+    span.mobile__icon &nbsp;
+  ////////////////////////////////////////// MOBILE NAV BACKGROUND
+  .mobile__background &nbsp;
+  ////////////////////////////////////////// MOBILE NAV LIST
+  nav.mobile__nav
+    ul.mobile__menu
+      ///////////////////////////////////////////// EASTERN CONFERENCE
+      li.mobile__menu--item(id="eastern")
+        ///////////////////////////////// EASTERN DIVISIONS
+        ul.mobile__list(id="eastern-divisions")
+          li.mobile__item(id="conference")
+            a.mobile__link(href="/?conference=Eastern") All Eastern Conference
+          li.mobile__item
+            a.mobile__link(href="/?division=Atlantic") Atlantic Division
+          li.mobile__item
+            a.mobile__link(href="/?division=Central") Central Division
+          li.mobile__item
+            a.mobile__link(href="/?division=Southeast") Southeast Division
+      ///////////////////////////////////////////// WESTERN CONFERENCE
+      li.mobile__menu--item(id="western")
+        ///////////////////////////////// WESTERN DIVISIONS
+        ul.mobile__list(id="western-divisions")
+          li.mobile__item(id="conference")
+            a.mobile__link(href="/?conference=Western") All Western Conference
+          li.mobile__item
+            a.mobile__link(href="/?division=Northwest") Northwest Division
+          li.mobile__item
+            a.mobile__link(href="/?division=Pacific") Pacific Division
+          li.mobile__item
+            a.mobile__link(href="/?division=Southwest") Southwest Division
+          

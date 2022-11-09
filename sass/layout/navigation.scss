@@ -31,6 +31,10 @@
 		height: 6rem;
 	}
 
+	@include respond(tablet) {
+		height: 5rem;
+	}
+
 	// @media only screen and (max-width: 37.5em) {
 	// 	.nav {
 	// 		-webkit-box-orient: vertical;
@@ -83,6 +87,10 @@
 			/* @MEDIA QUERIES */
 			@include respond(tablet) {
 				padding: 0.75rem 1.75rem;
+			}
+
+			@include respond(tablet) {
+				padding: 0.5rem 1rem;
 			}
 
 			/* ---------- HOVER */
@@ -140,6 +148,10 @@
 
 			@include respond(tablet) {
 				font-size: 1.2rem;
+			}
+
+			@include respond(mob-lg) {
+				font-size: 1rem;
 			}
 
 			/* ---------- HOVER */
@@ -250,6 +262,10 @@
 		/* @MEDIA QUERIES */
 		@include respond(tablet) {
 			font-size: 1.2rem;
+		}
+
+		@include respond(tablet) {
+			font-size: 1rem;
 		}
 	}
 }
