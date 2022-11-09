@@ -1,3 +1,30 @@
+/* ---------------------------------------------- @MEDIA MANAGER */
+/* BREAKPOINTS
+90em	->		1441px +			->		4K
+***** [1025 - 1440px]			(default styles apply) *****
+64em			->		769 - 1024px	->		Laptop / Tablet landscape
+48em		  ->		425 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 424px		->		Mobile large
+23.5em		->		321 - 376px		->		Mobile medium
+20em			->		0 - 320px			->		Mobile small
+ 
+$breakpoint arg choices:
+- xl
+- laptop
+- tablet
+- mob-lg
+- mob-md
+- mob-sm
+
+ORDER:
+> Base and typography
+> General layout and grid 
+> Page layout
+> Components
+
+1em = 16px
+
+*/
 /* -------------------------------------------------------- COLOUR VARIABLES */
 /* -------------------------------- NBA */
 /* -------------------------------- ATLANTA HAWKS */
@@ -800,6 +827,65 @@ body {
 .additional__text-color--was {
   color: #ffffff; }
 
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
+/* -------------------------------- ATLANTA HAWKS */
+/* -------------------------------- BOSTON CELTICS */
+/* -------------------------------- BROOKLYN NETS */
+/* -------------------------------- CHARLOTTE HORNETS */
+/* -------------------------------- CHICAGO BULLS */
+/* -------------------------------- CLEVELAND CAVALIERS */
+/* -------------------------------- DALLAS MAVERICKS */
+/* -------------------------------- DENVER NUGGETS */
+/* -------------------------------- DETROIT PISTONS */
+/* -------------------------------- GOLDEN STATE WARRIORS */
+/* -------------------------------- HOUSTON ROCKETS */
+/* -------------------------------- INDIANA PACERS */
+/* -------------------------------- LOS ANGELES CLIPPERS */
+/* -------------------------------- LOS ANGELES LAKERS */
+/* -------------------------------- MEMPHIS GRIZZLIES */
+/* -------------------------------- MIAMI HEAT */
+/* -------------------------------- MILWAUKEE BUCKS */
+/* -------------------------------- MINNESOTA TIMBERWOLVES */
+/* -------------------------------- NEW ORLEANS PELICANS */
+/* -------------------------------- NEW YORK KNICKS */
+/* -------------------------------- OKLAHOMA CITY THUNDER */
+/* -------------------------------- ORLANDO MAGIC */
+/* -------------------------------- PHILADELPHIA 76ERS */
+/* -------------------------------- PHOENIX SUNS */
+/* -------------------------------- PORTLAND TRAIL BLAZERS */
+/* -------------------------------- SAN ANTONIO SPURS */
+/* -------------------------------- SACRAMENTO KINGS */
+/* -------------------------------- TORONTO RAPTORS */
+/* -------------------------------- UTAH JAZZ */
+/* -------------------------------- WASHINGTON WIZARDS */
+/* ---------------------------------------------- @MEDIA MANAGER */
+/* BREAKPOINTS
+90em	->		1441px +			->		4K
+***** [1025 - 1440px]			(default styles apply) *****
+64em			->		769 - 1024px	->		Laptop / Tablet landscape
+48em		  ->		425 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 424px		->		Mobile large
+23.5em		->		321 - 376px		->		Mobile medium
+20em			->		0 - 320px			->		Mobile small
+ 
+$breakpoint arg choices:
+- xl
+- laptop
+- tablet
+- mob-lg
+- mob-md
+- mob-sm
+
+ORDER:
+> Base and typography
+> General layout and grid 
+> Page layout
+> Components
+
+1em = 16px
+
+*/
 /* -------------------------------------------------------- SECTION HEADING */
 .section__heading {
   font-size: 2.25rem;
@@ -809,7 +895,17 @@ body {
   letter-spacing: 0.1rem;
   line-height: 1.3;
   display: inline-block;
-  margin: 3rem 0; }
+  margin: 3rem 0;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */ }
+  @media (min-width: 90.1em) {
+    .section__heading {
+      font-size: 4.5rem; } }
 
 /* -------------------------------------------------------- PLAYERS HEADING */
 .players__heading {
@@ -819,38 +915,17 @@ body {
 /* ----------------------------------------- PLAYERS SUBHEADING */
 .players__subheading {
   font-size: 1.5rem;
-  font-style: italic; }
-
-/* ---------------------------------------------- SECTION MAP */
-.section-map {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  flex-direction: row-reverse;
-  margin-top: calc(2rem - var(--section-rotate));
-  height: 30vw;
-  -ms-flex: 0 0 70%;
-  flex: 0 0 70%; }
-  .section-map > * {
-    padding: 1rem 8rem;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%; }
-
-/* ------------------------------- MAP */
-#map {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 0 0 5rem 0; }
-
-/* ------------------------------- MARKER */
-.marker {
-  background-image: url(../img/nba_logo.png);
-  background-size: cover;
-  width: 20px;
-  height: 45px; }
+  font-style: italic;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */ }
+  @media (min-width: 90.1em) {
+    .players__subheading {
+      font-size: 3rem; } }
 
 /* -------------------------------------------------------- COLOUR VARIABLES */
 /* -------------------------------- NBA */
@@ -884,6 +959,141 @@ body {
 /* -------------------------------- TORONTO RAPTORS */
 /* -------------------------------- UTAH JAZZ */
 /* -------------------------------- WASHINGTON WIZARDS */
+/* ---------------------------------------------- @MEDIA MANAGER */
+/* BREAKPOINTS
+90em	->		1441px +			->		4K
+***** [1025 - 1440px]			(default styles apply) *****
+64em			->		769 - 1024px	->		Laptop / Tablet landscape
+48em		  ->		425 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 424px		->		Mobile large
+23.5em		->		321 - 376px		->		Mobile medium
+20em			->		0 - 320px			->		Mobile small
+ 
+$breakpoint arg choices:
+- xl
+- laptop
+- tablet
+- mob-lg
+- mob-md
+- mob-sm
+
+ORDER:
+> Base and typography
+> General layout and grid 
+> Page layout
+> Components
+
+1em = 16px
+
+*/
+/* ---------------------------------------------- SECTION MAP */
+.section-map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  margin-top: calc(2rem - var(--section-rotate));
+  height: 30vw;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%; }
+  .section-map > * {
+    padding: 1rem 8rem;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%; }
+
+/* ------------------------------- MAP */
+#map {
+  border-radius: 0 0 5rem 0;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */ }
+  @media (min-width: 90.1em) {
+    #map {
+      zoom: 2; } }
+
+/* ------------------------------- MARKER */
+.marker {
+  background-image: url(../img/nba_logo.png);
+  background-size: cover;
+  width: 20px;
+  height: 45px;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */ }
+  @media (min-width: 90.1em) {
+    .marker {
+      width: 30px;
+      height: 70px; } }
+
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
+/* -------------------------------- ATLANTA HAWKS */
+/* -------------------------------- BOSTON CELTICS */
+/* -------------------------------- BROOKLYN NETS */
+/* -------------------------------- CHARLOTTE HORNETS */
+/* -------------------------------- CHICAGO BULLS */
+/* -------------------------------- CLEVELAND CAVALIERS */
+/* -------------------------------- DALLAS MAVERICKS */
+/* -------------------------------- DENVER NUGGETS */
+/* -------------------------------- DETROIT PISTONS */
+/* -------------------------------- GOLDEN STATE WARRIORS */
+/* -------------------------------- HOUSTON ROCKETS */
+/* -------------------------------- INDIANA PACERS */
+/* -------------------------------- LOS ANGELES CLIPPERS */
+/* -------------------------------- LOS ANGELES LAKERS */
+/* -------------------------------- MEMPHIS GRIZZLIES */
+/* -------------------------------- MIAMI HEAT */
+/* -------------------------------- MILWAUKEE BUCKS */
+/* -------------------------------- MINNESOTA TIMBERWOLVES */
+/* -------------------------------- NEW ORLEANS PELICANS */
+/* -------------------------------- NEW YORK KNICKS */
+/* -------------------------------- OKLAHOMA CITY THUNDER */
+/* -------------------------------- ORLANDO MAGIC */
+/* -------------------------------- PHILADELPHIA 76ERS */
+/* -------------------------------- PHOENIX SUNS */
+/* -------------------------------- PORTLAND TRAIL BLAZERS */
+/* -------------------------------- SAN ANTONIO SPURS */
+/* -------------------------------- SACRAMENTO KINGS */
+/* -------------------------------- TORONTO RAPTORS */
+/* -------------------------------- UTAH JAZZ */
+/* -------------------------------- WASHINGTON WIZARDS */
+/* ---------------------------------------------- @MEDIA MANAGER */
+/* BREAKPOINTS
+90em	->		1441px +			->		4K
+***** [1025 - 1440px]			(default styles apply) *****
+64em			->		769 - 1024px	->		Laptop / Tablet landscape
+48em		  ->		425 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 424px		->		Mobile large
+23.5em		->		321 - 376px		->		Mobile medium
+20em			->		0 - 320px			->		Mobile small
+ 
+$breakpoint arg choices:
+- xl
+- laptop
+- tablet
+- mob-lg
+- mob-md
+- mob-sm
+
+ORDER:
+> Base and typography
+> General layout and grid 
+> Page layout
+> Components
+
+1em = 16px
+
+*/
 /* -------------------------------------------------------- PLAYERS */
 .players {
   padding: 5rem 6rem;
@@ -904,13 +1114,6 @@ body {
   /* ---------------------------------- PLAYERS HISTORY */
   /* ---------------------------------- PLAYERS PROFILE */ }
   .players__card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     width: 50rem;
     height: 25rem;
     background-color: #f7f7f7;
@@ -919,7 +1122,18 @@ body {
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     scroll-snap-align: center;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (min-width: 90.1em) {
+      .players__card {
+        width: 100rem;
+        height: 50rem; } }
   .players .additional {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -933,35 +1147,105 @@ body {
     overflow: hidden;
     z-index: 2;
     -webkit-transition: width 0.8s;
-    transition: width 0.8s; }
+    transition: width 0.8s;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
     .players .additional:hover {
       width: 100%; }
+    @media (min-width: 90.1em) {
+      .players .additional {
+        width: 34rem; } }
   .players__header-info {
     display: grid;
     grid-template-rows: auto auto max-content;
     width: 17rem;
-    text-align: center; }
+    text-align: center;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (min-width: 90.1em) {
+      .players__header-info {
+        width: 34rem; } }
   .players__name {
     font-size: 1.5rem;
     font-weight: 800;
     text-transform: uppercase;
-    padding: 0.125rem 0.75rem; }
+    padding: 0.125rem 0.75rem;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (min-width: 90.1em) {
+      .players__name {
+        font-size: 3rem; } }
   .players__number {
     font-family: "Stardos Stencil", cursive;
-    font-size: 7.5rem; }
+    font-size: 7.5rem;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (min-width: 90.1em) {
+      .players__number {
+        font-size: 15rem; } }
   .players__position {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 700;
-    padding: 0.125rem 0.75rem; }
+    padding: 0.125rem 0.75rem;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (min-width: 90.1em) {
+      .players__position {
+        font-size: 4rem; } }
   .players__label {
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (min-width: 90.1em) {
+      .players__label {
+        font-size: 2.8rem; } }
   .players__text {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-style: italic;
-    font-weight: 400; }
+    font-weight: 400;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (min-width: 90.1em) {
+      .players__text {
+        font-size: 3rem; } }
   .players__history {
     text-align: center;
     display: grid;
@@ -971,8 +1255,19 @@ body {
     position: absolute;
     width: 35rem;
     height: 100%;
-    left: 150px;
-    padding: 1rem; }
+    left: 15rem;
+    padding: 1rem;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (min-width: 90.1em) {
+      .players__history {
+        width: 70rem;
+        left: 30rem; } }
     .players__history-school, .players__history-college, .players__history-draft-team {
       grid-column: 1 / span 3;
       text-align: center; }
@@ -990,7 +1285,17 @@ body {
     width: 35rem;
     height: 100%;
     right: 0;
-    padding: 1rem; }
+    padding: 1rem;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (min-width: 90.1em) {
+      .players__profile {
+        width: 65rem; } }
   .players__profile-birthplace, .players__profile-country, .players__profile-birthdate {
     grid-column: 1 / 3;
     text-align: center; }
@@ -999,6 +1304,65 @@ body {
 ::-webkit-scrollbar {
   display: none; }
 
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
+/* -------------------------------- ATLANTA HAWKS */
+/* -------------------------------- BOSTON CELTICS */
+/* -------------------------------- BROOKLYN NETS */
+/* -------------------------------- CHARLOTTE HORNETS */
+/* -------------------------------- CHICAGO BULLS */
+/* -------------------------------- CLEVELAND CAVALIERS */
+/* -------------------------------- DALLAS MAVERICKS */
+/* -------------------------------- DENVER NUGGETS */
+/* -------------------------------- DETROIT PISTONS */
+/* -------------------------------- GOLDEN STATE WARRIORS */
+/* -------------------------------- HOUSTON ROCKETS */
+/* -------------------------------- INDIANA PACERS */
+/* -------------------------------- LOS ANGELES CLIPPERS */
+/* -------------------------------- LOS ANGELES LAKERS */
+/* -------------------------------- MEMPHIS GRIZZLIES */
+/* -------------------------------- MIAMI HEAT */
+/* -------------------------------- MILWAUKEE BUCKS */
+/* -------------------------------- MINNESOTA TIMBERWOLVES */
+/* -------------------------------- NEW ORLEANS PELICANS */
+/* -------------------------------- NEW YORK KNICKS */
+/* -------------------------------- OKLAHOMA CITY THUNDER */
+/* -------------------------------- ORLANDO MAGIC */
+/* -------------------------------- PHILADELPHIA 76ERS */
+/* -------------------------------- PHOENIX SUNS */
+/* -------------------------------- PORTLAND TRAIL BLAZERS */
+/* -------------------------------- SAN ANTONIO SPURS */
+/* -------------------------------- SACRAMENTO KINGS */
+/* -------------------------------- TORONTO RAPTORS */
+/* -------------------------------- UTAH JAZZ */
+/* -------------------------------- WASHINGTON WIZARDS */
+/* ---------------------------------------------- @MEDIA MANAGER */
+/* BREAKPOINTS
+90em	->		1441px +			->		4K
+***** [1025 - 1440px]			(default styles apply) *****
+64em			->		769 - 1024px	->		Laptop / Tablet landscape
+48em		  ->		425 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 424px		->		Mobile large
+23.5em		->		321 - 376px		->		Mobile medium
+20em			->		0 - 320px			->		Mobile small
+ 
+$breakpoint arg choices:
+- xl
+- laptop
+- tablet
+- mob-lg
+- mob-md
+- mob-sm
+
+ORDER:
+> Base and typography
+> General layout and grid 
+> Page layout
+> Components
+
+1em = 16px
+
+*/
 /* -------------------------------------------------------- SECTION BOX */
 .section-box {
   display: -webkit-box;
@@ -1007,19 +1371,26 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   /* --------------------------------------- SECTION BOX FIELD */
   /* ---------------- SECTION BOX LABEL */
   /* ---------------- SECTION BOX TEXT */ }
   .section-box__field {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     font-size: 1.6rem;
     font-weight: 400;
-    margin-bottom: 2.25rem; }
+    margin-bottom: 2.25rem;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (min-width: 90.1em) {
+      .section-box__field {
+        font-size: 3.2rem; } }
   .section-box__label {
     font-weight: 700;
     margin-right: 2.25rem;
@@ -1066,6 +1437,33 @@ body {
 /* -------------------------------- TORONTO RAPTORS */
 /* -------------------------------- UTAH JAZZ */
 /* -------------------------------- WASHINGTON WIZARDS */
+/* ---------------------------------------------- @MEDIA MANAGER */
+/* BREAKPOINTS
+90em	->		1441px +			->		4K
+***** [1025 - 1440px]			(default styles apply) *****
+64em			->		769 - 1024px	->		Laptop / Tablet landscape
+48em		  ->		425 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 424px		->		Mobile large
+23.5em		->		321 - 376px		->		Mobile medium
+20em			->		0 - 320px			->		Mobile small
+ 
+$breakpoint arg choices:
+- xl
+- laptop
+- tablet
+- mob-lg
+- mob-md
+- mob-sm
+
+ORDER:
+> Base and typography
+> General layout and grid 
+> Page layout
+> Components
+
+1em = 16px
+
+*/
 /* ---------------------------------------------- CARD CONTAINER */
 .card-container {
   max-width: 120rem;
@@ -1073,7 +1471,18 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 7rem; }
+  gap: 7rem;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */ }
+  @media (min-width: 90.1em) {
+    .card-container {
+      max-width: 200rem;
+      gap: 10rem; } }
 
 /* ------------------------------- CARD */
 .card {
@@ -1099,8 +1508,18 @@ body {
     position: relative;
     height: 22rem;
     z-index: 1;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
     /* - CARD PICTURE IMG */
     /* - CARD PICTURE CAPTION */ }
+    @media (min-width: 90.1em) {
+      .card__picture {
+        height: 33rem; } }
     .card__picture-img {
       -o-object-fit: contain;
       object-fit: contain;
@@ -1121,14 +1540,34 @@ body {
       border-radius: 2.5rem;
       opacity: 0;
       transform: translate(-50%, 300%);
-      transition: all 0.8s; }
+      transition: all 0.8s;
+      /* @MEDIA QUERIES */
+      /*----------------------------------- 4K */
+      /*----------------------------------- LAPTOP */
+      /*----------------------------------- TABLET */
+      /*----------------------------------- MOBILE LARGE */
+      /*----------------------------------- MOBILE MEDIUM */
+      /*----------------------------------- MOBILE SMALL */ }
+      @media (min-width: 90.1em) {
+        .card__picture-caption {
+          font-size: 4rem; } }
   .card__footer {
     padding: 1.5rem 3rem;
-    font-size: 1.75rem;
+    font-size: 1.7rem;
     text-align: center;
-    z-index: 2; }
+    z-index: 2;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
     .card__footer-text {
       font-weight: 800; }
+    @media (min-width: 90.1em) {
+      .card__footer {
+        font-size: 3.4rem; } }
   .card:hover .card__picture-caption {
     opacity: 1;
     transform: translate(-50%, -50%); }
@@ -1168,6 +1607,33 @@ body {
 /* -------------------------------- TORONTO RAPTORS */
 /* -------------------------------- UTAH JAZZ */
 /* -------------------------------- WASHINGTON WIZARDS */
+/* ---------------------------------------------- @MEDIA MANAGER */
+/* BREAKPOINTS
+90em	->		1441px +			->		4K
+***** [1025 - 1440px]			(default styles apply) *****
+64em			->		769 - 1024px	->		Laptop / Tablet landscape
+48em		  ->		425 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 424px		->		Mobile large
+23.5em		->		321 - 376px		->		Mobile medium
+20em			->		0 - 320px			->		Mobile small
+ 
+$breakpoint arg choices:
+- xl
+- laptop
+- tablet
+- mob-lg
+- mob-md
+- mob-sm
+
+ORDER:
+> Base and typography
+> General layout and grid 
+> Page layout
+> Components
+
+1em = 16px
+
+*/
 /* ---------------------------------------------- FOOTER */
 .footer {
   display: -webkit-box;
@@ -1184,13 +1650,18 @@ body {
   padding: 4rem 6rem;
   font-size: 1.4rem;
   border-radius: 2.5rem;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */
   /* ------------------------------- FOOTER LOGO */
   /* ------------------------------- FOOTER COPYRIGHT */ }
-  @media only screen and (max-width: 50em) {
-    .footer .footer {
-      grid-template-columns: 1fr;
-      grid-row-gap: 1.25rem;
-      justify-items: center; } }
+  @media (min-width: 90.1em) {
+    .footer {
+      font-size: 2.8rem; } }
   .footer__logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1201,9 +1672,6 @@ body {
   .footer__logo img {
     height: 3rem;
     margin-right: 3rem; }
-  @media only screen and (max-width: 50em) {
-    .footer__copyright {
-      justify-self: center; } }
 
 /* -------------------------------------------------------- COLOUR VARIABLES */
 /* -------------------------------- NBA */
@@ -1237,6 +1705,33 @@ body {
 /* -------------------------------- TORONTO RAPTORS */
 /* -------------------------------- UTAH JAZZ */
 /* -------------------------------- WASHINGTON WIZARDS */
+/* ---------------------------------------------- @MEDIA MANAGER */
+/* BREAKPOINTS
+90em	->		1441px +			->		4K
+***** [1025 - 1440px]			(default styles apply) *****
+64em			->		769 - 1024px	->		Laptop / Tablet landscape
+48em		  ->		425 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 424px		->		Mobile large
+23.5em		->		321 - 376px		->		Mobile medium
+20em			->		0 - 320px			->		Mobile small
+ 
+$breakpoint arg choices:
+- xl
+- laptop
+- tablet
+- mob-lg
+- mob-md
+- mob-sm
+
+ORDER:
+> Base and typography
+> General layout and grid 
+> Page layout
+> Components
+
+1em = 16px
+
+*/
 /* ---------------------------------------------- NAVIGATION */
 .nav {
   display: -webkit-box;
@@ -1250,20 +1745,20 @@ body {
   height: 8rem;
   border-radius: 2.5rem;
   z-index: 100;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */
   /* ---------------------------------- NAV MENU */
   /* ------------------------------- NAV DROPDOWN LIST */
   /* ------------------------------- NAV DROPDOWN ITEM */
   /* ------------------------------- NAV DROPDOWN EL */ }
-  @media only screen and (max-width: 37.5em) {
-    .nav .nav {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      margin-bottom: 0; } }
-  @media only screen and (max-width: 62.5em) {
-    .nav .nav {
-      margin-bottom: 1.5rem; } }
+  @media (min-width: 90.1em) {
+    .nav {
+      height: 12rem; } }
   .nav__menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1296,7 +1791,19 @@ body {
       .nav__menu--item:active #western-divisions {
         opacity: 1;
         scale: 1;
-        transform: translateY(110%); }
+        transform: translateY(110%);
+        /* @MEDIA QUERIES */
+        /*----------------------------------- 4K */
+        /*----------------------------------- LAPTOP */
+        /*----------------------------------- TABLET */
+        /*----------------------------------- MOBILE LARGE */
+        /*----------------------------------- MOBILE MEDIUM */
+        /*----------------------------------- MOBILE SMALL */ }
+        @media (min-width: 90.1em) {
+          .nav__menu--item:hover #eastern-divisions,
+          .nav__menu--item:hover #western-divisions, .nav__menu--item:active #eastern-divisions,
+          .nav__menu--item:active #western-divisions {
+            scale: 2; } }
     .nav__menu--el, .nav__menu--el:link, .nav__menu--el:visited {
       display: -webkit-inline-box;
       display: -ms-inline-flexbox;
@@ -1314,17 +1821,23 @@ body {
       border: none;
       cursor: pointer;
       /* ---------- HOVER */
-      /* ---------- FOCUS */ }
+      /* ---------- FOCUS */
+      /* @MEDIA QUERIES */
+      /*----------------------------------- 4K */
+      /*----------------------------------- LAPTOP */
+      /*----------------------------------- TABLET */
+      /*----------------------------------- MOBILE LARGE */
+      /*----------------------------------- MOBILE MEDIUM */
+      /*----------------------------------- MOBILE SMALL */ }
       .nav__menu--el:hover, .nav__menu--el:active, .nav__menu--el:link:hover, .nav__menu--el:link:active, .nav__menu--el:visited:hover, .nav__menu--el:visited:active {
         -webkit-transform: translateY(-2px);
         transform: translateY(-2px);
         text-shadow: 0 0.7rem 1rem black; }
       .nav__menu--el:focus, .nav__menu--el:link:focus, .nav__menu--el:visited:focus {
         outline: none; }
-    @media only screen and (max-width: 37.5em) {
-      .nav__menu_--el:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 1.2rem; } }
+      @media (min-width: 90.1em) {
+        .nav__menu--el, .nav__menu--el:link, .nav__menu--el:visited {
+          font-size: 3.2rem; } }
   .nav__dropdown--list {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -1365,7 +1878,7 @@ body {
       text-shadow: 0 0.7rem 1rem black; }
   .nav__dropdown--el {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase; }
@@ -1426,8 +1939,45 @@ body {
 /* -------------------------------- TORONTO RAPTORS */
 /* -------------------------------- UTAH JAZZ */
 /* -------------------------------- WASHINGTON WIZARDS */
+/* ---------------------------------------------- @MEDIA MANAGER */
+/* BREAKPOINTS
+90em	->		1441px +			->		4K
+***** [1025 - 1440px]			(default styles apply) *****
+64em			->		769 - 1024px	->		Laptop / Tablet landscape
+48em		  ->		425 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 424px		->		Mobile large
+23.5em		->		321 - 376px		->		Mobile medium
+20em			->		0 - 320px			->		Mobile small
+ 
+$breakpoint arg choices:
+- xl
+- laptop
+- tablet
+- mob-lg
+- mob-md
+- mob-sm
+
+ORDER:
+> Base and typography
+> General layout and grid 
+> Page layout
+> Components
+
+1em = 16px
+
+*/
 /* ---------------------------------------------- MAIN */
 .main {
   background-color: #f7f7f7;
   padding: 10rem 0;
-  border-radius: 2.5rem; }
+  border-radius: 2.5rem;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */ }
+  @media (min-width: 90.1em) {
+    .main {
+      padding: 26rem 0; } }

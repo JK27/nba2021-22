@@ -1,4 +1,6 @@
-@import "./../abstracts/variables.scss";
+@import "./../abstracts/variables";
+@import "./../abstracts/mixins";
+
 /* -------------------------------------------------------- PLAYERS */
 .players {
 	padding: 5rem 6rem;
@@ -14,14 +16,14 @@
 
 	/* ---------------------------------- PLAYERS CARD */
 	&__card {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
+		// display: -webkit-box;
+		// display: -ms-flexbox;
+		// display: flex;
 
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-ms-flex-direction: column;
-		flex-direction: column;
+		// -webkit-box-orient: vertical;
+		// -webkit-box-direction: normal;
+		// -ms-flex-direction: column;
+		// flex-direction: column;
 
 		width: 50rem;
 		height: 25rem;
@@ -33,6 +35,13 @@
 		position: relative;
 		// DOES => Hiddes the background of the .additional side of the card to be displayed underneath the card when not hovered over. It also prevents the round corners to not to be visible.
 		overflow: hidden;
+
+		/* @MEDIA QUERIES */
+		@include respond(xl) {
+			// DOES => Doubles the dimensions of the card to maintain the ratio with the rest of the page.
+			width: 100rem;
+			height: 50rem;
+		}
 	}
 
 	/* ------------------------------------ ADDITIONAL  */
@@ -60,6 +69,12 @@
 			// DOES => Makes additional content to cover full width of card.
 			width: 100%;
 		}
+
+		/* @MEDIA QUERIES */
+		@include respond(xl) {
+			// DOES => Doubles the width of the section to maintain the ratio with the rest of the card.
+			width: 34rem;
+		}
 	}
 
 	/* ------------------- PLAYERS HEADER INFO */
@@ -77,6 +92,12 @@
 		// height: 100%;
 		text-align: center;
 		// padding: 1rem;
+
+		/* @MEDIA QUERIES */
+		@include respond(xl) {
+			// DOES => Doubles the width of the section to maintain the ratio with the rest of the card.
+			width: 34rem;
+		}
 	}
 
 	/* ------------------- PLAYERS NAME */
@@ -85,19 +106,34 @@
 		font-weight: 800;
 		text-transform: uppercase;
 		padding: 0.125rem 0.75rem;
+
+		/* @MEDIA QUERIES */
+		@include respond(xl) {
+			font-size: 3rem;
+		}
 	}
 
 	/* ------------------- PLAYERS NUMBER */
 	&__number {
 		font-family: "Stardos Stencil", cursive;
 		font-size: 7.5rem;
+
+		/* @MEDIA QUERIES */
+		@include respond(xl) {
+			font-size: 15rem;
+		}
 	}
 
 	/* ------------------- PLAYERS POSITION */
 	&__position {
-		font-size: 2em;
+		font-size: 2rem;
 		font-weight: 700;
 		padding: 0.125rem 0.75rem;
+
+		/* @MEDIA QUERIES */
+		@include respond(xl) {
+			font-size: 4rem;
+		}
 	}
 
 	/* ------------------- PLAYERS LABEL */
@@ -105,6 +141,11 @@
 		font-weight: 800;
 		text-transform: uppercase;
 		font-size: 1.4rem;
+
+		/* @MEDIA QUERIES */
+		@include respond(xl) {
+			font-size: 2.8rem;
+		}
 	}
 
 	/* ------------------- PLAYERS TEXT */
@@ -113,6 +154,11 @@
 		margin-bottom: 1rem;
 		font-style: italic;
 		font-weight: 400;
+
+		/* @MEDIA QUERIES */
+		@include respond(xl) {
+			font-size: 3rem;
+		}
 	}
 
 	/* ---------------------------------- PLAYERS HISTORY */
@@ -136,8 +182,16 @@
 		position: absolute;
 		width: 35rem;
 		height: 100%;
-		left: 150px;
+		left: 15rem;
 		padding: 1rem;
+
+		/* @MEDIA QUERIES */
+		@include respond(xl) {
+			// DOES => Doubles the width of the section to maintain the ratio with the rest of the card.
+			width: 70rem;
+			// DOES => Allows for content to fit evenly within the card.
+			left: 30rem;
+		}
 
 		// DOES => Makes these rows to occupy the whole width of the grid.
 		&-school,
@@ -173,7 +227,14 @@
 		height: 100%;
 		right: 0;
 		padding: 1rem;
+
+		/* @MEDIA QUERIES */
+		@include respond(xl) {
+			// DOES => Doubles the width of the section to maintain the ratio with the rest of the card.
+			width: 65rem;
+		}
 	}
+
 	// DOES => Makes these rows to occupy the whole width of the grid.
 	&__profile-birthplace,
 	&__profile-country,

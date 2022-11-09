@@ -65,7 +65,7 @@ block content
     section.section-players
       .players__heading
         h2.section__heading(class=`heading__color--${alias}`) Team Roster
-        p.players__subheading Hover over the left side of the card for more information.
+        p.players__subheading Hover over or tap the left side of the card for more information.
       .players
         //- DOES => Loops through all guides creating an img with name and label for each.
         each player in team.players
@@ -142,3 +142,6 @@ block content
                 - const date = new Date(player.birthdate).toLocaleString("en-gb", {day: "numeric", month: "long", year: "numeric"})
                 p.players__label(class=`heading__color--${alias}`) Birth Date 
                 p.players__text= date
+
+    script(src="/js/mapbox.js")
+

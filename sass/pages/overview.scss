@@ -1,4 +1,5 @@
-@import "./../abstracts/variables.scss";
+@import "./../abstracts/variables";
+@import "./../abstracts/mixins";
 /* ---------------------------------------------- MAIN */
 .main {
 	background-color: $color-background-primary;
@@ -9,4 +10,9 @@
 	// flex: 1;
 	// position: relative;
 	border-radius: $border-radius;
+
+	/* @MEDIA QUERIES */
+	@include respond(xl) {
+		padding: 26rem 0;
+	}
 }

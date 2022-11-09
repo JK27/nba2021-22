@@ -1,0 +1,71 @@
+/* ---------------------------------------------- @MEDIA MANAGER */
+/* BREAKPOINTS
+90em	->		1441px +			->		4K
+***** [1025 - 1440px]			(default styles apply) *****
+64em			->		769 - 1024px	->		Laptop / Tablet landscape
+48em		  ->		425 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 424px		->		Mobile large
+23.5em		->		321 - 376px		->		Mobile medium
+20em			->		0 - 320px			->		Mobile small
+ 
+$breakpoint arg choices:
+- xl
+- laptop
+- tablet
+- mob-lg
+- mob-md
+- mob-sm
+
+ORDER:
+> Base and typography
+> General layout and grid 
+> Page layout
+> Components
+
+1em = 16px
+
+*/
+
+@mixin respond($breakpoint) {
+	/*----------------------------------- 4K */
+	@if $breakpoint == xl {
+		@media (min-width: 90.1em) {
+			@content;
+		} // min-width: 1441px
+	}
+
+	/*----------------------------------- LAPTOP */
+	@if $breakpoint == laptop {
+		@media (max-width: 64em) {
+			@content;
+		} // max-width: 1024px
+	}
+
+	/*----------------------------------- TABLET */
+	@if $breakpoint == tablet {
+		@media (max-width: 48em) {
+			@content;
+		} // max-width: 768px
+	}
+
+	/*----------------------------------- MOBILE LARGE */
+	@if $breakpoint == mob-lg {
+		@media (max-width: 26.5em) {
+			@content;
+		} // max-width: 424px
+	}
+
+	/*----------------------------------- MOBILE MEDIUM */
+	@if $breakpoint == mob-md {
+		@media (max-width: 23.5em) {
+			@content;
+		} // max-width: 376px
+	}
+
+	/*----------------------------------- MOBILE SMALL */
+	@if $breakpoint == mob-sm {
+		@media (max-width: 20em) {
+			@content;
+		} // max-width: 320px
+	}
+}

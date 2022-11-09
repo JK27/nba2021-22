@@ -1,4 +1,5 @@
-@import "./../abstracts/variables.scss";
+@import "./../abstracts/variables";
+@import "./../abstracts/mixins";
 /* ---------------------------------------------- NAVIGATION */
 .nav {
 	display: -webkit-box;
@@ -21,21 +22,32 @@
 	// DOES => Guarantees dropdown list is visible over main section.
 	z-index: 100;
 
-	@media only screen and (max-width: 37.5em) {
-		.nav {
-			-webkit-box-orient: vertical;
-			-webkit-box-direction: normal;
-			-ms-flex-direction: column;
-			flex-direction: column;
-			margin-bottom: 0;
-		}
+	/* @MEDIA QUERIES */
+	@include respond(xl) {
+		height: 12rem;
 	}
 
-	@media only screen and (max-width: 62.5em) {
-		.nav {
-			margin-bottom: 1.5rem;
-		}
-	}
+	// @include respond(tablet) {
+	// 	-webkit-box-orient: vertical;
+	// 	-webkit-box-direction: normal;
+	// 	-ms-flex-direction: column;
+	// 	flex-direction: column;
+	// 	margin-bottom: 0;
+	// }
+
+	// @media only screen and (max-width: 37.5em) {
+	// 	.nav {
+	// 		-webkit-box-orient: vertical;
+	// 		-webkit-box-direction: normal;
+	// 		-ms-flex-direction: column;
+	// 		flex-direction: column;
+	// 		margin-bottom: 0;
+	// 	}
+	// }
+
+	// @include respond(laptop) {
+	// 	margin-bottom: 1.5rem;
+	// }
 
 	/* ---------------------------------- NAV MENU */
 	&__menu {
@@ -80,6 +92,11 @@
 					opacity: 1;
 					scale: 1;
 					transform: translateY(110%);
+
+					/* @MEDIA QUERIES */
+					@include respond(xl) {
+						scale: 2;
+					}
 				}
 			}
 		}
@@ -120,14 +137,19 @@
 			&:focus {
 				outline: none;
 			}
-		}
 
-		@media only screen and (max-width: 37.5em) {
-			&_--el:not(:last-child) {
-				margin-right: 0;
-				margin-bottom: 1.2rem;
+			/* @MEDIA QUERIES */
+			@include respond(xl) {
+				font-size: 3.2rem;
 			}
 		}
+
+		// @media only screen and (max-width: 37.5em) {
+		// 	&_--el:not(:last-child) {
+		// 		margin-right: 0;
+		// 		margin-bottom: 1.2rem;
+		// 	}
+		// }
 	}
 
 	/* ------------------------------- NAV DROPDOWN LIST */
@@ -207,7 +229,7 @@
 	/* ------------------------------- NAV DROPDOWN EL */
 	&__dropdown--el {
 		color: $color-nba-white;
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 		font-weight: 400;
 		text-decoration: none;
 		text-transform: uppercase;

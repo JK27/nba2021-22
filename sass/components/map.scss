@@ -1,3 +1,6 @@
+@import "./../abstracts/variables";
+@import "./../abstracts/mixins";
+
 /* ---------------------------------------------- SECTION MAP */
 .section-map {
 	display: -webkit-box;
@@ -24,14 +27,20 @@
 
 /* ------------------------------- MAP */
 #map {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+	// display: -webkit-box;
+	// display: -ms-flexbox;
+	// display: flex;
 
 	// top: 0;
 	// bottom: 0;
 	// DOES => Imitates the border radius of the team and player cards, giving each section a border radius in only one corner depending on their position.
 	border-radius: 0 0 5rem 0;
+
+	/* @MEDIA QUERIES */
+	@include respond(xl) {
+		// DOES => Zooms in on map displaying the same area as for other viewport screens.
+		zoom: 2;
+	}
 }
 
 /* ------------------------------- MARKER */
@@ -41,4 +50,10 @@
 	// DOES => Mantain NBA logo ratio.
 	width: 20px;
 	height: 45px;
+
+	/* @MEDIA QUERIES */
+	@include respond(xl) {
+		width: 30px;
+		height: 70px;
+	}
 }
