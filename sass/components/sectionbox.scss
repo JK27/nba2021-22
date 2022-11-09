@@ -33,6 +33,15 @@
 		@include respond(xl) {
 			font-size: 3.2rem;
 		}
+
+		@include respond(desktop) {
+			font-size: 1.8rem;
+		}
+
+		@include respond(tablet) {
+			font-size: 1.3rem;
+			margin-bottom: 1rem;
+		}
 	}
 
 	/* ---------------- SECTION BOX LABEL */

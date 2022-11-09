@@ -27,13 +27,9 @@
 		height: 12rem;
 	}
 
-	// @include respond(tablet) {
-	// 	-webkit-box-orient: vertical;
-	// 	-webkit-box-direction: normal;
-	// 	-ms-flex-direction: column;
-	// 	flex-direction: column;
-	// 	margin-bottom: 0;
-	// }
+	@include respond(tablet) {
+		height: 6rem;
+	}
 
 	// @media only screen and (max-width: 37.5em) {
 	// 	.nav {
@@ -84,6 +80,11 @@
 			padding: 1rem 2rem;
 			transition: transform 0.5s ease-in-out;
 
+			/* @MEDIA QUERIES */
+			@include respond(tablet) {
+				padding: 0.75rem 1.75rem;
+			}
+
 			/* ---------- HOVER */
 			&:hover,
 			&:active {
@@ -96,6 +97,10 @@
 					/* @MEDIA QUERIES */
 					@include respond(xl) {
 						scale: 2;
+					}
+
+					@include respond(tablet) {
+						transform: translateY(90%);
 					}
 				}
 			}
@@ -124,6 +129,19 @@
 			border: none;
 			cursor: pointer;
 
+			/* @MEDIA QUERIES */
+			@include respond(xl) {
+				font-size: 3.2rem;
+			}
+
+			@include respond(desktop) {
+				font-size: 2rem;
+			}
+
+			@include respond(tablet) {
+				font-size: 1.2rem;
+			}
+
 			/* ---------- HOVER */
 			&:hover,
 			&:active {
@@ -136,11 +154,6 @@
 			/* ---------- FOCUS */
 			&:focus {
 				outline: none;
-			}
-
-			/* @MEDIA QUERIES */
-			@include respond(xl) {
-				font-size: 3.2rem;
 			}
 		}
 
@@ -233,5 +246,10 @@
 		font-weight: 400;
 		text-decoration: none;
 		text-transform: uppercase;
+
+		/* @MEDIA QUERIES */
+		@include respond(tablet) {
+			font-size: 1.2rem;
+		}
 	}
 }

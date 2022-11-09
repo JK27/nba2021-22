@@ -1,8 +1,8 @@
 /* ---------------------------------------------- @MEDIA MANAGER */
 /* BREAKPOINTS
-90em	->		1441px +			->		4K
-***** [1025 - 1440px]			(default styles apply) *****
-64em			->		769 - 1024px	->		Laptop / Tablet landscape
+90.1em+		->		1441px +			->		4K
+90em			->		1025 - 1440px	->		Desktop / Large laptop
+64em			->	 	769 - 1024px	->		(default styles apply) *****
 48em		  ->		425 - 768px	  ->		Tablet portrait
 26.5em		->		377 - 424px		->		Mobile large
 23.5em		->		321 - 376px		->		Mobile medium
@@ -10,7 +10,7 @@
  
 $breakpoint arg choices:
 - xl
-- laptop
+- desktop
 - tablet
 - mob-lg
 - mob-md
@@ -29,16 +29,16 @@ ORDER:
 @mixin respond($breakpoint) {
 	/*----------------------------------- 4K */
 	@if $breakpoint == xl {
-		@media (min-width: 90.1em) {
+		@media (min-width: 90.01em) {
 			@content;
 		} // min-width: 1441px
 	}
 
 	/*----------------------------------- LAPTOP */
-	@if $breakpoint == laptop {
-		@media (max-width: 64em) {
+	@if $breakpoint == desktop {
+		@media (min-width: 64.01em) and (max-width: 90em) {
 			@content;
-		} // max-width: 1024px
+		} // min-width:1025px and max-width: 1440px
 	}
 
 	/*----------------------------------- TABLET */

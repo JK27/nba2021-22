@@ -14,6 +14,10 @@
 		max-width: 200rem;
 		gap: 10rem;
 	}
+
+	@include respond(tablet) {
+		gap: 3.5rem;
+	}
 }
 
 /* ------------------------------- CARD */
@@ -63,6 +67,10 @@
 			height: 33rem;
 		}
 
+		@include respond(tablet) {
+			height: 12rem;
+		}
+
 		/* - CARD PICTURE IMG */
 		&-img {
 			// DOES => Mantains aspect ratio of logo while fitting within the content box.
@@ -76,6 +84,12 @@
 
 			transition: all 0.8s;
 			// backface-visibility: hidden;
+
+			/* @MEDIA QUERIES */
+			@include respond(tablet) {
+				// DOES => Maintains team logo centered within the card after removing the card footer on smaller screens.
+				transform: translate(20%, 20%);
+			}
 		}
 
 		/* - CARD PICTURE CAPTION */
@@ -101,6 +115,10 @@
 			@include respond(xl) {
 				font-size: 4rem;
 			}
+
+			@include respond(tablet) {
+				font-size: 1.6rem;
+			}
 		}
 	}
 	/* -------------- CARD FOOTER */
@@ -119,6 +137,10 @@
 		/* @MEDIA QUERIES */
 		@include respond(xl) {
 			font-size: 3.4rem;
+		}
+
+		@include respond(tablet) {
+			display: none;
 		}
 	}
 

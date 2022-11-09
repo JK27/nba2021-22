@@ -15,6 +15,15 @@
 	@include respond(xl) {
 		font-size: 4.5rem;
 	}
+
+	@include respond(tablet) {
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+	}
+
+	&:last-of-type {
+		margin-top: 1rem;
+	}
 }
 
 /* -------------------------------------------------------- PLAYERS HEADING */
