@@ -21,6 +21,11 @@
 		margin-bottom: 1rem;
 	}
 
+	@include respond(mob-lg) {
+		font-size: 1.2rem;
+		margin: 1rem 0;
+	}
+
 	&:last-of-type {
 		margin-top: 1rem;
 	}
@@ -39,5 +44,9 @@
 	/* @MEDIA QUERIES */
 	@include respond(xl) {
 		font-size: 3rem;
+	}
+
+	@include respond(mob-lg) {
+		font-size: 1.2rem;
 	}
 }

@@ -908,6 +908,12 @@ ORDER:
   /*----------------------------------- TABLET */
   /*----------------------------------- MOBILE LARGE */
   /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
   /*----------------------------------- MOBILE SMALL */ }
   @media (min-width: 90.01em) {
     .section__heading {
@@ -916,6 +922,10 @@ ORDER:
     .section__heading {
       font-size: 1.6rem;
       margin-bottom: 1rem; } }
+  @media (max-width: 26.6em) {
+    .section__heading {
+      font-size: 1.2rem;
+      margin: 1rem 0; } }
   .section__heading:last-of-type {
     margin-top: 1rem; }
 
@@ -934,10 +944,19 @@ ORDER:
   /*----------------------------------- TABLET */
   /*----------------------------------- MOBILE LARGE */
   /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
   /*----------------------------------- MOBILE SMALL */ }
   @media (min-width: 90.01em) {
     .players__subheading {
       font-size: 3rem; } }
+  @media (max-width: 26.6em) {
+    .players__subheading {
+      font-size: 1.2rem; } }
 
 /* -------------------------------------------------------- COLOUR VARIABLES */
 /* -------------------------------- NBA */
@@ -1008,12 +1027,32 @@ ORDER:
   margin-top: calc(2rem - var(--section-rotate));
   height: 30vw;
   -ms-flex: 0 0 70%;
-  flex: 0 0 70%; }
+  flex: 0 0 70%;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */ }
+  @media (max-width: 26.6em) {
+    .section-map {
+      height: 50vw; } }
   .section-map > * {
     padding: 1rem 8rem;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
-    flex: 0 0 50%; }
+    flex: 0 0 50%;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (max-width: 26.6em) {
+      .section-map > * {
+        padding: 0 1rem; } }
 
 /* ------------------------------- MAP */
 #map {
@@ -1115,6 +1154,13 @@ ORDER:
   overflow-x: scroll;
   -ms-scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */
   /* ---------------------------------- PLAYERS CARD */
   /* ------------------------------------ ADDITIONAL  */
   /* ------------------- PLAYERS HEADER INFO */
@@ -1125,6 +1171,10 @@ ORDER:
   /* ------------------- PLAYERS TEXT */
   /* ---------------------------------- PLAYERS HISTORY */
   /* ---------------------------------- PLAYERS PROFILE */ }
+  @media (max-width: 26.6em) {
+    .players {
+      padding: 2rem 1rem;
+      column-gap: 2rem; } }
   .players__card {
     width: 50rem;
     height: 25rem;
@@ -1141,11 +1191,21 @@ ORDER:
     /*----------------------------------- TABLET */
     /*----------------------------------- MOBILE LARGE */
     /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
     /*----------------------------------- MOBILE SMALL */ }
     @media (min-width: 90.01em) {
       .players__card {
         width: 100rem;
         height: 50rem; } }
+    @media (max-width: 26.6em) {
+      .players__card {
+        width: 30rem;
+        height: 20rem; } }
   .players .additional {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1166,12 +1226,21 @@ ORDER:
     /*----------------------------------- TABLET */
     /*----------------------------------- MOBILE LARGE */
     /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
     /*----------------------------------- MOBILE SMALL */ }
     .players .additional:hover {
       width: 100%; }
     @media (min-width: 90.01em) {
       .players .additional {
         width: 34rem; } }
+    @media (max-width: 26.6em) {
+      .players .additional {
+        width: 11rem; } }
   .players__header-info {
     display: grid;
     grid-template-rows: auto auto max-content;
@@ -1183,10 +1252,19 @@ ORDER:
     /*----------------------------------- TABLET */
     /*----------------------------------- MOBILE LARGE */
     /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
     /*----------------------------------- MOBILE SMALL */ }
     @media (min-width: 90.01em) {
       .players__header-info {
         width: 34rem; } }
+    @media (max-width: 26.6em) {
+      .players__header-info {
+        width: 11rem; } }
   .players__name {
     font-size: 1.5rem;
     font-weight: 800;
@@ -1198,10 +1276,20 @@ ORDER:
     /*----------------------------------- TABLET */
     /*----------------------------------- MOBILE LARGE */
     /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
     /*----------------------------------- MOBILE SMALL */ }
     @media (min-width: 90.01em) {
       .players__name {
         font-size: 3rem; } }
+    @media (max-width: 26.6em) {
+      .players__name {
+        font-size: 1rem;
+        padding: 0; } }
   .players__number {
     font-family: "Stardos Stencil", cursive;
     font-size: 7.5rem;
@@ -1211,10 +1299,19 @@ ORDER:
     /*----------------------------------- TABLET */
     /*----------------------------------- MOBILE LARGE */
     /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
     /*----------------------------------- MOBILE SMALL */ }
     @media (min-width: 90.01em) {
       .players__number {
         font-size: 15rem; } }
+    @media (max-width: 26.6em) {
+      .players__number {
+        font-size: 5rem; } }
   .players__position {
     font-size: 2rem;
     font-weight: 700;
@@ -1225,10 +1322,19 @@ ORDER:
     /*----------------------------------- TABLET */
     /*----------------------------------- MOBILE LARGE */
     /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
     /*----------------------------------- MOBILE SMALL */ }
     @media (min-width: 90.01em) {
       .players__position {
         font-size: 4rem; } }
+    @media (max-width: 26.6em) {
+      .players__position {
+        font-size: 1.5rem; } }
   .players__label {
     font-weight: 800;
     text-transform: uppercase;
@@ -1239,10 +1345,19 @@ ORDER:
     /*----------------------------------- TABLET */
     /*----------------------------------- MOBILE LARGE */
     /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
     /*----------------------------------- MOBILE SMALL */ }
     @media (min-width: 90.01em) {
       .players__label {
         font-size: 2.8rem; } }
+    @media (max-width: 26.6em) {
+      .players__label {
+        font-size: 1rem; } }
   .players__text {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -1254,10 +1369,20 @@ ORDER:
     /*----------------------------------- TABLET */
     /*----------------------------------- MOBILE LARGE */
     /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
     /*----------------------------------- MOBILE SMALL */ }
     @media (min-width: 90.01em) {
       .players__text {
         font-size: 3rem; } }
+    @media (max-width: 26.6em) {
+      .players__text {
+        font-size: 1.2rem;
+        margin-bottom: 0; } }
   .players__history {
     text-align: center;
     display: grid;
@@ -1275,11 +1400,21 @@ ORDER:
     /*----------------------------------- TABLET */
     /*----------------------------------- MOBILE LARGE */
     /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
     /*----------------------------------- MOBILE SMALL */ }
     @media (min-width: 90.01em) {
       .players__history {
         width: 70rem;
         left: 32rem; } }
+    @media (max-width: 26.6em) {
+      .players__history {
+        width: 18rem;
+        left: 10rem; } }
     .players__history-school, .players__history-college, .players__history-draft-team {
       grid-column: 1 / span 3;
       text-align: center; }
@@ -1304,10 +1439,19 @@ ORDER:
     /*----------------------------------- TABLET */
     /*----------------------------------- MOBILE LARGE */
     /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
     /*----------------------------------- MOBILE SMALL */ }
     @media (min-width: 90.01em) {
       .players__profile {
         width: 65rem; } }
+    @media (max-width: 26.6em) {
+      .players__profile {
+        width: 20rem; } }
   .players__profile-birthplace, .players__profile-country, .players__profile-birthdate {
     grid-column: 1 / 3;
     text-align: center; }
@@ -1386,6 +1530,7 @@ ORDER:
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-radius: 0 0 0 2.5rem;
   /* --------------------------------------- SECTION BOX FIELD */
   /* ---------------- SECTION BOX LABEL */
   /* ---------------- SECTION BOX TEXT */ }
@@ -1394,6 +1539,12 @@ ORDER:
     font-weight: 400;
     margin-bottom: 2.25rem;
     /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
     /*----------------------------------- 4K */
     /*----------------------------------- LAPTOP */
     /*----------------------------------- TABLET */
@@ -1422,6 +1573,9 @@ ORDER:
       .section-box__field {
         font-size: 1.3rem;
         margin-bottom: 1rem; } }
+    @media (max-width: 26.6em) {
+      .section-box__field {
+        font-size: 1rem; } }
   .section-box__label {
     font-weight: 700;
     margin-right: 2.25rem;
@@ -1429,12 +1583,10 @@ ORDER:
   .section-box__text {
     margin-right: 2.25rem;
     text-transform: capitalize; }
-
-#facts-box {
-  border-radius: 0 2.5rem 0 0; }
-
-#venue-box {
-  border-radius: 0 0 0 2.5rem; }
+  .section-box #facts-box {
+    border-radius: 0 2.5rem 0 0; }
+  .section-box #venue-box {
+    border-radius: 0 0 0 2.5rem; }
 
 /* -------------------------------------------------------- COLOUR VARIABLES */
 /* -------------------------------- NBA */
@@ -1563,6 +1715,12 @@ ORDER:
     /*----------------------------------- MOBILE LARGE */
     /*----------------------------------- MOBILE MEDIUM */
     /*----------------------------------- MOBILE SMALL */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */
     /* - CARD PICTURE IMG */
     /* - CARD PICTURE CAPTION */ }
     @media (min-width: 90.01em) {
@@ -1571,6 +1729,9 @@ ORDER:
     @media (max-width: 48em) {
       .card__picture {
         height: 12rem; } }
+    @media (max-width: 26.6em) {
+      .card__picture {
+        height: 6rem; } }
     .card__picture-img {
       -o-object-fit: contain;
       object-fit: contain;
@@ -1620,7 +1781,7 @@ ORDER:
           font-size: 4rem; } }
       @media (max-width: 48em) {
         .card__picture-caption {
-          font-size: 1.6rem; } }
+          display: none; } }
   .card__footer {
     padding: 1.5rem 3rem;
     font-size: 1.7rem;
@@ -1652,7 +1813,17 @@ ORDER:
     transform: translate(-50%, -50%); }
   .card:hover .card__picture-img {
     transform: translate(20%, 25%) scale(0.8);
-    filter: blur(3px) brightness(80%); }
+    filter: blur(3px) brightness(80%);
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (max-width: 48em) {
+      .card:hover .card__picture-img {
+        transform: translate(20%, 20%) scale(1);
+        filter: blur(0) brightness(1); } }
 
 /* -------------------------------------------------------- COLOUR VARIABLES */
 /* -------------------------------- NBA */
@@ -1736,11 +1907,20 @@ ORDER:
   /*----------------------------------- MOBILE LARGE */
   /*----------------------------------- MOBILE MEDIUM */
   /*----------------------------------- MOBILE SMALL */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */
   /* ------------------------------- FOOTER LOGO */
   /* ------------------------------- FOOTER COPYRIGHT */ }
   @media (min-width: 90.01em) {
     .footer {
       font-size: 2.8rem; } }
+  @media (max-width: 26.6em) {
+    .footer {
+      font-size: 1.2rem; } }
   .footer__logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1844,7 +2024,15 @@ ORDER:
     position: relative;
     margin: 3rem 0;
     width: 100%;
-    /* ---------------------- NAV MENU ITEM */ }
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (max-width: 26.6em) {
+      .mobile__menu {
+        margin: 6rem 0; } }
   .mobile__background {
     height: 3rem;
     width: 3rem;
@@ -1892,10 +2080,16 @@ ORDER:
     padding: 0.4rem 2rem;
     color: #ffffff;
     text-decoration: none;
-    text-transform: uppercase; }
-    .mobile__link:link span, .mobile__link:visited span {
-      display: inline-block;
-      margin-right: 1.5rem; }
+    text-transform: uppercase;
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (max-width: 26.6em) {
+      .mobile__link:link, .mobile__link:visited {
+        font-size: 1.2rem; } }
   .mobile__checkbox {
     display: none; }
   .mobile__checkbox:checked ~ .mobile__background {
@@ -2229,19 +2423,98 @@ ORDER:
       .nav__dropdown--el {
         font-size: 1rem; } }
 
+/* -------------------------------------------------------- COLOUR VARIABLES */
+/* -------------------------------- NBA */
+/* -------------------------------- ATLANTA HAWKS */
+/* -------------------------------- BOSTON CELTICS */
+/* -------------------------------- BROOKLYN NETS */
+/* -------------------------------- CHARLOTTE HORNETS */
+/* -------------------------------- CHICAGO BULLS */
+/* -------------------------------- CLEVELAND CAVALIERS */
+/* -------------------------------- DALLAS MAVERICKS */
+/* -------------------------------- DENVER NUGGETS */
+/* -------------------------------- DETROIT PISTONS */
+/* -------------------------------- GOLDEN STATE WARRIORS */
+/* -------------------------------- HOUSTON ROCKETS */
+/* -------------------------------- INDIANA PACERS */
+/* -------------------------------- LOS ANGELES CLIPPERS */
+/* -------------------------------- LOS ANGELES LAKERS */
+/* -------------------------------- MEMPHIS GRIZZLIES */
+/* -------------------------------- MIAMI HEAT */
+/* -------------------------------- MILWAUKEE BUCKS */
+/* -------------------------------- MINNESOTA TIMBERWOLVES */
+/* -------------------------------- NEW ORLEANS PELICANS */
+/* -------------------------------- NEW YORK KNICKS */
+/* -------------------------------- OKLAHOMA CITY THUNDER */
+/* -------------------------------- ORLANDO MAGIC */
+/* -------------------------------- PHILADELPHIA 76ERS */
+/* -------------------------------- PHOENIX SUNS */
+/* -------------------------------- PORTLAND TRAIL BLAZERS */
+/* -------------------------------- SAN ANTONIO SPURS */
+/* -------------------------------- SACRAMENTO KINGS */
+/* -------------------------------- TORONTO RAPTORS */
+/* -------------------------------- UTAH JAZZ */
+/* -------------------------------- WASHINGTON WIZARDS */
+/* ---------------------------------------------- @MEDIA MANAGER */
+/* BREAKPOINTS
+90.1em+		->		1441px +			->		4K
+90em			->		1025 - 1440px	->		Desktop / Large laptop
+64em			->	 	769 - 1024px	->		(default styles apply) *****
+48em		  ->		426 - 768px	  ->		Tablet portrait
+26.5em		->		377 - 425px		->		Mobile large
+23.5em		->		321 - 376px		->		Mobile medium
+20em			->		0 - 320px			->		Mobile small
+ 
+$breakpoint arg choices:
+- xl
+- desktop
+- tablet
+- mob-lg
+- mob-md
+- mob-sm
+
+ORDER:
+> Base and typography
+> General layout and grid 
+> Page layout
+> Components
+
+1em = 16px
+
+*/
 /* ---------------------------------------------- SECTION INFO */
 .section-info {
   position: relative;
   height: 45vw;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */ }
+  @media (max-width: 26.6em) {
+    .section-info {
+      height: 70vw; } }
   .section-info > * {
-    padding: 0 8vw;
+    padding: 0 8rem;
     padding-bottom: calc(1vw + var(--section-rotate));
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
-    flex: 0 0 50%; }
+    flex: 0 0 50%;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (max-width: 26.6em) {
+      .section-info > * {
+        padding: 0 1rem; } }
 
 /* ------------------------------- INFO HERO */
 .info__hero {

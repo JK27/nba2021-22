@@ -15,6 +15,8 @@
 	-ms-flex-align: center;
 	align-items: center;
 
+	border-radius: 0 0 0 2.5rem;
+
 	/* --------------------------------------- SECTION BOX FIELD */
 	&__field {
 		// display: -webkit-box;
@@ -42,6 +44,10 @@
 			font-size: 1.3rem;
 			margin-bottom: 1rem;
 		}
+
+		@include respond(mob-lg) {
+			font-size: 1rem;
+		}
 	}
 
 	/* ---------------- SECTION BOX LABEL */
@@ -55,13 +61,13 @@
 		margin-right: 2.25rem;
 		text-transform: capitalize;
 	}
-}
 
-// DOES => Imitates the border radius of the team and player cards, giving each section a border radius in only one corner depending on their position.
-#facts-box {
-	border-radius: 0 2.5rem 0 0;
-}
+	// DOES => Imitates the border radius of the team and player cards, giving each section a border radius in only one corner depending on their position.
+	#facts-box {
+		border-radius: 0 2.5rem 0 0;
+	}
 
-#venue-box {
-	border-radius: 0 0 0 2.5rem;
+	#venue-box {
+		border-radius: 0 0 0 2.5rem;
+	}
 }

@@ -17,11 +17,21 @@
 	-ms-flex: 0 0 70%;
 	flex: 0 0 70%;
 
+	/* @MEDIA QUERIES */
+	@include respond(mob-lg) {
+		height: 50vw;
+	}
+
 	& > * {
 		padding: 1rem 8rem;
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 50%;
 		flex: 0 0 50%;
+
+		/* @MEDIA QUERIES */
+		@include respond(mob-lg) {
+			padding: 0 1rem;
+		}
 	}
 }
 

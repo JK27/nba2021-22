@@ -32,6 +32,10 @@
 		font-size: 2.8rem;
 	}
 
+	@include respond(mob-lg) {
+		font-size: 1.2rem;
+	}
+
 	// @media only screen and (max-width: 50em) {
 	// 	.footer {
 	// 		grid-template-columns: 1fr;

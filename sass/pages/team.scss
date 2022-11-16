@@ -1,3 +1,5 @@
+@import "./../abstracts/variables";
+@import "./../abstracts/mixins";
 /* ---------------------------------------------- SECTION INFO */
 .section-info {
 	position: relative;
@@ -6,12 +8,23 @@
 	display: -ms-flexbox;
 	display: flex;
 
+	/* @MEDIA QUERIES */
+	@include respond(mob-lg) {
+		// DOES => Increases height of section to allow more real state for its content.
+		height: 70vw;
+	}
+
 	& > * {
-		padding: 0 8vw;
+		padding: 0 8rem;
 		padding-bottom: calc(1vw + var(--section-rotate));
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 50%;
 		flex: 0 0 50%;
+
+		/* @MEDIA QUERIES */
+		@include respond(mob-lg) {
+			padding: 0 1rem;
+		}
 	}
 }
 /* ------------------------------- INFO HERO */

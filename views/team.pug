@@ -96,7 +96,7 @@ block content
                   p.players__text(class=`additional__text-color--${alias}`)= player.draft.round ?  player.draft.round : 'Undrafted'
                 .players__history-draft-pick
                   p.players__label(class=`additional__label-color--${alias}`) Pick
-                  p.players__text(class=`additional__text-color--${alias}`)= player.draft.pick ?  player.draft.pick : 'Undrafted'
+                  p.players__text(class=`additional__text-color--${alias}`)= player.draft.pick ?  player.draft.pick : 'N/A'
                 .players__history-draft-team
                   - let {name: teamName, market: teamMarket} = player.draft.team_id
                   p.players__label(class=`additional__label-color--${alias}`) Draft Team  
