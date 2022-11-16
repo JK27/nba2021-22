@@ -12,12 +12,12 @@
 	// -------------- BUTTON
 	&__button {
 		background-color: $color-background-primary;
-		height: 7rem;
-		width: 7rem;
+		height: 5rem;
+		width: 5rem;
 		border-radius: 10rem;
 		position: fixed;
-		top: 3rem;
-		right: 3rem;
+		top: 3.5rem;
+		right: 3.5rem;
 		z-index: 2000;
 		box-shadow: 0 1rem 3rem rgba(black, 0.1);
 		text-align: center;
@@ -35,7 +35,7 @@
 		justify-content: space-evenly;
 
 		position: relative;
-		margin: 2rem 0;
+		margin: 3rem 0;
 		// DOES => Helps spread items along the nav.
 		width: 100%;
 
@@ -68,8 +68,8 @@
 		width: 3rem;
 		border-radius: 10rem;
 		position: fixed;
-		top: 3.5rem;
-		right: 3.5rem;
+		top: 4rem;
+		right: 4rem;
 		background-color: $color-background-primary;
 		z-index: 1000;
 		transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
@@ -91,9 +91,11 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 1500;
 
+		// DOES => z-index and opacity hide mobile__nav element behind the main section. Both properties are reverted when mobile__button is tapped, displaying the navigation.
+		z-index: -1500;
 		opacity: 0;
+
 		width: 0;
 		transition: all 0.8s cubic-bezier(0.68, 0, 0.32, 1);
 	}
@@ -123,7 +125,7 @@
 		gap: 0.75rem 1.8rem;
 
 		border-radius: $border-radius;
-		margin: 0 2rem;
+		margin: 0 3rem;
 		padding: 1.2rem;
 		list-style: none;
 	}
@@ -194,20 +196,23 @@
 		display: none;
 	}
 
-	// FUNCTIONALITY
+	// FUNCTIONALITY => Displaying the mobile navigation menu.
 	&__checkbox:checked ~ &__background {
+		// DOES => Enlarges the mobile__background to cover the whole screen.
 		transform: scale(80);
 	}
 
 	&__checkbox:checked ~ &__nav {
+		// DOES => Makes the mobile__nav visible, occupying the whole screen and displaying over the mobile__background with a higher z-index.
 		opacity: 1;
 		width: 100%;
+		z-index: 1500;
 	}
 
 	// -------------- ICON
 	&__icon {
 		position: relative;
-		margin-top: 3.5rem;
+		margin-top: 2.5rem;
 		// background-color: $color-nba-red;
 
 		&,

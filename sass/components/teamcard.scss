@@ -17,6 +17,9 @@
 
 	@include respond(tablet) {
 		gap: 3.5rem;
+		// DOES => Replace the padding removed from the main section, allowing some real state between the cards and the mobile__nav button.
+		padding-top: 6rem;
+		padding-bottom: 6rem;
 	}
 }
 

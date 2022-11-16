@@ -17,7 +17,7 @@
 	}
 
 	@include respond(tablet) {
-		// DOES => Reduces padding-top as navbar is no longer displayed.
-		padding: 8rem 0;
+		// DOES => Removes the padding-top as navbar is no longer displayed.
+		padding: 0;
 	}
 }

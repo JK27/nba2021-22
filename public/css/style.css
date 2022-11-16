@@ -1017,7 +1017,7 @@ ORDER:
 
 /* ------------------------------- MAP */
 #map {
-  border-radius: 0 0 5rem 0;
+  border-radius: 0 0 2.5rem 0;
   /* @MEDIA QUERIES */
   /*----------------------------------- 4K */
   /*----------------------------------- LAPTOP */
@@ -1431,10 +1431,10 @@ ORDER:
     text-transform: capitalize; }
 
 #facts-box {
-  border-radius: 0 5rem 0 0; }
+  border-radius: 0 2.5rem 0 0; }
 
 #venue-box {
-  border-radius: 0 0 0 5rem; }
+  border-radius: 0 0 0 2.5rem; }
 
 /* -------------------------------------------------------- COLOUR VARIABLES */
 /* -------------------------------- NBA */
@@ -1522,7 +1522,9 @@ ORDER:
       gap: 10rem; } }
   @media (max-width: 48em) {
     .card-container {
-      gap: 3.5rem; } }
+      gap: 3.5rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem; } }
 
 /* ------------------------------- CARD */
 .card {
@@ -1822,12 +1824,12 @@ ORDER:
       display: block; } }
   .mobile__button {
     background-color: #f7f7f7;
-    height: 7rem;
-    width: 7rem;
+    height: 5rem;
+    width: 5rem;
     border-radius: 10rem;
     position: fixed;
-    top: 3rem;
-    right: 3rem;
+    top: 3.5rem;
+    right: 3.5rem;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     text-align: center; }
@@ -1840,7 +1842,7 @@ ORDER:
     -ms-flex-pack: justify;
     justify-content: space-evenly;
     position: relative;
-    margin: 2rem 0;
+    margin: 3rem 0;
     width: 100%;
     /* ---------------------- NAV MENU ITEM */ }
   .mobile__background {
@@ -1848,8 +1850,8 @@ ORDER:
     width: 3rem;
     border-radius: 10rem;
     position: fixed;
-    top: 3.5rem;
-    right: 3.5rem;
+    top: 4rem;
+    right: 4rem;
     background-color: #f7f7f7;
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1); }
@@ -1858,7 +1860,7 @@ ORDER:
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1500;
+    z-index: -1500;
     opacity: 0;
     width: 0;
     transition: all 0.8s cubic-bezier(0.68, 0, 0.32, 1); }
@@ -1870,7 +1872,7 @@ ORDER:
     grid-template-columns: repeat(3, auto);
     gap: 0.75rem 1.8rem;
     border-radius: 2.5rem;
-    margin: 0 2rem;
+    margin: 0 3rem;
     padding: 1.2rem;
     list-style: none; }
   .mobile #conference {
@@ -1900,10 +1902,11 @@ ORDER:
     transform: scale(80); }
   .mobile__checkbox:checked ~ .mobile__nav {
     opacity: 1;
-    width: 100%; }
+    width: 100%;
+    z-index: 1500; }
   .mobile__icon {
     position: relative;
-    margin-top: 3.5rem; }
+    margin-top: 2.5rem; }
     .mobile__icon, .mobile__icon::before, .mobile__icon::after {
       display: inline-block;
       width: 3rem;
@@ -2243,7 +2246,7 @@ ORDER:
 /* ------------------------------- INFO HERO */
 .info__hero {
   height: 100%;
-  border-radius: 5rem 0 0 0; }
+  border-radius: 2.5rem 0 0 0; }
   .info__hero-img {
     -o-object-fit: contain;
     object-fit: contain;
@@ -2332,4 +2335,4 @@ ORDER:
       padding: 26rem 0; } }
   @media (max-width: 48em) {
     .main {
-      padding: 8rem 0; } }
+      padding: 0; } }
