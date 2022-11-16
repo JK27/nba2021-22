@@ -1,29 +1,26 @@
 @import "./../abstracts/variables";
 @import "./../abstracts/mixins";
 .mobile {
+	// DOES => Does not display mobile navigation for laptop and larger screens.
+	display: none;
+
+	@include respond(tablet) {
+		// DOES => Removes navbar for tablet and smaller screens.
+		display: block;
+	}
+
 	// -------------- BUTTON
 	&__button {
-		background-color: white;
+		background-color: $color-background-primary;
 		height: 7rem;
 		width: 7rem;
-		border-radius: 50%;
+		border-radius: 10rem;
 		position: fixed;
-		top: 6rem;
-		right: 6rem;
+		top: 3rem;
+		right: 3rem;
 		z-index: 2000;
 		box-shadow: 0 1rem 3rem rgba(black, 0.1);
 		text-align: center;
-		cursor: pointer;
-
-		// @include respond(tab-port) {
-		//   top: 4rem;
-		//   right: 4rem;
-		// }
-
-		// @include respond(phone) {
-		//   top: 3rem;
-		//   right: 3rem;
-		// }
 	}
 
 	&__menu {
@@ -38,6 +35,7 @@
 		justify-content: space-evenly;
 
 		position: relative;
+		margin: 2rem 0;
 		// DOES => Helps spread items along the nav.
 		width: 100%;
 
@@ -66,13 +64,12 @@
 
 	// -------------- BACKGROUND
 	&__background {
-		height: 6rem;
-		width: 6rem;
-		border-radius: 50%;
+		height: 3rem;
+		width: 3rem;
+		border-radius: 10rem;
 		position: fixed;
-		top: 6.5rem;
-		right: 6.5rem;
-		// background-image: radial-gradient($color-nba-red, $color-nba-blue);
+		top: 3.5rem;
+		right: 3.5rem;
 		background-color: $color-background-primary;
 		z-index: 1000;
 		transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
@@ -98,7 +95,7 @@
 
 		opacity: 0;
 		width: 0;
-		transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+		transition: all 0.8s cubic-bezier(0.68, 0, 0.32, 1);
 	}
 
 	// -------------- LIST
@@ -108,13 +105,13 @@
 		// top: 50%;
 		// left: 50%;
 		// transform: translate(-50%, -50%);
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-		justify-content: space-evenly;
+		// -webkit-box-pack: justify;
+		// -ms-flex-pack: justify;
+		// justify-content: space-evenly;
 
-		-webkit-box-align: center;
-		-ms-flex-align: center;
-		align-items: center;
+		// -webkit-box-align: center;
+		// -ms-flex-align: center;
+		// align-items: center;
 
 		text-align: center;
 		// position: absolute;
@@ -125,10 +122,8 @@
 		grid-template-columns: repeat(3, auto);
 		gap: 0.75rem 1.8rem;
 
-		text-align: center;
-		// background-color: $color-nba-white;
 		border-radius: $border-radius;
-		margin: 2rem;
+		margin: 0 2rem;
 		padding: 1.2rem;
 		list-style: none;
 	}
@@ -136,6 +131,16 @@
 	#conference {
 		// DOES => Makes first li with link to show all teams in the conference to occupy the entire first row, forcing the other 3 li for each division to be displayed on the second row.
 		grid-column: 1 / 4;
+	}
+
+	#all-divisions {
+		background: linear-gradient(
+			135deg,
+			rgba(0, 66, 139, 0.5),
+			rgba(217, 26, 50, 0.5)
+		);
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
 	}
 
 	#eastern-divisions {
@@ -158,7 +163,7 @@
 			display: inline-block;
 			font-size: 2rem;
 			font-weight: 700;
-			padding: 1rem 2rem;
+			padding: 0.4rem 2rem;
 			color: $color-nba-white;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -178,10 +183,10 @@
 			}
 		}
 
-		&:hover,
-		&:active {
-			transform: translateX(1rem);
-		}
+		// &:hover,
+		// &:active {
+		// 	transform: translateX(1rem);
+		// }
 	}
 
 	// -------------- CHECKBOX
@@ -203,6 +208,7 @@
 	&__icon {
 		position: relative;
 		margin-top: 3.5rem;
+		// background-color: $color-nba-red;
 
 		&,
 		&::before,
@@ -210,7 +216,11 @@
 			display: inline-block;
 			width: 3rem;
 			height: 2px;
-			background-color: $color-nba-red;
+			background: linear-gradient(
+				135deg,
+				rgba($color-nba-blue, 0.85) 50%,
+				rgba($color-nba-red, 0.85) 50%
+			);
 		}
 
 		&::before,
@@ -218,7 +228,7 @@
 			content: "";
 			position: absolute;
 			left: 0;
-			transition: all 0.2s;
+			transition: all 0.8s;
 		}
 
 		&::before {
@@ -239,16 +249,16 @@
 	}
 
 	&__checkbox:checked + &__button &__icon {
-		background-color: transparent; // To hide element instead of remove it as other elements' size are related to this elements' size
+		background: transparent; // To hide element instead of remove it as other elements' size are related to this elements' size
 	}
 
 	&__checkbox:checked + &__button &__icon::before {
 		top: 0;
-		transform: rotate(135deg);
+		transform: rotate(45deg);
 	}
 
 	&__checkbox:checked + &__button &__icon::after {
 		top: 0;
-		transform: rotate(-135deg);
+		transform: rotate(-45deg);
 	}
 }

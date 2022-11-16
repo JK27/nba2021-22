@@ -1,4 +1,4 @@
-.mobile
+nav.mobile
   ////////////////////////////////////////// MOBILE NAV TOGGLE
   input.mobile__checkbox(type="checkbox", id="nav-toggle")
   label.mobile__button(for="nav-toggle")
@@ -20,6 +20,11 @@
             a.mobile__link(href="/?division=Central") Central Division
           li.mobile__item
             a.mobile__link(href="/?division=Southeast") Southeast Division
+      /////////////////////////////////////////// ALL TEAMS
+      li.mobile__menu--item(id="all-teams")
+        ul.mobile__list(id="all-divisions")
+          li.mobile__item(id="conference")
+            a.mobile__link(href="/") All Teams
       ///////////////////////////////////////////// WESTERN CONFERENCE
       li.mobile__menu--item(id="western")
         ///////////////////////////////// WESTERN DIVISIONS
@@ -32,4 +37,4 @@
             a.mobile__link(href="/?division=Pacific") Pacific Division
           li.mobile__item
             a.mobile__link(href="/?division=Southwest") Southwest Division
-          
+

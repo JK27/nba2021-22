@@ -15,4 +15,9 @@
 	@include respond(xl) {
 		padding: 26rem 0;
 	}
+
+	@include respond(tablet) {
+		// DOES => Reduces padding-top as navbar is no longer displayed.
+		padding: 8rem 0;
+	}
 }

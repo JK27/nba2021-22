@@ -13,9 +13,9 @@
 	position: relative;
 	background: linear-gradient(
 		135deg,
-		rgba($color-nba-blue, 0.85) 49%,
+		rgba($color-nba-blue, 0.85) 40%,
 		rgba($color-nba-white, 0.85) 51%,
-		rgba($color-nba-red, 0.85) 100%
+		rgba($color-nba-red, 0.85) 60%
 	);
 	height: 8rem;
 	border-radius: $border-radius;
@@ -28,11 +28,8 @@
 	}
 
 	@include respond(tablet) {
-		height: 6rem;
-	}
-
-	@include respond(tablet) {
-		height: 5rem;
+		// DOES => Removes navbar for tablet and smaller screens.
+		display: none;
 	}
 
 	// @media only screen and (max-width: 37.5em) {
