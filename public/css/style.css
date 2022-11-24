@@ -932,7 +932,17 @@ ORDER:
 /* -------------------------------------------------------- PLAYERS HEADING */
 .players__heading {
   text-align: center;
-  padding-top: 4rem; }
+  padding-top: 4rem;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */ }
+  @media (max-width: 26.6em) {
+    .players__heading {
+      padding-top: 2rem; } }
 
 /* ----------------------------------------- PLAYERS SUBHEADING */
 .players__subheading {
@@ -1339,6 +1349,7 @@ ORDER:
     font-weight: 800;
     text-transform: uppercase;
     font-size: 1.4rem;
+    white-space: nowrap;
     /* @MEDIA QUERIES */
     /*----------------------------------- 4K */
     /*----------------------------------- LAPTOP */
@@ -1363,6 +1374,7 @@ ORDER:
     margin-bottom: 1rem;
     font-style: italic;
     font-weight: 400;
+    white-space: nowrap;
     /* @MEDIA QUERIES */
     /*----------------------------------- 4K */
     /*----------------------------------- LAPTOP */
@@ -1582,7 +1594,17 @@ ORDER:
     text-transform: uppercase; }
   .section-box__text {
     margin-right: 2.25rem;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    white-space: nowrap;
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (max-width: 26.6em) {
+      .section-box__text {
+        margin-right: 0; } }
   .section-box #facts-box {
     border-radius: 0 2.5rem 0 0; }
   .section-box #venue-box {
@@ -1920,7 +1942,8 @@ ORDER:
       font-size: 2.8rem; } }
   @media (max-width: 26.6em) {
     .footer {
-      font-size: 1.2rem; } }
+      font-size: 1.2rem;
+      padding: 2rem 1rem; } }
   .footer__logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1930,7 +1953,17 @@ ORDER:
     align-items: center; }
   .footer__logo img {
     height: 3rem;
-    margin-right: 3rem; }
+    margin-right: 3rem;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (max-width: 26.6em) {
+      .footer__logo img {
+        margin-right: 1rem; } }
 
 /* -------------------------------------------------------- COLOUR VARIABLES */
 /* -------------------------------- NBA */
@@ -2489,6 +2522,8 @@ ORDER:
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-radius: 2.5rem;
+  overflow: hidden;
   /* @MEDIA QUERIES */
   /*----------------------------------- 4K */
   /*----------------------------------- LAPTOP */

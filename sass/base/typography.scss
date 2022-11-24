@@ -35,6 +35,11 @@
 .players__heading {
 	text-align: center;
 	padding-top: 4rem;
+
+	/* @MEDIA QUERIES */
+	@include respond(mob-lg) {
+		padding-top: 2rem;
+	}
 }
 /* ----------------------------------------- PLAYERS SUBHEADING */
 .players__subheading {

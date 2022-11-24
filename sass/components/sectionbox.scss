@@ -60,6 +60,11 @@
 	&__text {
 		margin-right: 2.25rem;
 		text-transform: capitalize;
+		white-space: nowrap;
+
+		@include respond(mob-lg) {
+			margin-right: 0;
+		}
 	}
 
 	// DOES => Imitates the border radius of the team and player cards, giving each section a border radius in only one corner depending on their position.

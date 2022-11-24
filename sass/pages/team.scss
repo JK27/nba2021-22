@@ -7,6 +7,8 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	border-radius: $border-radius;
+	overflow: hidden;
 
 	/* @MEDIA QUERIES */
 	@include respond(mob-lg) {
