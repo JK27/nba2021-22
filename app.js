@@ -65,6 +65,7 @@ app.use(helmet({
 				"https://*.cloudflare.com/",
 				"https://bundle.js:*",
 				"ws://127.0.0.1:*/",
+				"https://jk21-nba-dashboard.azurewebsites.net/",
 			],
 		},
 	},

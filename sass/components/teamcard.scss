@@ -21,6 +21,12 @@
 		padding-top: 6rem;
 		padding-bottom: 6rem;
 	}
+
+	@include respond(mob-lg) {
+		gap: 3rem;
+		// DOES => Replace the padding removed from the main section, allowing some real state between the cards and the mobile__nav button.
+		padding: 6rem 3rem;
+	}
 }
 
 /* ------------------------------- CARD */
@@ -50,6 +56,12 @@
 
 	// position: relative;
 	// outline: none;
+
+	/* @MEDIA QUERIES */
+	@include respond(mob-lg) {
+		height: 6.5rem;
+		width: 6.5rem;
+	}
 
 	/* ---------------- CARD HEADER */
 	&__header {
@@ -96,6 +108,11 @@
 			@include respond(tablet) {
 				// DOES => Maintains team logo centered within the card after removing the card footer on smaller screens.
 				transform: translate(20%, 20%);
+			}
+
+			@include respond(mob-lg) {
+				// DOES => Maintains team logo centered within the card after removing the card footer on smaller screens.
+				transform: translate(22%, 25%);
 			}
 		}
 

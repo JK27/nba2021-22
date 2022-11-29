@@ -21,7 +21,7 @@
 	"bugs": {
 		"url": "https://github.com/JK27/nba2021-22/issues"
 	},
-	"homepage": "https://github.com/JK27/nba2021-22#readme",
+	"homepage": "https://github.com/JK27/nba2021-22/",
 	"dependencies": {
 		"axios": "^0.27.2",
 		"cors": "^2.8.5",

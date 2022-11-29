@@ -1689,6 +1689,12 @@ ORDER:
   /*----------------------------------- TABLET */
   /*----------------------------------- MOBILE LARGE */
   /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
   /*----------------------------------- MOBILE SMALL */ }
   @media (min-width: 90.01em) {
     .card-container {
@@ -1699,6 +1705,10 @@ ORDER:
       gap: 3.5rem;
       padding-top: 6rem;
       padding-bottom: 6rem; } }
+  @media (max-width: 26.6em) {
+    .card-container {
+      gap: 3rem;
+      padding: 6rem 3rem; } }
 
 /* ------------------------------- CARD */
 .card {
@@ -1717,9 +1727,20 @@ ORDER:
   overflow: hidden;
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
+  /* @MEDIA QUERIES */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */
   /* ---------------- CARD HEADER */
   /* ---------------- CARD PICTURE */
   /* -------------- CARD FOOTER */ }
+  @media (max-width: 26.6em) {
+    .card {
+      height: 6.5rem;
+      width: 6.5rem; } }
   .card__picture {
     position: relative;
     height: 22rem;
@@ -1768,10 +1789,19 @@ ORDER:
       /*----------------------------------- TABLET */
       /*----------------------------------- MOBILE LARGE */
       /*----------------------------------- MOBILE MEDIUM */
+      /*----------------------------------- MOBILE SMALL */
+      /*----------------------------------- 4K */
+      /*----------------------------------- LAPTOP */
+      /*----------------------------------- TABLET */
+      /*----------------------------------- MOBILE LARGE */
+      /*----------------------------------- MOBILE MEDIUM */
       /*----------------------------------- MOBILE SMALL */ }
       @media (max-width: 48em) {
         .card__picture-img {
           transform: translate(20%, 20%); } }
+      @media (max-width: 26.6em) {
+        .card__picture-img {
+          transform: translate(22%, 25%); } }
     .card__picture-caption {
       position: absolute;
       top: 50%;
