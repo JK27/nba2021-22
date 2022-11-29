@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "Data dashboard for 2021-22 season",
 	"main": "app.js",
+	"targets": {
+		"main": false
+	},
 	"scripts": {
 		"start": "nodemon server.js",
 		"start:prod": "SET NODE_ENV=production&& nodemon app.js",
@@ -21,7 +24,7 @@
 	"bugs": {
 		"url": "https://github.com/JK27/nba2021-22/issues"
 	},
-	"homepage": "https://github.com/JK27/nba2021-22/",
+	"homepage": "https://jk27.github.io/nba2021-22/",
 	"dependencies": {
 		"axios": "^0.27.2",
 		"cors": "^2.8.5",
@@ -38,5 +41,8 @@
 	"devDependencies": {
 		"node-sass": "^7.0.1",
 		"nodemon": "^2.0.16"
+	},
+	"engines": {
+		"node": "^16"
 	}
 }
