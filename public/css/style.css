@@ -1707,8 +1707,8 @@ ORDER:
       padding-bottom: 6rem; } }
   @media (max-width: 26.6em) {
     .card-container {
-      gap: 3rem;
-      padding: 6rem 3rem; } }
+      gap: 2rem;
+      padding: 4rem 5rem 4rem 3rem; } }
 
 /* ------------------------------- CARD */
 .card {
@@ -1722,6 +1722,7 @@ ORDER:
   background-color: #ffffff;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  height: 30rem;
   text-decoration: none;
   border-radius: 10rem;
   overflow: hidden;
@@ -1734,13 +1735,23 @@ ORDER:
   /*----------------------------------- MOBILE LARGE */
   /*----------------------------------- MOBILE MEDIUM */
   /*----------------------------------- MOBILE SMALL */
+  /*----------------------------------- 4K */
+  /*----------------------------------- LAPTOP */
+  /*----------------------------------- TABLET */
+  /*----------------------------------- MOBILE LARGE */
+  /*----------------------------------- MOBILE MEDIUM */
+  /*----------------------------------- MOBILE SMALL */
   /* ---------------- CARD HEADER */
   /* ---------------- CARD PICTURE */
   /* -------------- CARD FOOTER */ }
+  @media (max-width: 48em) {
+    .card {
+      height: 15rem;
+      width: 15rem; } }
   @media (max-width: 26.6em) {
     .card {
-      height: 6.5rem;
-      width: 6.5rem; } }
+      height: 7.5rem;
+      width: 7.5rem; } }
   .card__picture {
     position: relative;
     height: 22rem;
@@ -1798,10 +1809,10 @@ ORDER:
       /*----------------------------------- MOBILE SMALL */ }
       @media (max-width: 48em) {
         .card__picture-img {
-          transform: translate(20%, 20%); } }
+          transform: translate(22%, 35%); } }
       @media (max-width: 26.6em) {
         .card__picture-img {
-          transform: translate(22%, 25%); } }
+          transform: translate(22%, 35%); } }
     .card__picture-caption {
       position: absolute;
       top: 50%;
@@ -1838,6 +1849,7 @@ ORDER:
     padding: 1.5rem 3rem;
     font-size: 1.7rem;
     text-align: center;
+    height: -webkit-fill-available;
     z-index: 2;
     /* @MEDIA QUERIES */
     /*----------------------------------- 4K */
@@ -2067,15 +2079,27 @@ ORDER:
       display: block; } }
   .mobile__button {
     background-color: #f7f7f7;
-    height: 5rem;
-    width: 5rem;
+    height: 7.5rem;
+    width: 7.5rem;
     border-radius: 10rem;
     position: fixed;
     top: 3.5rem;
     right: 3.5rem;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
-    text-align: center; }
+    text-align: center;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (max-width: 26.6em) {
+      .mobile__button {
+        margin: 0;
+        height: 5rem;
+        width: 5rem; } }
   .mobile__menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2087,6 +2111,7 @@ ORDER:
     position: relative;
     margin: 3rem 0;
     width: 100%;
+    /* @MEDIA QUERIES */
     /*----------------------------------- 4K */
     /*----------------------------------- LAPTOP */
     /*----------------------------------- TABLET */
@@ -2163,7 +2188,17 @@ ORDER:
     z-index: 1500; }
   .mobile__icon {
     position: relative;
-    margin-top: 2.5rem; }
+    margin-top: 3.5rem;
+    /* @MEDIA QUERIES */
+    /*----------------------------------- 4K */
+    /*----------------------------------- LAPTOP */
+    /*----------------------------------- TABLET */
+    /*----------------------------------- MOBILE LARGE */
+    /*----------------------------------- MOBILE MEDIUM */
+    /*----------------------------------- MOBILE SMALL */ }
+    @media (max-width: 26.6em) {
+      .mobile__icon {
+        margin-top: 2.5rem; } }
     .mobile__icon, .mobile__icon::before, .mobile__icon::after {
       display: inline-block;
       width: 3rem;

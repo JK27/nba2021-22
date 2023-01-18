@@ -23,9 +23,9 @@
 	}
 
 	@include respond(mob-lg) {
-		gap: 3rem;
+		gap: 2rem;
 		// DOES => Replace the padding removed from the main section, allowing some real state between the cards and the mobile__nav button.
-		padding: 6rem 3rem;
+		padding: 4rem 5rem 4rem 3rem;
 	}
 }
 
@@ -44,6 +44,7 @@
 	-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
 	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
 
+	height: 30rem;
 	text-decoration: none;
 	border-radius: 10rem;
 	// DOES => Makes card__footer respect the card border radius.
@@ -58,9 +59,14 @@
 	// outline: none;
 
 	/* @MEDIA QUERIES */
+	@include respond(tablet) {
+		height: 15rem;
+		width: 15rem;
+	}
+
 	@include respond(mob-lg) {
-		height: 6.5rem;
-		width: 6.5rem;
+		height: 7.5rem;
+		width: 7.5rem;
 	}
 
 	/* ---------------- CARD HEADER */
@@ -102,17 +108,16 @@
 			transform: translate(20%, 25%);
 
 			transition: all 0.8s;
-			// backface-visibility: hidden;
 
 			/* @MEDIA QUERIES */
 			@include respond(tablet) {
 				// DOES => Maintains team logo centered within the card after removing the card footer on smaller screens.
-				transform: translate(20%, 20%);
+				transform: translate(22%, 35%);
 			}
 
 			@include respond(mob-lg) {
 				// DOES => Maintains team logo centered within the card after removing the card footer on smaller screens.
-				transform: translate(22%, 25%);
+				transform: translate(22%, 35%);
 			}
 		}
 
@@ -150,6 +155,7 @@
 		padding: 1.5rem 3rem;
 		font-size: 1.7rem;
 		text-align: center;
+		height: -webkit-fill-available;
 		// DOES => Makes sure picture-caption is hidden behind footer, even if caption opacity is set to 0.
 		z-index: 2;
 

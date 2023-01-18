@@ -12,8 +12,8 @@
 	// -------------- BUTTON
 	&__button {
 		background-color: $color-background-primary;
-		height: 5rem;
-		width: 5rem;
+		height: 7.5rem;
+		width: 7.5rem;
 		border-radius: 10rem;
 		position: fixed;
 		top: 3.5rem;
@@ -21,6 +21,13 @@
 		z-index: 2000;
 		box-shadow: 0 1rem 3rem rgba(black, 0.1);
 		text-align: center;
+
+		/* @MEDIA QUERIES */
+		@include respond(mob-lg) {
+			margin: 0;
+			height: 5rem;
+			width: 5rem;
+		}
 	}
 
 	&__menu {
@@ -39,6 +46,7 @@
 		// DOES => Helps spread items along the nav.
 		width: 100%;
 
+		/* @MEDIA QUERIES */
 		@include respond(mob-lg) {
 			margin: 6rem 0;
 		}
@@ -211,8 +219,12 @@
 	// -------------- ICON
 	&__icon {
 		position: relative;
-		margin-top: 2.5rem;
-		// background-color: $color-nba-red;
+		margin-top: 3.5rem;
+
+		/* @MEDIA QUERIES */
+		@include respond(mob-lg) {
+			margin-top: 2.5rem;
+		}
 
 		&,
 		&::before,
