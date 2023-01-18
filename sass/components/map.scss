@@ -10,7 +10,7 @@
 	position: relative;
 	// DOES => Makes map to be displayed second in the row after the venue details.
 	flex-direction: row-reverse;
-	// DOES => In combination with padding bottom for all elements in .section-info, margin-top and height: 30vw make the contentes of the 4 boxes to be evenly distributed.
+	// DOES => In combination with padding bottom for all elements in .section-info, margin-top and height: 30vw make the contents of the 4 boxes to be evenly distributed.
 	margin-top: calc(2rem - var(--section-rotate));
 	height: 30vw;
 
@@ -37,12 +37,6 @@
 
 /* ------------------------------- MAP */
 #map {
-	// display: -webkit-box;
-	// display: -ms-flexbox;
-	// display: flex;
-
-	// top: 0;
-	// bottom: 0;
 	// DOES => Imitates the border radius of the team and player cards, giving each section a border radius in only one corner depending on their position.
 	border-radius: 0 0 2.5rem 0;
 

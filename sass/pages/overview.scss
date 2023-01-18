@@ -2,11 +2,6 @@
 @import "./../abstracts/mixins";
 /* ---------------------------------------------- MAIN */
 .main {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-	position: relative;
-
 	background-color: $color-background-primary;
 	// DOES=> Creates real state at the top for displaying conference divisions dropdown without it overlapping the main content.
 	padding: 10rem 0;

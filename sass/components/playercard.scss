@@ -3,16 +3,18 @@
 
 /* -------------------------------------------------------- PLAYERS */
 .players {
-	padding: 5rem 6rem;
 	display: grid;
+	// DOES => Column gap defines the gap between the cards.
 	column-gap: 6rem;
 	// DOES => Cards are placed by filling each column in turn, adding new columns as necessary.
 	grid-auto-flow: column;
 	// DOES => Makes overflow content visible when scrolling.
 	overflow-x: scroll;
-	// DOES => The scroll container snaps to snap positions in its horizontal axis only. If card is scrolled over halfway the viewport (depending on direction of scrolling), that card will be displayed at centre of viewport.
+	// DOES => The scroll container snaps to snap positions in its horizontal axis only.
 	-ms-scroll-snap-type: x mandatory;
 	scroll-snap-type: x mandatory;
+
+	padding: 5rem 6rem;
 
 	/* @MEDIA QUERIES */
 	@include respond(mob-lg) {
@@ -22,21 +24,13 @@
 
 	/* ---------------------------------- PLAYERS CARD */
 	&__card {
-		// display: -webkit-box;
-		// display: -ms-flexbox;
-		// display: flex;
-
-		// -webkit-box-orient: vertical;
-		// -webkit-box-direction: normal;
-		// -ms-flex-direction: column;
-		// flex-direction: column;
-
 		width: 50rem;
 		height: 25rem;
-		background-color: $color-background-primary;
 		border-radius: 5rem;
+		background-color: $color-background-primary;
 		-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 		box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+		// DOES => If card is scrolled over halfway the viewport (depending on direction of scrolling), that card will be displayed at centre of viewport.
 		scroll-snap-align: center;
 		position: relative;
 		// DOES => Hiddes the background of the .additional side of the card to be displayed underneath the card when not hovered over. It also prevents the round corners to not to be visible.
@@ -70,6 +64,7 @@
 		// NOTE => Width cannot be higher than 17rem, as it will show players history contents.
 		width: 17rem;
 		height: 100%;
+		// DOES => Hides the contents of players__history so they don't overlap the players__profile
 		overflow: hidden;
 		// DOES => z-index makes additional content to overlap player's profile content, preventing this to still be visible when hovering over card.
 		z-index: 2;
@@ -96,19 +91,12 @@
 
 	/* ------------------- PLAYERS HEADER INFO */
 	&__header-info {
-		// -webkit-box-pack: center;
-		// -ms-flex-pack: center;
-		// justify-content: center;
-
-		// position: relative;
 		display: grid;
 		grid-template-rows: auto auto max-content;
 
 		// NOTE => Width needs to match the initial additional element's width to make items be centered within the parent element.
 		width: 17rem;
-		// height: 100%;
 		text-align: center;
-		// padding: 1rem;
 
 		/* @MEDIA QUERIES */
 		@include respond(xl) {
@@ -192,8 +180,8 @@
 	&__text {
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
-		font-style: italic;
 		font-weight: 400;
+		font-style: italic;
 		white-space: nowrap;
 
 		/* @MEDIA QUERIES */
@@ -209,21 +197,12 @@
 
 	/* ---------------------------------- PLAYERS HISTORY */
 	&__history {
-		// -webkit-box-pack: justify;
-		// -ms-flex-pack: justify;
-		// justify-content: space-evenly;
-
-		// -webkit-box-align: center;
-		// -ms-flex-align: center;
-		// align-items: center;
-
-		text-align: center;
-
 		display: grid;
 		grid-template-rows: repeat(3, auto);
 		grid-template-columns: repeat(3, 1fr);
 		gap: 0.5rem;
 
+		text-align: center;
 		// DOES => All properties below allow for content to fit evenly within the card.
 		position: absolute;
 		width: 35rem;
@@ -256,20 +235,11 @@
 
 	/* ---------------------------------- PLAYERS PROFILE */
 	&__profile {
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-		justify-content: space-evenly;
-
-		// -webkit-box-align: center;
-		// -ms-flex-align: center;
-		// align-items: center;
-
 		display: grid;
 		grid-template-rows: repeat(4, auto);
 		grid-template-columns: repeat(2, auto);
 		gap: 0.5rem;
 
-		// box-sizing: border-box;
 		// NOTE => z-index needs to be lower than additional's so it is covered when hovering.
 		z-index: 1;
 		// DOES => All properties below allow for content to fit evenly within the card.

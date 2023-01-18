@@ -2,13 +2,13 @@
 @import "./../abstracts/mixins";
 /* -------------------------------------------------------- SECTION HEADING */
 .section__heading {
+	display: inline-block;
+
 	font-size: 2.25rem;
-	text-transform: uppercase;
 	font-weight: 700;
-	-webkit-background-clip: text;
+	text-transform: uppercase;
 	letter-spacing: 0.1rem;
 	line-height: 1.3;
-	display: inline-block;
 	margin: 3rem 0;
 
 	/* @MEDIA QUERIES */

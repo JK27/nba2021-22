@@ -31,32 +31,17 @@
 
 /* ------------------------------- CARD */
 .card {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	// DOES => Places card__footer at the bottom of the card, underneath the team logo.
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-
+	height: 30rem;
 	background-color: $color-nba-white;
+	border-radius: 10rem;
 	-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
 	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
-
-	height: 30rem;
 	text-decoration: none;
-	border-radius: 10rem;
 	// DOES => Makes card__footer respect the card border radius.
 	overflow: hidden;
 
 	-webkit-transition: 0.4s all;
 	transition: 0.4s all;
-	// -webkit-backface-visibility: hidden;
-	// backface-visibility: hidden;
-
-	// position: relative;
-	// outline: none;
 
 	/* @MEDIA QUERIES */
 	@include respond(tablet) {
@@ -69,12 +54,7 @@
 		width: 7.5rem;
 	}
 
-	/* ---------------- CARD HEADER */
-	&__header {
-		// position: relative;
-	}
-
-	/* ---------------- CARD PICTURE */
+	/* -------------- CARD PICTURE */
 	&__picture {
 		// DOES => Position: relative is required so caption is displayed on hovering.
 		position: relative;
@@ -96,7 +76,7 @@
 			height: 6rem;
 		}
 
-		/* - CARD PICTURE IMG */
+		/* -- CARD PICTURE IMG */
 		&-img {
 			// DOES => Mantains aspect ratio of logo while fitting within the content box.
 			-o-object-fit: contain;
@@ -137,7 +117,6 @@
 			// DOES => Places caption at the bottom of card__header so when hovering over the card, caption appears to come up from footer.
 			transform: translate(-50%, 300%);
 			transition: all 0.8s;
-			// backface-visibility: hidden;
 
 			/* @MEDIA QUERIES */
 			@include respond(xl) {
@@ -155,7 +134,7 @@
 		padding: 1.5rem 3rem;
 		font-size: 1.7rem;
 		text-align: center;
-		height: -webkit-fill-available;
+		height: inherit;
 		// DOES => Makes sure picture-caption is hidden behind footer, even if caption opacity is set to 0.
 		z-index: 2;
 

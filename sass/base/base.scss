@@ -1,15 +1,17 @@
+@import "./../abstracts/variables.scss";
+
 :root {
 	--section-rotate: 9vw;
 }
 
 ::-moz-selection {
-	background-color: #c8102e;
-	color: #fff;
+	background-color: $color-nba-blue;
+	color: $color-nba-white;
 }
 
 ::selection {
-	background-color: #c8102e;
-	color: #fff;
+	background-color: $color-nba-blue;
+	color: $color-nba-white;
 }
 
 *,
@@ -29,12 +31,6 @@ html {
 }
 /* -------------------------------------------------------- BODY */
 body {
-	line-height: 1.6;
-	font-weight: 300;
-	font-family: "Open Sans", sans-serif;
-	color: $color-text-primary;
-	padding: 3rem;
-	min-height: 100vh;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -42,4 +38,12 @@ body {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
+
+	min-height: 100vh;
+	line-height: 1.6;
+	font-weight: 300;
+	font-family: "Open Sans", sans-serif;
+	color: $color-text-primary;
+	// DOES => Padding creates a "frame" that surrounds the content of the page.
+	padding: 3rem;
 }
