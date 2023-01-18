@@ -55,6 +55,11 @@
 		font-weight: 700;
 		margin-right: 2.25rem;
 		text-transform: uppercase;
+
+		/* @MEDIA QUERIES */
+		@include respond(mob-lg) {
+			margin-right: 1rem;
+		}
 	}
 	/* ---------------- SECTION BOX TEXT */
 	&__text {
@@ -62,6 +67,7 @@
 		text-transform: capitalize;
 		white-space: nowrap;
 
+		/* @MEDIA QUERIES */
 		@include respond(mob-lg) {
 			margin-right: 0;
 		}

@@ -1,5 +1,6 @@
 @import "./../abstracts/variables";
 @import "./../abstracts/mixins";
+
 .mobile {
 	// DOES => Does not display mobile navigation for laptop and larger screens.
 	display: none;
@@ -37,14 +38,15 @@
 
 		flex-direction: column;
 
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-		justify-content: space-evenly;
+		// -webkit-box-pack: justify;
+		// -ms-flex-pack: justify;
+		// justify-content: space-evenly;
 
 		position: relative;
-		margin: 3rem 0;
+		// margin: 3rem 0;
+		top: 20%;
 		// DOES => Helps spread items along the nav.
-		width: 100%;
+		// width: 100%;
 
 		/* @MEDIA QUERIES */
 		@include respond(mob-lg) {
@@ -134,7 +136,7 @@
 		display: grid;
 		grid-template-rows: repeat(2, auto);
 		grid-template-columns: repeat(3, auto);
-		gap: 0.75rem 1.8rem;
+		gap: 1rem;
 
 		border-radius: $border-radius;
 		margin: 0 3rem;
@@ -145,6 +147,10 @@
 	#conference {
 		// DOES => Makes first li with link to show all teams in the conference to occupy the entire first row, forcing the other 3 li for each division to be displayed on the second row.
 		grid-column: 1 / 4;
+	}
+
+	#all-teams {
+		padding: 5rem 0;
 	}
 
 	#all-divisions {

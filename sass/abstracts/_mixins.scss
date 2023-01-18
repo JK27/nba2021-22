@@ -3,7 +3,7 @@
 90.1em+		->		1441px +			->		4K
 90em			->		1025 - 1440px	->		Desktop / Large laptop
 64em			->	 	769 - 1024px	->		(default styles apply) *****
-48em		  ->		426 - 768px	  ->		Tablet portrait
+48em		  ->		426 - 864px	  ->		Tablet portrait
 26.5em		->		377 - 425px		->		Mobile large
 23.5em		->		321 - 376px		->		Mobile medium
 20em			->		0 - 320px			->		Mobile small
@@ -43,9 +43,9 @@ ORDER:
 
 	/*----------------------------------- TABLET */
 	@if $breakpoint == tablet {
-		@media (max-width: 48em) {
+		@media (max-width: 54em) {
 			@content;
-		} // max-width: 768px
+		} // max-width: 864px
 	}
 
 	/*----------------------------------- MOBILE LARGE */
